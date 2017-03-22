@@ -79,12 +79,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
-          // Compiled styles.
-          'css/components.css':         'scss/components/components.scss',
-          'css/layout.css':             'scss/layout/layout.scss',
-          'css/states.css':             'scss/states/states.scss',
-          'css/theme.css':              'scss/theme/theme.scss',
-          'css/print.css':              'scss/theme/print.scss'
+          'patterns/atoms/buttons/simple-cta/css/simple-cta.component.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.component.scss',
+          'patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.theme.scss'
         }
       }
     },

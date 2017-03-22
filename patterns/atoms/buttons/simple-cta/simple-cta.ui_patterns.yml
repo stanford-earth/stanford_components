@@ -1,0 +1,13 @@
+# The Components
+# simple_cta:
+#   label: Button - Simple CTA
+#   description: A Simple Call to Action Button
+#   fields:
+#     content:
+#       type: string
+#       label: Content
+#       description: The button text.
+#       preview: 'SIMPLE CTA'
+#   libraries:
+#     - stanford_components/simple_cta
+#   use: '@stanford_components/atoms/buttons/simple-cta/simple-cta.html.twig'

@@ -61,7 +61,9 @@
 #   dependencies:
 #     - core/jquery
 
-link_list:
+simple_cta:
   css:
     component:
-      css/components.css: {}
+      patterns/atoms/buttons/simple-cta/css/simple-cta.component.css: {}
+    theme:
+      patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css: {}
