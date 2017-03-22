@@ -60,10 +60,3 @@
 #     js/script.js: {}
 #   dependencies:
 #     - core/jquery
-
-simple_cta:
-  css:
-    component:
-      patterns/atoms/buttons/simple-cta/css/simple-cta.component.css: {}
-    theme:
-      patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css: {}

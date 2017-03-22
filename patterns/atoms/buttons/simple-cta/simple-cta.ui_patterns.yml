@@ -1,13 +1,23 @@
 # The Components
-# simple_cta:
-#   label: Button - Simple CTA
-#   description: A Simple Call to Action Button
-#   fields:
-#     content:
-#       type: string
-#       label: Content
-#       description: The button text.
-#       preview: 'SIMPLE CTA'
-#   libraries:
-#     - stanford_components/simple_cta
-#   use: '@stanford_components/atoms/buttons/simple-cta/simple-cta.html.twig'
+simple_cta:
+  label: Button - Simple CTA
+  description: A Simple Call to Action Button
+  fields:
+    title:
+      type: text
+      label: Label
+      description: The button label
+      preview: Submit
+    url:
+      type: text
+      label: URL
+      description: The button URL
+      preview: http://example.com
+  libraries:
+    - simple_cta_library:
+        css:
+          component:
+            css/simple-cta.component.css: {}
+          theme:
+            css/simple-cta.theme.css: {}
+  use: '@stanford_components/atoms/buttons/simple-cta/simple-cta.html.twig'
