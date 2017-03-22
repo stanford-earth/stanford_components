@@ -1,5 +1,5 @@
 # The Components
-link-list:
+link_list:
   label: Block - Link list
   description: A block links.
   fields:
@@ -9,5 +9,5 @@ link-list:
       description: The block contents.
       preview: '<h2>Block Heading</h2><ul><li><a href="https://stanford.edu">Stanford</a></li></ul>'
   libraries:
-    - stanford_components/link-list
-  use: '@components/blocks/link-list/link-list.html.twig'
+    - stanford_components/link_list
+  # use: '@components/blocks/link-list/link-list.html.twig'

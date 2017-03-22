@@ -61,6 +61,7 @@
 #   dependencies:
 #     - core/jquery
 
-link-list:
-  component:
-    css/components.css: {}
+link_list:
+  css:
+    component:
+      css/components.css: {}
