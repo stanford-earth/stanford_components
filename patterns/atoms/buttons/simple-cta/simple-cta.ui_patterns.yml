@@ -6,13 +6,13 @@ simple_cta:
     title:
       type: text
       label: Label
-      description: The button label
-      preview: Submit
+      description: The CTA label
+      preview: EXAMPLE CTA
     url:
       type: text
       label: URL
-      description: The button URL
-      preview: http://example.com
+      description: The CTA URL
+      preview: https://stanford.edu
   libraries:
     - simple_cta_library:
         css:
