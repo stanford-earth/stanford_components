@@ -1,0 +1,10 @@
+{
+  "name": "su-sws/stanford_components",
+  "description": "Stanford Component Module for re-usable components",
+  "type": "stanford-module",
+  "homepage": "https://github.com/SU-SWS/stanford_components",
+  "authors": [],
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {}
+}

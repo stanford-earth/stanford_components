@@ -1,0 +1,11 @@
+name: 'Stanford Components'
+type: module
+description: 'Provides a library of re-usable components'
+core: 8.x
+package: Stanford
+version: 8.x-1.0-dev
+dependencies:
+  - components
+  - ui_patterns
+# libraries:
+#   - /example_name
