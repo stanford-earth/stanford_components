@@ -12,7 +12,7 @@ simple_cta:
       type: text
       label: URL
       description: The CTA URL
-      preview: https://stanford.edu
+      preview: https://stanford.edu/
   libraries:
     - simple_cta_library:
         css:

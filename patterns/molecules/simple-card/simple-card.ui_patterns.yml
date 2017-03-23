@@ -1,0 +1,52 @@
+# Card Pattern
+#
+simple_card:
+  label: Simple Card
+  description: A card component.
+  fields:
+    image:
+      type: image
+      label: Image
+      description: Card image.
+      preview:
+        type: pattern
+        id: image
+        fields:
+          image:
+            theme: image
+            uri: http://lorempixel.com/400/200/nature/2
+          caption: &copy; 2017 John Smith photography
+    title:
+      type: text
+      label: Title
+      description: Card title.
+      preview: Card title
+    text:
+      type: text
+      label: Text
+      description: Card text.
+      preview: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+    image:
+      label: Image
+      description: A simple image with caption.
+      fields:
+        image:
+          type: image
+          label: Image
+          description: The actual image.
+          preview:
+            theme: image
+            uri: http://lorempixel.com/350/250/nature/1
+        caption:
+          type: text
+          label: Caption
+          description: The image caption.
+          preview: &copy; 2017 John Smith photography
+  libraries:
+    - simple_card_library:
+        css:
+          component:
+            css/simple-card.component.css: {}
+          theme:
+            css/simple-card.theme.css: {}
+  use: '@stanford_components/molecules/simple-card/simple-card.html.twig'

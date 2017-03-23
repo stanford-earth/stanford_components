@@ -1,0 +1,21 @@
+.simple-card {
+  border: none;
+  background: #ddd;
+}
+
+.simple-card .simple-card__thumbnail img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.simple-card h3 {
+  font-size: 1.5625em;
+  margin: 0px;
+  padding: 0px;
+}
+
+.simple-card .simple_card__caption {
+  color: #112;
+}
+
+/*# sourceMappingURL=simple-card.theme.css.map */

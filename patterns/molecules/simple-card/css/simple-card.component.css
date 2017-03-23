@@ -1,0 +1,17 @@
+.simple-card {
+  width: calc(33.3333333333% - 26.6666666667px);
+  float: left;
+  margin-left: 20px;
+  border: solid 1px #111;
+}
+
+.simple-card .simple-card__thumbnail img {
+  max-width: 100%;
+  width: 100%;
+}
+
+.simple-card .simple-card__caption {
+  margin: 0 20px 20px;
+}
+
+/*# sourceMappingURL=simple-card.component.css.map */

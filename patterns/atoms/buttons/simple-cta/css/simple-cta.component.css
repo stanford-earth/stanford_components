@@ -1,7 +1,6 @@
 .button__simple-cta {
-  background: #F0F;
-  color: #FFF;
-  font-weight: bold;
+  display: inline-block;
+  padding: 4px;
 }
 
 /*# sourceMappingURL=simple-cta.component.css.map */

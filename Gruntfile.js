@@ -79,8 +79,13 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
+          // Atoms
           'patterns/atoms/buttons/simple-cta/css/simple-cta.component.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.component.scss',
-          'patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.theme.scss'
+          'patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.theme.scss',
+          // Molecules
+          'patterns/molecules/simple-card/css/simple-card.component.css': 'patterns/molecules/simple-card/scss/simple-card.component.scss',
+          'patterns/molecules/simple-card/css/simple-card.theme.css': 'patterns/molecules/simple-card/scss/simple-card.theme.scss'
+
         }
       }
     },

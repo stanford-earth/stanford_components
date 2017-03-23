@@ -1,0 +1,26 @@
+@charset 'UTF-8';
+////
+/// A template for a very simple card.
+////
+
+@import "decanter/core/utilities/decanter-utilities";
+
+///
+/// Card class.
+///
+.simple-card {
+  @include grid-column(1 of 3);
+  border: solid 1px color(black);
+
+  .simple-card__thumbnail {
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .simple-card__caption {
+    margin: 0 $gutter $gutter;
+  }
+
+}
