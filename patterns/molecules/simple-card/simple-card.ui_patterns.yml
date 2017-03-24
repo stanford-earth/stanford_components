@@ -11,6 +11,7 @@ simple_card:
       preview:
         theme: image
         uri: http://lorempixel.com/400/200/nature/2
+        alt: this is a sample image
     title:
       type: text
       label: Title

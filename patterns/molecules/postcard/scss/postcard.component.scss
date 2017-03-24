@@ -1,0 +1,33 @@
+@charset 'UTF-8';
+////
+/// A template for a very simple card.
+////
+
+@import "decanter/core/utilities/decanter-utilities";
+
+///
+/// postcard class.
+///
+.postcard {
+
+  .postcard__image {
+    display: block;
+    width: 30%;
+    float: left;
+
+    img {
+      // Something.
+    }
+  }
+
+  .postcard__content {
+    display: block;
+    width: 68%;
+    float: left;
+    color: color(text);
+    h3 {
+      @include font-size(modular-scale(1));
+    }
+  }
+
+}
