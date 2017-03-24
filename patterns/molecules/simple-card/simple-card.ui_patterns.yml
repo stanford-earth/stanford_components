@@ -9,13 +9,8 @@ simple_card:
       label: Image
       description: Card image.
       preview:
-        type: pattern
-        id: image
-        fields:
-          image:
-            theme: image
-            uri: http://lorempixel.com/400/200/nature/2
-          caption: &copy; 2017 John Smith photography
+        theme: image
+        uri: http://lorempixel.com/400/200/nature/2
     title:
       type: text
       label: Title
