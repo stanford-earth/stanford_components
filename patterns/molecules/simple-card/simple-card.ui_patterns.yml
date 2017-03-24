@@ -26,22 +26,6 @@ simple_card:
       label: Text
       description: Card text.
       preview: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-    image:
-      label: Image
-      description: A simple image with caption.
-      fields:
-        image:
-          type: image
-          label: Image
-          description: The actual image.
-          preview:
-            theme: image
-            uri: http://lorempixel.com/350/250/nature/1
-        caption:
-          type: text
-          label: Caption
-          description: The image caption.
-          preview: &copy; 2017 John Smith photography
   libraries:
     - simple_card_library:
         css:
