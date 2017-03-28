@@ -1,0 +1,32 @@
+# Card Pattern
+#
+hero_with_overlay:
+  label: Hero with overlay
+  description: A hero component with overlay text
+  fields:
+    image:
+      type: image
+      label: Image
+      description: Hero image.
+      preview:
+        theme: image
+        uri: http://lorempixel.com/1400/800/sports/6
+        alt: this is a sample image
+    title:
+      type: text
+      label: Title
+      description: Overlay title.
+      preview: Overlay title
+    teaser:
+      type: text
+      label: Teaser / Caption Text
+      description: Teaser style intro text.
+      preview: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit
+  libraries:
+    - hero_with_overlay_library:
+        css:
+          component:
+            css/hero-with-overlay.component.css: {}
+          theme:
+            css/hero-with-overlay.theme.css: {}
+  use: '@stanford_components/molecules/hero-with-overlay/hero-with-overlay.html.twig'

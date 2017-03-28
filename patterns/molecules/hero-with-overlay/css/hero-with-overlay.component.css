@@ -1,0 +1,26 @@
+.hero-with-overlay {
+  position: relative;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.hero-with-overlay .hero-with-overlay__image img {
+  width: 100%;
+  min-width: 100%;
+}
+
+@media only screen and (min-width: 576px) {
+  .hero-with-overlay .hero-with-overlay__content {
+    position: absolute;
+    height: 400px;
+    width: 600px;
+    background: #BADA55;
+    width: calc(66.6666666667% - 33.3333333333px);
+    float: left;
+    margin-left: 20px;
+    top: 0px;
+    left: 0px;
+  }
+}
+
+/*# sourceMappingURL=hero-with-overlay.component.css.map */

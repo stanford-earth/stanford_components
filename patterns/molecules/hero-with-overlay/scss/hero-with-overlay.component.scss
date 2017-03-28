@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+////
+/// A template for a very simple card.
+////
+
+@import "decanter/core/utilities/_decanter-utilities";
+
+.hero-with-overlay {
+
+  position: relative;
+  max-height: 500px;
+  overflow: hidden;
+
+  .hero-with-overlay__image img {
+    width: 100%;
+    min-width: 100%;
+  }
+
+  .hero-with-overlay__content {
+    @include grid-media($media-sm) {
+      position: absolute;
+      height: 400px;
+      width: 600px;
+      background: #BADA55;
+      @include grid-column(8 of 12);
+      top: 0px;
+      left: 0px;
+    }
+  }
+
+}
