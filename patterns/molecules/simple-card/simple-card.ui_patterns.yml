@@ -1,8 +1,8 @@
 # Card Pattern
 #
-simple_card:
-  label: Simple Card
-  description: A card component.
+simple-card:
+  label: A simple card layout
+  description: A simple card layout
   fields:
     image:
       type: image
@@ -10,7 +10,7 @@ simple_card:
       description: Card image.
       preview:
         theme: image
-        uri: http://lorempixel.com/400/200/nature/2
+        uri: http://lorempixel.com/400/200/sports/6
         alt: this is a sample image
     title:
       type: text
@@ -21,12 +21,12 @@ simple_card:
       type: text
       label: Text
       description: Card text.
-      preview: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
+      preview: <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
   libraries:
     - simple_card_library:
         css:
           component:
-            css/simple-card.component.css: {}
+            css/postcard.component.css: {}
           theme:
-            css/simple-card.theme.css: {}
+            css/postcard.theme.css: {}
   use: '@stanford_components/molecules/simple-card/simple-card.html.twig'
