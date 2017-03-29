@@ -1,6 +1,6 @@
 # Card Pattern
 #
-simple-card:
+simple_card:
   label: A simple card layout
   description: A simple card layout
   fields:

@@ -1,6 +1,6 @@
 # Card Pattern
 #
-hero-with-overlay:
+hero_with_overlay:
   label: Hero with overlay
   description: A hero component with overlay text
   fields:
