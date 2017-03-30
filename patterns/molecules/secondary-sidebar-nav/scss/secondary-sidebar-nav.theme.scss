@@ -1,0 +1,25 @@
+@charset 'UTF-8';
+
+@import "decanter/core/utilities/decanter-utilities";
+
+.secondary-sidebar-nav {
+
+  > li {
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    > a,
+    > a:link,
+    > a:visited {
+      font-weight: 600;
+    }
+  }
+
+  .is-active {
+    color: color(black);
+    &:before {
+      content: "> ";
+    }
+  }
+
+}

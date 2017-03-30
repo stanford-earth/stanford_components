@@ -83,12 +83,14 @@ module.exports = function(grunt) {
           'patterns/atoms/buttons/simple-cta/css/simple-cta.component.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.component.scss',
           'patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.theme.scss',
           // Molecules
-          'patterns/molecules/simple-card/css/simple-card.component.css':             'patterns/molecules/simple-card/scss/simple-card.component.scss',
-          'patterns/molecules/simple-card/css/simple-card.theme.css':                 'patterns/molecules/simple-card/scss/simple-card.theme.scss',
-          'patterns/molecules/postcard/css/postcard.component.css':                   'patterns/molecules/postcard/scss/postcard.component.scss',
-          'patterns/molecules/postcard/css/postcard.theme.css':                       'patterns/molecules/postcard/scss/postcard.theme.scss',
-          'patterns/molecules/hero-with-overlay/css/hero-with-overlay.component.css': 'patterns/molecules/hero-with-overlay/scss/hero-with-overlay.component.scss',
-          'patterns/molecules/hero-with-overlay/css/hero-with-overlay.theme.css':     'patterns/molecules/hero-with-overlay/scss/hero-with-overlay.theme.scss'
+          'patterns/molecules/simple-card/css/simple-card.component.css':                     'patterns/molecules/simple-card/scss/simple-card.component.scss',
+          'patterns/molecules/simple-card/css/simple-card.theme.css':                         'patterns/molecules/simple-card/scss/simple-card.theme.scss',
+          'patterns/molecules/postcard/css/postcard.component.css':                           'patterns/molecules/postcard/scss/postcard.component.scss',
+          'patterns/molecules/postcard/css/postcard.theme.css':                               'patterns/molecules/postcard/scss/postcard.theme.scss',
+          'patterns/molecules/hero-with-overlay/css/hero-with-overlay.component.css':         'patterns/molecules/hero-with-overlay/scss/hero-with-overlay.component.scss',
+          'patterns/molecules/hero-with-overlay/css/hero-with-overlay.theme.css':             'patterns/molecules/hero-with-overlay/scss/hero-with-overlay.theme.scss',
+          'patterns/molecules/secondary-sidebar-nav/css/secondary-sidebar-nav.component.css': 'patterns/molecules/secondary-sidebar-nav/scss/secondary-sidebar-nav.component.scss',
+          'patterns/molecules/secondary-sidebar-nav/css/secondary-sidebar-nav.theme.css':     'patterns/molecules/secondary-sidebar-nav/scss/secondary-sidebar-nav.theme.scss'
         }
       }
     },

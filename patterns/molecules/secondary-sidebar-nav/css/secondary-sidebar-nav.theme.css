@@ -1,0 +1,20 @@
+.secondary-sidebar-nav > li {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+.secondary-sidebar-nav > li > a,
+.secondary-sidebar-nav > li > a:link,
+.secondary-sidebar-nav > li > a:visited {
+  font-weight: 600;
+}
+
+.secondary-sidebar-nav .is-active {
+  color: #111;
+}
+
+.secondary-sidebar-nav .is-active:before {
+  content: "> ";
+}
+
+/*# sourceMappingURL=secondary-sidebar-nav.theme.css.map */
