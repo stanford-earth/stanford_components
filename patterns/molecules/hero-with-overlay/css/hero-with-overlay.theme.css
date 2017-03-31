@@ -1,2 +1,12 @@
+.hero-with-overlay .hero-with-overlay__superhead * {
+  color: #FFF;
+  background-color: rgba(83, 40, 79, 0.85);
+  padding: 0.5em 0;
+  font-weight: 300;
+}
+
+.hero-with-overlay .hero-with-overlay__subhead * {
+  color: #FFF;
+}
 
 /*# sourceMappingURL=hero-with-overlay.theme.css.map */

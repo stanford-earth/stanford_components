@@ -12,16 +12,16 @@ hero_with_overlay:
         theme: image
         uri: http://lorempixel.com/1400/800/sports/6
         alt: this is a sample image
-    title:
+    superhead:
       type: text
-      label: Title
-      description: Overlay title.
+      label: Super Head
+      description: The super large heading text.
       preview: Overlay title
-    teaser:
+    subhead:
       type: text
-      label: Teaser / Caption Text
-      description: Teaser style intro text.
-      preview: Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit
+      label: Sub Head
+      description: Secondary heading to the super head.
+      preview: Cras justo odio, dapibus ac facilisis in.
   libraries:
     - hero_with_overlay_library:
         css:

@@ -1,7 +1,15 @@
 .hero-with-overlay {
-  position: relative;
-  max-height: 500px;
+  text-align: center;
+  height: 600px;
   overflow: hidden;
+  position: relative;
+}
+
+.hero-with-overlay .hero-with-overlay__image {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
 }
 
 .hero-with-overlay .hero-with-overlay__image img {
@@ -9,18 +17,25 @@
   min-width: 100%;
 }
 
-@media only screen and (min-width: 576px) {
-  .hero-with-overlay .hero-with-overlay__content {
-    position: absolute;
-    height: 400px;
-    width: 600px;
-    background: #BADA55;
-    width: calc(66.6666666667% - 33.3333333333px);
-    float: left;
-    margin-left: 20px;
-    top: 0px;
-    left: 0px;
-  }
+.hero-with-overlay .hero-with-overlay__superhead {
+  position: relative;
+  z-index: 10;
+  width: 60%;
+  margin: 200px 20% 0 20%;
+}
+
+.hero-with-overlay .hero-with-overlay__subhead {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-with-overlay .hero-with-overlay__shade {
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0) 0%, rgba(51, 51, 51, 0.95) 100%);
+  height: 100%;
+  width: 100%;
+  display: block;
+  z-index: 5;
+  position: absolute;
 }
 
 /*# sourceMappingURL=hero-with-overlay.component.css.map */
