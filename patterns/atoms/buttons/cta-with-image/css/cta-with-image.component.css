@@ -9,9 +9,10 @@
   margin: 0px;
 }
 
-.cta-with-image .button__simple-cta {
+.cta-with-image a.button__simple-cta {
   width: 100%;
   margin: 0px;
+  display: inline-block;
 }
 
 /*# sourceMappingURL=cta-with-image.component.css.map */
