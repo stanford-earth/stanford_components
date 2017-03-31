@@ -16,12 +16,12 @@ hero_with_overlay:
       type: text
       label: Super Head
       description: The super large heading text.
-      preview: Overlay title
+      preview: <h2>Overlay title</h2>
     subhead:
       type: text
       label: Sub Head
       description: Secondary heading to the super head.
-      preview: Cras justo odio, dapibus ac facilisis in.
+      preview: <h4>Cras justo odio, dapibus ac facilisis in.</h4>
   libraries:
     - hero_with_overlay_library:
         css:
