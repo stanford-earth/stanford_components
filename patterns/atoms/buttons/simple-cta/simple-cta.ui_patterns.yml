@@ -7,7 +7,7 @@ simple_cta:
       type: text
       label: Label
       description: The CTA label
-      preview: EXAMPLE CTA
+      preview: Example CTA
     url:
       type: text
       label: URL

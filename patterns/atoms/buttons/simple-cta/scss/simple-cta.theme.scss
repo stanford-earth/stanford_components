@@ -1,7 +1,18 @@
 @charset 'UTF-8';
 
 .button__simple-cta {
-  background: #F0F;
-  color: #FFF;
-  font-weight: bold;
+  background-color: #FFBD54;
+  font-size: 20px;
+  text-align: center;
+  padding: .5em;
+  color: #333333;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+  min-width: 220px;
+}
+
+a.button__simple-cta:hover,
+.button__simple-cta:hover {
+  text-decoration: none;
+  background: #00ECE9;
+  color: #333333;
 }
