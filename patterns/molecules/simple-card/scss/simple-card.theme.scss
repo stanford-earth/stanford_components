@@ -4,13 +4,14 @@
 ////
 
 @import "decanter/core/utilities/decanter-utilities";
+@import "decanter/core/components/cards/card";
 
 ///
 /// Card class.
 ///
 .simple-card {
-  border: none;
-  background: color(background-secondary);
+  @include card(true, #F0F0F0);
+  @include grid-column(1 of 3);
 
   .simple-card__thumbnail {
     img {

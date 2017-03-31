@@ -1,0 +1,17 @@
+.cta-with-image {
+  max-width: 270px;
+  font-size: 0;
+}
+
+.cta-with-image img {
+  width: 100%;
+  min-width: 100%;
+  margin: 0px;
+}
+
+.cta-with-image .button__simple-cta {
+  width: 100%;
+  margin: 0px;
+}
+
+/*# sourceMappingURL=cta-with-image.component.css.map */

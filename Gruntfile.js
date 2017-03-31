@@ -82,6 +82,8 @@ module.exports = function(grunt) {
           // Atoms
           'patterns/atoms/buttons/simple-cta/css/simple-cta.component.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.component.scss',
           'patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css': 'patterns/atoms/buttons/simple-cta/scss/simple-cta.theme.scss',
+          'patterns/atoms/buttons/cta-with-image/css/cta-with-image.component.css': 'patterns/atoms/buttons/cta-with-image/scss/cta-with-image.component.scss',
+          'patterns/atoms/buttons/cta-with-image/css/cta-with-image.theme.css': 'patterns/atoms/buttons/cta-with-image/scss/cta-with-image.theme.scss',
           // Molecules
           'patterns/molecules/simple-card/css/simple-card.component.css':                     'patterns/molecules/simple-card/scss/simple-card.component.scss',
           'patterns/molecules/simple-card/css/simple-card.theme.css':                         'patterns/molecules/simple-card/scss/simple-card.theme.scss',

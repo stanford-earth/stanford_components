@@ -1,6 +1,16 @@
 .simple-card {
-  border: none;
-  background: #ddd;
+  background-color: #F0F0F0;
+  border: 1px solid #999;
+  padding: 1.25em;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  width: calc(33.3333333333% - 26.6666666667px);
+  float: left;
+  margin-left: 20px;
+}
+
+.simple-card > :last-child {
+  margin-bottom: 0;
 }
 
 .simple-card .simple-card__thumbnail img {

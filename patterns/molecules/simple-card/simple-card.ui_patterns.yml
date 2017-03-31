@@ -26,7 +26,7 @@ simple_card:
     - simple_card_library:
         css:
           component:
-            css/postcard.component.css: {}
+            css/simple-card.component.css: {}
           theme:
-            css/postcard.theme.css: {}
+            css/simple-card.theme.css: {}
   use: '@stanford_components/molecules/simple-card/simple-card.html.twig'

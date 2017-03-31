@@ -10,8 +10,7 @@
 /// Card class.
 ///
 .simple-card {
-  @include grid-column(1 of 3);
-  border: solid 1px color(black);
+  @include card(true);
 
   .simple-card__thumbnail {
     img {
