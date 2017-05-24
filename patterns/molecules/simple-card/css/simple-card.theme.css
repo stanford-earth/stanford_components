@@ -9,6 +9,12 @@
   margin-left: 20px;
 }
 
+@media only screen {
+  .simple-card {
+    box-shadow: false;
+  }
+}
+
 .simple-card > :last-child {
   margin-bottom: 0;
 }

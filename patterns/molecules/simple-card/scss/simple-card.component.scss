@@ -20,7 +20,7 @@
   }
 
   .simple-card__caption {
-    margin: 0 $gutter $gutter;
+    margin: 0 _retrieve-decanter-setting(gutter) _retrieve-decanter-setting(gutter);
   }
 
 }
