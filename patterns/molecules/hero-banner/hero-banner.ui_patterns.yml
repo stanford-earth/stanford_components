@@ -1,0 +1,32 @@
+# Card Pattern
+#
+hero_banner:
+  label: Hero banner
+  description: A hero banner component
+  fields:
+    image:
+      type: text
+      label: Image URL
+      description: Hero image.
+      preview: https://lorempixel.com/1400/800/sports/2
+    superhead:
+      type: text
+      label: Super Head
+      description: The super large heading text.
+      preview: Overlay title
+    subhead:
+      type: text
+      label: Sub Head
+      description: Secondary heading to the super head.
+      preview: Cras justo odio, dapibus ac facilisis in.
+    cite:
+      type: text
+      label: Cite
+      description: Citation for hero banner background image.
+      preview: Copyright by so-and-so.
+  libraries:
+    - hero-banner_library:
+        css:
+          component:
+            css/hero-banner.component.css: {}
+  use: '@stanford_components/molecules/hero-banner/hero-banner.html.twig'

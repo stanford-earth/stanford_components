@@ -10,7 +10,7 @@
 /// Card class.
 ///
 .simple-card {
-  @include card(true, #F0F0F0);
+  @include card(1, #F0F0F0);
   @include grid-column(1 of 3);
 
   .simple-card__thumbnail {

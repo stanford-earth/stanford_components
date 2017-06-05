@@ -10,7 +10,7 @@
 /// Card class.
 ///
 .simple-card {
-  @include card(true);
+  @include card(1);
 
   .simple-card__thumbnail {
     img {
@@ -20,7 +20,7 @@
   }
 
   .simple-card__caption {
-    margin: 0 _retrieve-decanter-setting(gutter) _retrieve-decanter-setting(gutter);
+    //margin: 0 $gutter $gutter;
   }
 
 }

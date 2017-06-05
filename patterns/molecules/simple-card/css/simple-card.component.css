@@ -8,7 +8,7 @@
 
 @media only screen {
   .simple-card {
-    box-shadow: false;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.115), 0px 3px 3px rgba(0, 0, 0, 0.115);
   }
 }
 
@@ -19,10 +19,6 @@
 .simple-card .simple-card__thumbnail img {
   max-width: 100%;
   width: 100%;
-}
-
-.simple-card .simple-card__caption {
-  margin: 0 20px 20px;
 }
 
 /*# sourceMappingURL=simple-card.component.css.map */
