@@ -1,0 +1,25 @@
+.filmstrip .film-card,
+.filmstrip .filmstrip__top_border,
+.filmstrip .filmstrip__title {
+  float: none;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .filmstrip .film-card,
+  .filmstrip .filmstrip__top_border,
+  .filmstrip .filmstrip__title {
+    margin: 0 18px 20px 0;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .filmstrip .film-card {
+    float: left;
+    width: 220px;
+  }
+}
+
+/*# sourceMappingURL=filmstrip.component.css.map */

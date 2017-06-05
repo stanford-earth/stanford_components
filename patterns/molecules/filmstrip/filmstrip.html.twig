@@ -1,0 +1,26 @@
+{#
+/**
+ * @file
+ * Filmstrip pattern.
+ */
+#}
+{# Attach the film card css and js #}
+{{ attach_library('ui_patterns/film_card.film_card_library') }}
+{# Template HTML #}
+<div class="filmstrip">
+  <div class="filmstrip__top_border"></div>
+  <h6 class="filmstrip__title">{{ title }}</h6>
+  <div class="filmstrip__cards">
+    {# Break up the individual items in to the appropriate template var. #}
+    {% for item in items %}
+      {% set vars = {
+        'link': item.link,
+        'image': item.image,
+        'title': item.title
+        }
+      %}
+      {# Pass vars through to include template. #}
+      {% include '@stanford_components/molecules/film-card/film-card.html.twig' with vars %}
+    {% endfor %}
+  </div>
+</div>

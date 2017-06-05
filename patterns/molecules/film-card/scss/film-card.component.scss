@@ -1,0 +1,43 @@
+@charset 'UTF-8';
+////
+/// A template for a film card.
+////
+
+@import 'decanter/core/utilities/decanter-utilities';
+@import 'decanter/core/components/cards/card';
+
+///
+/// Card class.
+///
+.film-card {
+  @include card(1);
+  width: 220px;
+  height: 145px;
+  margin-right: 18px;
+  padding: 0;
+  box-shadow: none !important;
+  border: 0;
+
+  .film-card__thumbnail {
+    position: absolute;
+
+    img {
+      width: 220px;
+      height: 145px;
+    }
+  }
+
+  .film-card__caption {
+    position: absolute;
+    margin: 55px 4px 55px 22px;
+    color: #fff;
+  }
+
+  .film-card__arrow {
+    width: 25px;
+    position: relative;
+    left: 174px;
+    top: 110px;
+  }
+
+}

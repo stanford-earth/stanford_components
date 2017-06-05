@@ -1,0 +1,25 @@
+.filmstrip .filmstrip__top_border {
+  width: 20px;
+  height: 2px;
+  border: solid 2px #f9b002;
+}
+
+.filmstrip h6 {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+}
+
+.filmstrip h6.filmstrip__title {
+  margin: 12px 0 17px;
+}
+
+@media (min-width: 768px) {
+  .filmstrip h6.filmstrip__title {
+    color: #fff;
+    background: rgba(100, 100, 100, 0.3);
+  }
+}
+
+/*# sourceMappingURL=filmstrip.theme.css.map */

@@ -1,0 +1,32 @@
+# Card Pattern
+#
+film_card:
+  label: Film card
+  description: A single card inside a filmstrip
+  fields:
+    image:
+      type: image
+      label: Image
+      description: Card image.
+      preview:
+        theme: image
+        uri: http://lorempixel.com/400/200/sports/6
+        alt: this is a sample image
+    title:
+      type: text
+      label: Title
+      description: Card title.
+      preview: Card title
+    link:
+      type: url
+      label: Link
+      description: URI that points somewhere
+      preview: http://stanford.edu
+  libraries:
+    - film_card_library:
+        css:
+          component:
+            css/film-card.component.css: {}
+          theme:
+            css/film-card.theme.css: {}
+  use: '@stanford_components/molecules/film-card/film-card.html.twig'

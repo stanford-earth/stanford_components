@@ -1,0 +1,27 @@
+// Stanford Earth styling for the filmstrip top-border
+
+.filmstrip {
+  .filmstrip__top_border {
+    width: 20px;
+    height: 2px;
+    border: solid 2px #f9b002;
+  }
+
+  h6 {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+
+    &.filmstrip__title {
+      margin: 12px 0 17px;
+
+      @media (min-width: 768px){
+        color: #fff;
+        // Extra special styling for patterns preview
+        background: rgba(100, 100, 100, .3);
+      }
+    }
+  }
+}
+

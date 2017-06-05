@@ -1,0 +1,45 @@
+# Filmstrip Pattern
+#
+filmstrip:
+  label: Filmstrip
+  description: A horizontal list of small images with text overlays and arrow buttons
+  fields:
+    title:
+      type: text
+      label: Title
+      description: Title for the whole filmstrip
+      preview: Challenges We Tackle
+    items:
+      type: array
+      label: A list of simple image cards
+      description: This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element.
+      preview:
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: http://lorempixel.com/220/145/sports/1
+            alt: this is a sample image
+          title: First Item
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: http://lorempixel.com/220/145/sports/5
+            alt: this is a sample image
+          title: Second Item
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: http://lorempixel.com/220/145/sports/2
+            alt: this is a sample image
+          title: Third Item
+  libraries:
+    - filmstrip_library:
+        css:
+          component:
+            css/filmstrip.component.css: {}
+          theme:
+            css/filmstrip.theme.css: {}
+  use: '@stanford_components/molecules/filmstrip/filmstrip.html.twig'
