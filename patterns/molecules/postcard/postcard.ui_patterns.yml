@@ -5,28 +5,28 @@ postcard:
   description: A postcard component.
   fields:
     image:
-      type: image
+      type: text
       label: Image
       description: Card image.
-      preview:
-        theme: image
-        uri: http://lorempixel.com/400/200/sports/6
-        alt: this is a sample image
+      preview: https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg
     title:
       type: text
       label: Title
       description: Card title.
-      preview: Card title
+      preview: Field Trip
     text:
       type: text
       label: Text
       description: Card text.
-      preview: <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      preview: <p>Stanford University has been affectionately known as "The Farm" ever since it was established by founders Leland and Jane Stanford on their Palo Alto stock farm. The Stanfords' founding grant decreed that "a farm for instruction in agriculture" should forever be maintained on university lands.</p>
+    linkurl:
+      type: text
+      label: URL (optional)
+      description: The link URL that gets applied to the arrow.
+      preview: https://www.stanford.edu
   libraries:
     - postcard_library:
         css:
           component:
             css/postcard.component.css: {}
-          theme:
-            css/postcard.theme.css: {}
   use: '@stanford_components/molecules/postcard/postcard.html.twig'

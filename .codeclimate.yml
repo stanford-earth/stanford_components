@@ -32,6 +32,8 @@ engines:
         enabled: false
       ColorKeyword:
         enabled: false
+      NestingDepth:
+        enabled: false
   phpcodesniffer:
     enabled: true
     checks:
