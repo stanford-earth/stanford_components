@@ -5,7 +5,7 @@ film_card:
   description: A single card inside a filmstrip
   fields:
     image:
-      type: image
+      type: text
       label: Image
       description: Card image.
       preview:
@@ -18,7 +18,7 @@ film_card:
       description: Card title.
       preview: Card title
     link:
-      type: url
+      type: text
       label: Link
       description: URI that points somewhere
       preview: http://stanford.edu
