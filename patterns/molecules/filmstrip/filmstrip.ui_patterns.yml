@@ -35,6 +35,11 @@ filmstrip:
             uri: http://lorempixel.com/220/145/sports/2
             alt: this is a sample image
           title: Third Item
+    content:
+      type: text
+      label: Rendered Markup
+      description: The rendered html markup for the items if using a view or something else that will already provide the templated output.
+      preview: 
   libraries:
     - filmstrip_library:
         css:
