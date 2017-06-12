@@ -2,15 +2,15 @@
 #
 film_card:
   label: Film card
-  description: A single card inside a filmstrip
+  description: A single card inside a filmstrip.
   fields:
     image:
-      type: image
+      type: text
       label: Image
       description: Card image.
       preview:
         theme: image
-        uri: http://lorempixel.com/400/200/sports/6
+        uri: https://lorempixel.com/400/200/sports/6
         alt: this is a sample image
     title:
       type: text
@@ -18,10 +18,10 @@ film_card:
       description: Card title.
       preview: Card title
     link:
-      type: url
-      label: Link
-      description: URI that points somewhere
-      preview: http://stanford.edu
+      type: text
+      label: Link (optional)
+      description: URI that points somewhere.
+      preview: https://stanford.edu/
   libraries:
     - film_card_library:
         css:

@@ -9,7 +9,7 @@
 {# Template HTML #}
 <div class="filmstrip">
   <div class="filmstrip__top_border"></div>
-  <h6 class="filmstrip__title">{{ title }}</h6>
+  <h6 class="filmstrip__title white-text">{{ title }}</h6>
   <div class="filmstrip__cards">
     {# Break up the individual items in to the appropriate template var. #}
     {% for item in items %}
@@ -22,5 +22,7 @@
       {# Pass vars through to include template. #}
       {% include '@stanford_components/molecules/film-card/film-card.html.twig' with vars %}
     {% endfor %}
+    {# When Drupal Provides the film cards use this region. #}
+    {{ content }}
   </div>
 </div>
