@@ -4,17 +4,15 @@
  * Postcard pattern.
  */
 #}
-
 <div class="postcard has-text-offset"> {# has-image-right, has-text-offset, has-text-inset #}
-  <div class="postcard__image" style="background-image:url('{{ image }}')"></div>
-
+  <div class="postcard__image" style="background-image:url('{{ image|render|striptags|trim }}')"></div>
   <div class="postcard__content">
     <div class="postcard__content-inner">
       <div class="postcard__content-text">
-        <h3 class="postcard__title drop-cap-title"><span class="drop-cap-title__name">{{ title }}</span> <span class="drop-cap-title__drop-cap">{{ title|slice(0, 1) }}</span></h3>
+        <h3 class="postcard__title drop-cap-title"><span class="drop-cap-title__name">{{ title }}</span> <span class="drop-cap-title__drop-cap" aria-hidden="true">{{ title|render|striptags|trim|slice(0, 1) }}</span></h3>
         {{ text }}
         {% if linkurl is not empty %}
-        <a class="postcard__more" href="{{ linkurl }}"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a></div>
+        <a class="postcard__more" href="{{ linkurl|render|striptags|trim }}"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a></div>
         {% endif %}
     </div>
   </div>
