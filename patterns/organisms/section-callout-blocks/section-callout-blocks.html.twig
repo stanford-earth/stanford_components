@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Callout blocks pattern.
+ */
+#}
+{{ attach_library('ui_patterns/section_header.section_header_library') }}
+{{ attach_library('ui_patterns/callout_block.callout_block_library') }}
+{{ attach_library('ui_patterns/callout_blocks.callout_blocks_library') }}
+<div class="section-callout-blocks">
+  {%  set header_vars = {
+    'superhead': title,
+    'is-centered': false,
+    'dash_under': dash_under
+  } %}
+  {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+
+  <div class="callout-blocks">
+    {# Break up the individual items in to the appropriate template var. #}
+    {% for item in items %}
+      {% set vars = {
+        'link': item.link,
+        'image': item.image,
+        'title': item.title,
+        'intro': item.intro,
+        'subtitle': item.subtitle
+        }
+      %}
+      {# Pass vars through to include template. #}
+      {% include '@stanford_components/molecules/callout-block/callout-block.html.twig' with vars %}
+    {% endfor %}
+  </div>
+</div>

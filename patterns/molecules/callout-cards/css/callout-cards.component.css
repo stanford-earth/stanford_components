@@ -99,59 +99,32 @@
   }
 }
 
-.film-card {
-  max-width: 220px;
-  margin-right: 18px;
-  padding: 0;
-  position: relative;
-  box-shadow: none !important;
-  border: 0;
-  overflow: hidden;
+.callout-cards::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
-.film-card.has-arrow .film-card__caption {
-  position: absolute;
-  top: 50%;
-  margin-top: auto;
-  margin-bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  bottom: auto;
+.callout-card {
+  margin-bottom: 2em;
+  width: 100%;
 }
 
-.film-card__thumbnail {
-  position: relative;
+@media only screen and (min-width: 768px) {
+  .callout-card {
+    width: calc(50% - 30px);
+    float: left;
+    margin-left: 20px;
+    min-height: 200px;
+  }
 }
 
-.film-card__thumbnail .film-card__caption {
-  position: absolute;
-  max-width: 180px;
-  margin: 55px 4px 55px 22px;
-  color: #fff;
+@media only screen and (min-width: 992px) {
+  .callout-card {
+    width: calc(25% - 25px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 
-.film-card__thumbnail img {
-  width: 220px;
-}
-
-.film-card__caption {
-  position: absolute;
-  padding: 0 22px;
-  color: #fff;
-  bottom: 22px;
-}
-
-.film-card__arrow {
-  width: 25px;
-  position: absolute;
-  right: 22px;
-  bottom: 12px;
-  color: #fff;
-}
-
-.film-card__arrow svg {
-  vertical-align: middle;
-}
-
-/*# sourceMappingURL=film-card.component.css.map */
+/*# sourceMappingURL=callout-cards.component.css.map */

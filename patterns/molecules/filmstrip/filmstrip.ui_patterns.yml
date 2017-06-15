@@ -21,6 +21,7 @@ filmstrip:
             uri: https://lorempixel.com/220/145/sports/1
             alt: this is a sample image
           title: First Item
+          has_arrow: true
         -
           link: https://www.stanford.edu
           image:
@@ -28,6 +29,7 @@ filmstrip:
             uri: https://lorempixel.com/220/145/sports/5
             alt: this is a sample image
           title: Second Item
+          has_arrow: true
         -
           link: https://www.stanford.edu
           image:
@@ -35,6 +37,23 @@ filmstrip:
             uri: https://lorempixel.com/220/145/sports/2
             alt: this is a sample image
           title: Third Item
+          has_arrow: true
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: https://lorempixel.com/220/145/sports/5
+            alt: this is a sample image
+          title: Second Item
+          has_arrow: true
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: https://lorempixel.com/220/145/sports/2
+            alt: this is a sample image
+          title: Third Item
+          has_arrow: true
     content:
       type: text
       label: Rendered Markup (optional)
@@ -45,6 +64,4 @@ filmstrip:
         css:
           component:
             css/filmstrip.component.css: {}
-          theme:
-            css/filmstrip.theme.css: {}
   use: '@stanford_components/molecules/filmstrip/filmstrip.html.twig'

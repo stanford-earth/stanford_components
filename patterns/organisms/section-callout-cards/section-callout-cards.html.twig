@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Callout cards pattern.
+ */
+#}
+{{ attach_library('ui_patterns/section_header.section_header_library') }}
+{{ attach_library('ui_patterns/callout_card.callout_card_library') }}
+{{ attach_library('ui_patterns/callout_cards.callout_cards_library') }}
+<div class="section-callout-cards">
+  <div class="callout-cards__header">
+    {%  set header_vars = {
+      'superhead': superhead,
+      'subhead': subhead,
+      'is-centered': is_centered,
+      'dash_under': dash_under
+    } %}
+    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+  </div>
+
+  <div class="callout-cards__container">
+    <div class="callout-cards">
+      {# Break up the individual items in to the appropriate template var. #}
+      {% for item in items %}
+        {% set vars = {
+          'link': item.link,
+          'image': item.image,
+          'title': item.title
+          }
+        %}
+        {# Pass vars through to include template. #}
+        {% include '@stanford_components/molecules/callout-card/callout-card.html.twig' with vars %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

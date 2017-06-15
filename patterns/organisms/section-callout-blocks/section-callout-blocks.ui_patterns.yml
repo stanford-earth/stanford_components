@@ -1,0 +1,59 @@
+# Callout Blocks Pattern
+#
+section_callout_blocks:
+  label: Section Callout Blocks
+  description: A horizontal list callout blocks with icons and styled text
+  fields:
+    title:
+      type: text
+      label: Title
+      description: Title for the content block.
+      preview: What Makes Stanford Earth Different
+    is_centered:
+      type: text
+      label: Center
+      description: Flag to determine whether h2 should be centered.  Treat as boolean (true/false).
+      preview: true
+    dash_under:
+      type: text
+      label: Dash Under Emphasis
+      description: Emphasis dash under h2 or to the left?  Treat as boolean (true/false)
+      preview: true
+    items:
+      type: array
+      label: A list of simple image cards
+      description: This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element.
+      preview:
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
+            alt: this is a sample image
+          title: Field Learning
+          intro: We Do
+          subtitle: on 7 continents
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
+            alt: this is a sample image
+          title: Sustainability
+          intro: We Teach
+          subtitle: on our farm
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
+            alt: this is a sample image
+          title: Data Science
+          intro: We Use
+          subtitle: to understand Earth
+  libraries:
+    - section_callout_blocks_library:
+        css:
+          component:
+            css/section-callout-blocks.component.css: {}
+  use: '@stanford_components/organisms/section-callout-blocks/section-callout-blocks.html.twig'

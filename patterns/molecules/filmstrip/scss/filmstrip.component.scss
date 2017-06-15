@@ -1,3 +1,10 @@
+@charset 'UTF-8';
+
+@import 'decanter/core/utilities/decanter-utilities';
+
+// Grab our mixins.
+@import 'patterns/utilities/utilities';
+
 // When many film-cards are displayed in a single filmstrip, they should be
 // be aligned horizontally.
 .filmstrip {
@@ -8,16 +15,48 @@
     margin: 0 auto 20px;
     text-align: center;
 
-    @media (min-width: 768px){
+    @include grid-media($media-md) {
       margin: 0 18px 20px 0;
       text-align: left;
     }
   }
 
   .film-card {
-    @media (min-width: 768px) {
+    @include grid-media($media-md) {
       float: left;
       width: 220px;
+    }
+  }
+
+  // Container with flexible film cards
+  &.is-flexible {
+    $callout-filmstrip-grid: (
+      columns: 12,
+      gutter: 12px,
+    );
+
+    @include grid-container;
+
+    .film-card {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 270px;
+
+      @include grid-media($media-md) {
+        @include grid-column(6, $callout-filmstrip-grid);
+        max-width: none;
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(3, $callout-filmstrip-grid);
+      }
+    }
+
+    .film-card__thumbnail {
+      img {
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

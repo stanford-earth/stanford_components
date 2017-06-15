@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.35);
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -28,7 +28,7 @@
   left: 0;
   right: 0;
   background-image: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, 0.3));
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -54,16 +54,64 @@
   height: 100%;
 }
 
-.film-card {
-  margin-top: 0;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.film-card__caption {
-  text-transform: uppercase;
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.film-card__arrow svg use {
-  fill: #fff;
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/*# sourceMappingURL=film-card.theme.css.map */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.section-callout-filmstrip {
+  padding-bottom: 4.7777777778em;
+}
+
+.section-callout-filmstrip .section-header {
+  padding-bottom: 3.7222222222em;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-callout-filmstrip .section-header {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/*# sourceMappingURL=section-callout-filmstrip.component.css.map */

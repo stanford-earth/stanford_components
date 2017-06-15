@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.35);
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -28,7 +28,7 @@
   left: 0;
   right: 0;
   background-image: linear-gradient(to bottom, transparent 55%, rgba(0, 0, 0, 0.3));
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -54,16 +54,54 @@
   height: 100%;
 }
 
-.film-card {
-  margin-top: 0;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.film-card__caption {
-  text-transform: uppercase;
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.film-card__arrow svg use {
-  fill: #fff;
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/*# sourceMappingURL=film-card.theme.css.map */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.callout-block__icon img {
+  height: 50px;
+  width: 50px;
+}
+
+/*# sourceMappingURL=callout-block.component.css.map */

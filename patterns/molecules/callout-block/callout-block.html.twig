@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Callout blocks pattern.
+ */
+#}
+<div class="callout-block">
+  <div class="callout-block__title">
+    <span class="callout-block__intro">{{ intro }}</span>
+    <h3 class="callout-block__name"><a href="{{ link|render|striptags|trim }}">{{ title }}</a></h3>
+    <span class="callout-block__subhead">{{ subtitle }}</span>
+  </div>
+  <a class="callout-block__action" href="{{ link|render|striptags|trim }}"><svg class="i-svg i-svg--arrow-right"> <use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg></a>
+
+  <div class="callout-block__icon">
+    {{ image }}
+  </div>
+</div>

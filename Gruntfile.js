@@ -95,9 +95,16 @@ module.exports = function(grunt) {
           'patterns/molecules/secondary-sidebar-nav/css/secondary-sidebar-nav.component.css': 'patterns/molecules/secondary-sidebar-nav/scss/secondary-sidebar-nav.component.scss',
           'patterns/molecules/secondary-sidebar-nav/css/secondary-sidebar-nav.theme.css':     'patterns/molecules/secondary-sidebar-nav/scss/secondary-sidebar-nav.theme.scss',
           'patterns/molecules/film-card/css/film-card.component.css':                         'patterns/molecules/film-card/scss/film-card.component.scss',
-          'patterns/molecules/film-card/css/film-card.theme.css':                             'patterns/molecules/film-card/scss/film-card.theme.scss',
           'patterns/molecules/filmstrip/css/filmstrip.component.css':                         'patterns/molecules/filmstrip/scss/filmstrip.component.scss',
-          'patterns/molecules/filmstrip/css/filmstrip.theme.css':                             'patterns/molecules/filmstrip/scss/filmstrip.theme.scss'
+          'patterns/molecules/callout-block/css/callout-block.component.css':                 'patterns/molecules/callout-block/scss/callout-block.component.scss',
+          'patterns/molecules/callout-card/css/callout-card.component.css':                   'patterns/molecules/callout-card/scss/callout-card.component.scss',
+          'patterns/molecules/callout-blocks/css/callout-blocks.component.css':               'patterns/molecules/callout-blocks/scss/callout-blocks.component.scss',
+          'patterns/molecules/callout-cards/css/callout-cards.component.css':                 'patterns/molecules/callout-cards/scss/callout-cards.component.scss',
+          'patterns/molecules/section-header/css/section-header.component.css':               'patterns/molecules/section-header/scss/section-header.component.scss',
+          // Organisms.
+          'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css': 'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
+          'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':         'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
+          'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':       'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss'
         }
       }
     },

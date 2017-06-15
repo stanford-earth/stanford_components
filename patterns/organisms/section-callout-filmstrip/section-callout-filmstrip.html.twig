@@ -1,0 +1,36 @@
+{#
+/**
+ * @file
+ * Filmstrip pattern.
+ */
+#}
+{# Attach the film card andf filmstrip css and js #}
+{{ attach_library('ui_patterns/section_header.section_header_library') }}
+{{ attach_library('ui_patterns/film_card.film_card_library') }}
+{{ attach_library('ui_patterns/filmstrip.filmstrip_library') }}
+{# Template HTML #}
+<div class="section-callout-filmstrip">
+  {%  set header_vars = {
+    'superhead': superhead,
+    'subhead': subhead,
+    'is-centered': false,
+    'dash_under': dash_under
+  } %}
+  {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+
+  <div class="filmstrip is-flexible">
+    <div class="filmstrip__cards">
+      {# Break up the individual items in to the appropriate template var. #}
+      {% for item in items %}
+        {% set vars = {
+          'link': item.link,
+          'image': item.image,
+          'title': item.title
+          }
+        %}
+        {# Pass vars through to include template. #}
+        {% include '@stanford_components/molecules/film-card/film-card.html.twig' with vars %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -10,7 +10,7 @@ film_card:
       description: Card image.
       preview:
         theme: image
-        uri: https://lorempixel.com/400/200/sports/6
+        uri: https://lorempixel.com/220/145/sports/6
         alt: this is a sample image
     title:
       type: text
@@ -22,11 +22,14 @@ film_card:
       label: Link (optional)
       description: URI that points somewhere.
       preview: https://stanford.edu/
+    has_arrow:
+      type: text
+      label: Arrow
+      description: Render arrow on card.  Treat as boolean (true/false).
+      preview: true
   libraries:
     - film_card_library:
         css:
           component:
             css/film-card.component.css: {}
-          theme:
-            css/film-card.theme.css: {}
   use: '@stanford_components/molecules/film-card/film-card.html.twig'

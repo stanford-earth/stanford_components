@@ -99,59 +99,64 @@
   }
 }
 
-.film-card {
-  max-width: 220px;
-  margin-right: 18px;
-  padding: 0;
-  position: relative;
-  box-shadow: none !important;
-  border: 0;
-  overflow: hidden;
+.section-callout-cards {
+  padding-bottom: 3.2222222222em;
 }
 
-.film-card.has-arrow .film-card__caption {
-  position: absolute;
-  top: 50%;
-  margin-top: auto;
-  margin-bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  bottom: auto;
+.section-callout-cards::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
-.film-card__thumbnail {
-  position: relative;
+.section-callout-cards .callout-cards__header {
+  width: 100%;
 }
 
-.film-card__thumbnail .film-card__caption {
-  position: absolute;
-  max-width: 180px;
-  margin: 55px 4px 55px 22px;
-  color: #fff;
+@media only screen and (min-width: 768px) {
+  .section-callout-cards .callout-cards__header {
+    width: calc(100% - 40px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 
-.film-card__thumbnail img {
-  width: 220px;
+@media only screen and (min-width: 992px) {
+  .section-callout-cards .callout-cards__header {
+    width: calc(25% - 25px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 
-.film-card__caption {
-  position: absolute;
-  padding: 0 22px;
-  color: #fff;
-  bottom: 22px;
+@media only screen and (min-width: 1200px) {
+  .section-callout-cards .callout-cards__header {
+    margin-left: calc(8.3333333333% - 21.6666666667px + 40px);
+  }
 }
 
-.film-card__arrow {
-  width: 25px;
-  position: absolute;
-  right: 22px;
-  bottom: 12px;
-  color: #fff;
+@media only screen and (min-width: 992px) {
+  .section-callout-cards .callout-cards__container {
+    width: calc(75% - 35px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 
-.film-card__arrow svg {
-  vertical-align: middle;
+@media only screen and (min-width: 1200px) {
+  .section-callout-cards .callout-cards__container {
+    width: calc(66.6666666667% - 33.3333333333px);
+    float: left;
+    margin-left: 20px;
+  }
 }
 
-/*# sourceMappingURL=film-card.component.css.map */
+@media only screen and (min-width: 992px) {
+  .section-callout-cards .callout-cards__container .callout-cards {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+}
+
+/*# sourceMappingURL=section-callout-cards.component.css.map */

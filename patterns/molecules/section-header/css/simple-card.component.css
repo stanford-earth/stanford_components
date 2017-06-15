@@ -1,0 +1,24 @@
+.simple-card {
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 1.25em;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+@media only screen {
+  .simple-card {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.115), 0px 3px 3px rgba(0, 0, 0, 0.115);
+  }
+}
+
+.simple-card > :last-child {
+  margin-bottom: 0;
+}
+
+.simple-card .simple-card__thumbnail img {
+  max-width: 100%;
+  width: 100%;
+}
+
+/*# sourceMappingURL=simple-card.component.css.map */

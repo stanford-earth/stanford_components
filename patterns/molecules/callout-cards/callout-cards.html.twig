@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Callout cards pattern.
+ */
+#}
+{{ attach_library('ui_patterns/callout_card.callout_card_library') }}
+<div class="callout-cards">
+  {# Break up the individual items in to the appropriate template var. #}
+  {% for item in items %}
+    {% set vars = {
+      'link': item.link,
+      'image': item.image,
+      'title': item.title
+      }
+    %}
+    {# Pass vars through to include template. #}
+    {% include '@stanford_components/molecules/callout-card/callout-card.html.twig' with vars %}
+  {% endfor %}
+</div>

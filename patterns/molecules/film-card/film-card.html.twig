@@ -4,7 +4,8 @@
  * Card pattern.
  */
 #}
-<div class="film-card">
+
+<div class="film-card{% if has_arrow %} has-arrow{% endif %}">
   {% if link is not empty %}
   <a class="film-card__link" href="{{ link|render|striptags|trim }}">
   {% endif %}
@@ -14,20 +15,12 @@
     <div class="film-card__caption">
       <h6>{{ title|render|striptags|trim }}</h6>
     </div>
-    {% if link is not empty %}
-    <div class="film-card__arrow">
-        <svg version="1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-             viewBox="0 0 24 13" style="enable-background:new 0 0 24 13;" xml:space="preserve">
-          <style type="text/css">
-              .st0{fill:#FFFFFF ;}
-          </style>
-          <title>nav / arrow copy 6</title>
-          <desc>Created with Sketch.</desc>
-          <path class="st0" d="M18,12c-0,0-0-0-0-0c-0-0-0-1,0-1L22,7L1,7c-0,0-0-0-0-0S0,7,0,6
-c0-0,0-1,1-1L22,6l-4-4c-0-0-0-1,0-1c0-0,1-0,1,0l5,5C24,6,24,6,24,7
-s-0,0-0,0l-5,5C18,12,18,12,18,12z"/>
-      </svg>
-    </div>
+    {% if has_arrow %}
+      <div class="film-card__arrow">
+        <svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+      </div>
+    {% endif %}
+  {% if link is not empty %}
   </a>
   {% endif %}
 </div>

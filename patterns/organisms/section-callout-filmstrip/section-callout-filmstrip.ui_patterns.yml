@@ -1,0 +1,65 @@
+# Callout Filmstrip Pattern
+#
+section_callout_filmstrip:
+  label: Section Callout Filmstrip
+  description: A horizontal list of small images with section header
+  fields:
+    superhead:
+      type: text
+      label: Superhead
+      description: Title for callout
+      preview: Where Our Programs Can Lead You
+    subhead:
+      type: text
+      label: Subhead
+      description: Subhead for callout
+      preview: <p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy. Check some career Examples </p>
+    is_centered:
+      type: text
+      label: Center
+      description: Flag to determine whether h2 should be centered.  Treat as boolean (true/false).
+      preview: true
+    dash_under:
+      type: text
+      label: Dash Under Emphasis
+      description: Emphasis dash under h2 or to the left?  Treat as boolean (true/false)
+      preview: true
+    items:
+      type: array
+      label: A list of simple image cards
+      description: This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element.
+      preview:
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: http://lorempixel.com/270/183/sports/1
+            alt: this is a sample image
+          title: Green Venture Capitalist<br />MBA/MS Environmental<br />Resources '08
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: http://lorempixel.com/270/183/sports/2
+            alt: this is a sample image
+          title: Product Designer<br />Earth Systems BS '06,<br /> MS '10
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: http://lorempixel.com/270/183/sports/3
+            alt: this is a sample image
+          title: Energy Engineer<br />Energy Resources Engineering<br />MS '16
+        -
+          link: https://www.stanford.edu
+          image:
+            theme: image
+            uri: http://lorempixel.com/270/183/sports/6
+            alt: this is a sample image
+          title: Environmental attorney<br />Earth Systems BS, 05<br />MS '09
+  libraries:
+    - section_callout_filmstrip_library:
+        css:
+          component:
+            css/section-callout-filmstrip.component.css: {}
+  use: '@stanford_components/organisms/section-callout-filmstrip/section-callout-filmstrip.html.twig'

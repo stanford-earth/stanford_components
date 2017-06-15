@@ -1,0 +1,19 @@
+@charset 'UTF-8';
+
+@import 'decanter/core/utilities/decanter-utilities';
+
+// Grab our mixins.
+@import 'patterns/utilities/utilities';
+
+.section-callout-filmstrip {
+  padding-bottom: em(86px);
+
+  .section-header {
+    padding-bottom: em(67px);
+
+    @include grid-media($media-md) {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+  }
+}

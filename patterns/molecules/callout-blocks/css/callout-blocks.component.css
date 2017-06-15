@@ -99,59 +99,33 @@
   }
 }
 
-.film-card {
-  max-width: 220px;
-  margin-right: 18px;
-  padding: 0;
-  position: relative;
-  box-shadow: none !important;
-  border: 0;
-  overflow: hidden;
+.callout-blocks::after {
+  clear: both;
+  content: "";
+  display: block;
 }
 
-.film-card.has-arrow .film-card__caption {
-  position: absolute;
-  top: 50%;
-  margin-top: auto;
-  margin-bottom: auto;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  bottom: auto;
+@media only screen and (min-width: 992px) {
+  .callout-blocks {
+    max-width: 830px;
+    margin: 0 auto;
+  }
 }
 
-.film-card__thumbnail {
-  position: relative;
+.callout-block {
+  margin-bottom: 2em;
+  max-width: 250px;
+  margin: 0 auto 3em;
 }
 
-.film-card__thumbnail .film-card__caption {
-  position: absolute;
-  max-width: 180px;
-  margin: 55px 4px 55px 22px;
-  color: #fff;
+@media only screen and (min-width: 768px) {
+  .callout-block {
+    width: calc(33.3333333333% - 26.6666666667px);
+    float: left;
+    margin-left: 20px;
+    max-width: none;
+    margin-left: 20px;
+  }
 }
 
-.film-card__thumbnail img {
-  width: 220px;
-}
-
-.film-card__caption {
-  position: absolute;
-  padding: 0 22px;
-  color: #fff;
-  bottom: 22px;
-}
-
-.film-card__arrow {
-  width: 25px;
-  position: absolute;
-  right: 22px;
-  bottom: 12px;
-  color: #fff;
-}
-
-.film-card__arrow svg {
-  vertical-align: middle;
-}
-
-/*# sourceMappingURL=film-card.component.css.map */
+/*# sourceMappingURL=callout-blocks.component.css.map */

@@ -2,8 +2,9 @@
 /// A template for a hero banner
 ////
 
-// Grab our mixins.
 @import 'decanter/core/utilities/decanter-utilities';
+
+// Grab our mixins.
 @import 'patterns/utilities/utilities';
 
 $hero-max-width: 1380px;
