@@ -12,7 +12,7 @@ section_header:
     subhead:
       type: text
       label: Subhead
-      description: Card text.  Renders full html (eg. <p> & <br />)
+      description: "Card text.  Renders full html (eg. <p> & <br />)"
       preview: <p>Today more than 7 billion people inhabit  Earth and a billion lack adequate energy.</p>
     is_centered:
       type: text

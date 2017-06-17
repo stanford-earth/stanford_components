@@ -35,28 +35,28 @@ section_callout_filmstrip:
             theme: image
             uri: http://lorempixel.com/270/183/sports/1
             alt: this is a sample image
-          title: Green Venture Capitalist<br />MBA/MS Environmental<br />Resources '08
+          title: "Green Venture Capitalist<br />MBA/MS Environmental<br />Resources '08"
         -
           link: https://www.stanford.edu
           image:
             theme: image
             uri: http://lorempixel.com/270/183/sports/2
             alt: this is a sample image
-          title: Product Designer<br />Earth Systems BS '06,<br /> MS '10
+          title: "Product Designer<br />Earth Systems BS '06,<br /> MS '10"
         -
           link: https://www.stanford.edu
           image:
             theme: image
             uri: http://lorempixel.com/270/183/sports/3
             alt: this is a sample image
-          title: Energy Engineer<br />Energy Resources Engineering<br />MS '16
+          title: "Energy Engineer<br />Energy Resources Engineering<br />MS '16"
         -
           link: https://www.stanford.edu
           image:
             theme: image
             uri: http://lorempixel.com/270/183/sports/6
             alt: this is a sample image
-          title: Environmental attorney<br />Earth Systems BS, 05<br />MS '09
+          title: "Environmental attorney<br />Earth Systems BS, 05<br />MS '09"
   libraries:
     - section_callout_filmstrip_library:
         css:
