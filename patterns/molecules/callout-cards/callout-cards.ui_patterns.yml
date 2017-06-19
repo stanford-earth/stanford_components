@@ -6,37 +6,37 @@ callout_cards:
   fields:
     items:
       type: array
-      label: A list of simple image cards
+      label: A list of simple callout cards (optional)
       description: This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element.
       preview:
         -
-          link: https://www.stanford.edu
+          link: "https://www.stanford.edu"
           image:
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Geological  Sciences
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+            alt: "this is a sample image"
+          title: "Geological  Sciences"
         -
-          link: https://www.stanford.edu
+          link: "https://www.stanford.edu"
           image:
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Energy Resources Engineering
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+            alt: "this is a sample image"
+          title: "Energy Resources Engineering"
         -
-          link: https://www.stanford.edu
+          link: "https://www.stanford.edu"
           image:
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+            alt: "this is a sample image"
           title: Geophysics
         -
-          link: https://www.stanford.edu
+          link: "https://www.stanford.edu"
           image:
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Earth Systems  Program
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+            alt: "this is a sample image"
+          title: "Earth Systems  Program"
   libraries:
     - callout_cards_library:
         css:

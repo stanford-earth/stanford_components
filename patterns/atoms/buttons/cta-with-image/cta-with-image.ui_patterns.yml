@@ -7,12 +7,12 @@ cta_with_image:
       type: text
       label: Image
       description: The image tag
-      preview: <img src="http://lorempixel.com/274/100/sports/5" alt="motorcycle" />
+      preview: '<img src="http://lorempixel.com/274/100/sports/5" alt="motorcycle" />'
     button:
       type: text
       label: Button
       description: The CTA Button
-      preview: <a class="button__simple-cta" href="https://stanford.edu/">Example CTA</a>
+      preview: '<a class="button__simple-cta" href="https://stanford.edu/">Example CTA</a>'
   libraries:
     - cta_with_image_library:
         css:

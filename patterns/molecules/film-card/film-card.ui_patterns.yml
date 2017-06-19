@@ -11,7 +11,7 @@ film_card:
       preview:
         theme: image
         uri: https://lorempixel.com/220/145/sports/6
-        alt: this is a sample image
+        alt: "this is a sample image"
     title:
       type: text
       label: Title
@@ -20,12 +20,12 @@ film_card:
     link:
       type: text
       label: Link (optional)
-      description: URI that points somewhere.
+      description: "URI that points somewhere."
       preview: https://stanford.edu/
     has_arrow:
       type: text
       label: Arrow
-      description: Render arrow on card.  Treat as boolean (true/false).
+      description: "Render arrow on card.  Treat as boolean (true/false)."
       preview: true
   libraries:
     - film_card_library:

@@ -16,11 +16,11 @@ callout_card:
       preview:
         theme: image
         uri: https://upload.wikimedia.org/wikipedia/commons/4/4b/Cappadocia_024_nevit.svg
-        alt: this is a sample image
+        alt: "this is a sample image"
     link:
       type: url
       label: Link
-      description: URI that points somewhere
+      description: "URI that points somewhere"
       preview: https://stanford.edu
   libraries:
     - callout_card_library:
