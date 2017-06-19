@@ -1,5 +1,6 @@
 # Card Pattern
 simple_card:
+  label: "A simple card layout"
   description: "A simple card layout"
   fields:
     image:
@@ -8,7 +9,7 @@ simple_card:
       preview:
         alt: "this is a sample image"
         theme: image
-        uri: "https://lorempixel.com/400/200/sports/6"
+        uri: "https://lorempixel.com/400/200/nature/6"
       type: image
     text:
       description: "Card text."
@@ -20,7 +21,6 @@ simple_card:
       label: Title
       preview: "Card title"
       type: text
-  label: "A simple card layout"
   libraries:
     -
       simple_card_library:

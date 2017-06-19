@@ -1,6 +1,7 @@
 # Postcard Pattern
 #
 postcard:
+  label: Postcard
   description: "A postcard component."
   fields:
     image:
@@ -23,7 +24,6 @@ postcard:
       label: Title
       preview: "Field Trip"
       type: text
-  label: Postcard
   libraries:
     -
       postcard_library:

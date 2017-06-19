@@ -4,8 +4,8 @@
  * Section header.
  */
 #}
-<header class="section-header {% if is_centered %}is-centered{% endif %}">
-  <h2 class="drop-cap-title {% if dash_under %}has-dash-under--emphasis{% else %}has-dash-left--emphasis{% endif %}">
+<header class="section-header{% if is_centered %} is-centered{% endif %}">
+  <h2 class="drop-cap-title{% if dash_under %} has-dash--under{% else %} has-dash--left{% endif %}{% if is_featured %} has-dash--emphasis{% endif %}">
     <span class="drop-cap-title__name">{{ superhead }}</span>
     <span class="drop-cap-title__drop-cap">
       {{ superhead|slice(0, 1) }}

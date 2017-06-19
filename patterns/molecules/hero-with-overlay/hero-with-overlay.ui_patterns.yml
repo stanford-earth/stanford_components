@@ -1,6 +1,7 @@
 # Hero With Overlay
 #
 hero_with_overlay:
+  label: "Hero with overlay"
   description: "A hero component with overlay text"
   fields:
     image:
@@ -9,7 +10,7 @@ hero_with_overlay:
       preview:
         alt: "this is a sample image"
         theme: image
-        uri: "http://lorempixel.com/1400/800/sports/6"
+        uri: "http://lorempixel.com/1400/800/nature/6"
       type: image
     subhead:
       description: "Secondary heading to the super head."
@@ -21,7 +22,6 @@ hero_with_overlay:
       label: "Super Head"
       preview: "<h2>Overlay title</h2>"
       type: text
-  label: "Hero with overlay"
   libraries:
     -
       hero_with_overlay_library:

@@ -1,6 +1,7 @@
 # Callout Blocks Pattern
 #
 callout_block:
+  label: "Callout block"
   description: "A single of callout block"
   fields:
     image:
@@ -31,7 +32,6 @@ callout_block:
       label: Title
       preview: "Field Learning"
       type: text
-  label: "Callout block"
   libraries:
     -
       callout_block_library:

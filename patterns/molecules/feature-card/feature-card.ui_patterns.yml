@@ -1,0 +1,45 @@
+# Callout Blocks Pattern
+#
+feature_card:
+  label: "Feature Card"
+  description: "A single of feature card"
+  fields:
+    description:
+      description: "Card description."
+      label: Description
+      preview: "Mapping the seawater threat to California Central Coast aquifers"
+      type: text
+    has_arrow:
+      description: "Render arrow on card.  Treat as boolean (true/false)."
+      label: Arrow
+      preview: true
+      type: text
+    image:
+      description: "Card image."
+      label: Image
+      preview:
+        theme: image
+        uri: "https://lorempixel.com/270/160/nature/5"
+      type: image
+    link:
+      description: "URI that points somewhere"
+      label: Link
+      preview: "https://stanford.edu"
+      type: url
+    more:
+      description: "More link."
+      label: More
+      preview: "Explore Research News"
+      type: text
+    tag:
+      description: "Card intro."
+      label: Tag
+      preview: "Research News"
+      type: text
+  libraries:
+    -
+      feature_card_library:
+        css:
+          component:
+            css/feature-card.component.css: {}
+  use: "@stanford_components/molecules/feature-card/feature-card.html.twig"

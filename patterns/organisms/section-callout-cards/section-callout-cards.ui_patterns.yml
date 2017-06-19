@@ -1,6 +1,7 @@
 # Callout Cards Pattern
 #
 section_callout_cards:
+  label: "Section Callout Cards"
   description: "A horizontal list callout cards with icons"
   fields:
     dash_under:
@@ -13,6 +14,11 @@ section_callout_cards:
       label: Center
       preview: false
       type: text
+    is_featured:
+      type: text
+      label: Dash with Emphasis
+      description: Emphasis has emphasis or default brand color?  Treat as boolean (true/false)
+      preview: true
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
@@ -56,7 +62,6 @@ section_callout_cards:
       label: Superhead
       preview: "Major Programs"
       type: text
-  label: "Section Callout Cards"
   libraries:
     -
       section_callout_cards_library:

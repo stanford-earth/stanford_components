@@ -1,6 +1,7 @@
 # Callout Blocks Pattern
 #
 callout_blocks:
+  label: "Callout Blocks"
   description: "A horizontal list callout blocks with icons and styled text"
   fields:
     items:
@@ -35,7 +36,6 @@ callout_blocks:
           subtitle: "to understand Earth"
           title: "Data Science"
       type: array
-  label: "Callout Blocks"
   libraries:
     -
       callout_blocks_library:

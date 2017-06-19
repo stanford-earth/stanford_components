@@ -1,5 +1,6 @@
 # The Components
 simple_cta:
+  label: "Button - Simple CTA"
   description: "A Simple Call to Action Button"
   fields:
     title:
@@ -12,7 +13,6 @@ simple_cta:
       label: URL
       preview: "https://stanford.edu/"
       type: text
-  label: "Button - Simple CTA"
   libraries:
     -
       simple_cta_library:

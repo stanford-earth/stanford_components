@@ -1,6 +1,7 @@
 # Card Pattern
 #
 secondary_sidebar_nav:
+  label: "Secondary Sidebar Nav"
   description: "A secondary sidebar nav list with expanded elements."
   fields:
     content:
@@ -32,7 +33,6 @@ secondary_sidebar_nav:
       label: "A list of navigation items as defined by menu.html.twig"
       preview: "item 1"
       type: array
-  label: "Secondary Sidebar Nav"
   libraries:
     -
       secondary_sidebar_nav_library:

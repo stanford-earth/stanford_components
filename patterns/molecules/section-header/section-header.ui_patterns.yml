@@ -1,10 +1,11 @@
 # Section Header Pattern
-section_header: 
+section_header:
   description: "Section header with title and alternate description"
+  label: "Section header"
   fields:
     dash_under:
-      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
-      label: "Dash Under Emphasis"
+      label: "Dash Under Header"
+      description: "Dash under h2 or to the left?  Treat as boolean (true/false)"
       preview: true
       type: text
     is_centered:
@@ -12,17 +13,21 @@ section_header:
       label: Center
       preview: true
       type: text
+    is_featured:
+      type: text
+      label: Dash With Emphasis
+      description: Dash has emphasis or default brand color?  Treat as boolean (true/false)
+      preview: false
     subhead:
       description: "Card text.  Renders full html (eg. <p> & <br />)"
       label: Subhead
-      preview: "<p>Today more than 7 billion people inhabit\xe2\x80\xa8Earth and a billion lack adequate energy.</p>"
+      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy.</p>"
       type: text
     superhead:
       description: "Card title."
       label: Superhead
       preview: "What Makes Stanford Earth Different"
       type: text
-  label: "Section header"
   libraries:
     -
       section_header_library:

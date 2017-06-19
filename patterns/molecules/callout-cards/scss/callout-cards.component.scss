@@ -7,18 +7,19 @@
 
 .callout-cards {
   @include grid-container;
+
+  .callout-card {
+    margin-bottom: 2em;
+    width: 100%;
+
+    @include grid-media($media-md) {
+      @include grid-column(6);
+      min-height: 200px;
+    }
+
+    @include grid-media($media-lg) {
+      @include grid-column(3);
+    }
+  }
 }
 
-.callout-card {
-  margin-bottom: 2em;
-  width: 100%;
-
-  @include grid-media($media-md) {
-    @include grid-column(6);
-    min-height: 200px;
-  }
-
-  @include grid-media($media-lg) {
-    @include grid-column(3);
-  }
-}

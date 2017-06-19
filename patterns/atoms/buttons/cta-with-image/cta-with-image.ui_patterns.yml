@@ -1,5 +1,6 @@
 # The Components
 cta_with_image:
+  label: "A CTA button with an image"
   description: "A Simple Call to Action Button with an image"
   fields:
     button:
@@ -10,9 +11,8 @@ cta_with_image:
     image:
       description: "The image tag"
       label: Image
-      preview: "<img src=\"http://lorempixel.com/274/100/sports/5\" alt=\"motorcycle\" />"
+      preview: "<img src=\"http://lorempixel.com/274/100/nature/5\" alt=\"motorcycle\" />"
       type: text
-  label: "A CTA button with an image"
   libraries:
     -
       cta_with_image_library:

@@ -1,5 +1,6 @@
 # Callout Cards Pattern
 callout_card:
+  label: "Callout card"
   description: "A single callout card"
   fields:
     image:
@@ -20,7 +21,6 @@ callout_card:
       label: Title
       preview: "Card title"
       type: text
-  label: "Callout card"
   libraries:
     -
       callout_card_library:

@@ -12,16 +12,17 @@
     max-width: 830px;
     margin: 0 auto;
   }
-}
 
-.callout-block {
-  margin-bottom: 2em;
-  max-width: 250px;
-  margin: 0 auto 3em;
+  .callout-block {
+    margin-bottom: 2em;
+    max-width: 250px;
+    margin: 0 auto 3em;
 
-  @include grid-media($media-md) {
-    @include grid-column(4);
-    max-width: none;
-    margin-left: 20px;
+    @include grid-media($media-md) {
+      @include grid-column(4);
+      max-width: none;
+      margin-left: 20px;
+    }
   }
 }
+

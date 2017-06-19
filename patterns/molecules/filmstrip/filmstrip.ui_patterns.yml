@@ -1,6 +1,7 @@
 # Filmstrip Pattern
 #
 filmstrip:
+  label: Filmstrip
   description: "A horizontal list of small images with text overlays and arrow buttons."
   fields:
     content:
@@ -17,7 +18,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/sports/1"
+            uri: "https://lorempixel.com/220/145/nature/1"
           link: "https://www.stanford.edu"
           title: "First Item"
         -
@@ -25,7 +26,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/sports/5"
+            uri: "https://lorempixel.com/220/145/nature/5"
           link: "https://www.stanford.edu"
           title: "Second Item"
         -
@@ -33,7 +34,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/sports/2"
+            uri: "https://lorempixel.com/220/145/nature/2"
           link: "https://www.stanford.edu"
           title: "Third Item"
         -
@@ -41,7 +42,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/sports/5"
+            uri: "https://lorempixel.com/220/145/nature/5"
           link: "https://www.stanford.edu"
           title: "Second Item"
         -
@@ -49,7 +50,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/sports/2"
+            uri: "https://lorempixel.com/220/145/nature/2"
           link: "https://www.stanford.edu"
           title: "Third Item"
       type: collection
@@ -58,7 +59,6 @@ filmstrip:
       label: Title
       preview: "Challenges We Tackle"
       type: text
-  label: Filmstrip
   libraries:
     -
       filmstrip_library:

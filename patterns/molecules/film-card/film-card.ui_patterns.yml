@@ -1,6 +1,7 @@
 # Card Pattern
 #
 film_card:
+  label: "Film card"
   description: "A single card inside a filmstrip."
   fields:
     has_arrow:
@@ -14,7 +15,7 @@ film_card:
       preview:
         alt: "this is a sample image"
         theme: image
-        uri: "https://lorempixel.com/220/145/sports/6"
+        uri: "https://lorempixel.com/220/145/nature/6"
       type: text
     link:
       description: "URI that points somewhere."
@@ -26,7 +27,6 @@ film_card:
       label: Title
       preview: "Card title"
       type: text
-  label: "Film card"
   libraries:
     -
       film_card_library:

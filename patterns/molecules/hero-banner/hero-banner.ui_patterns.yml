@@ -1,6 +1,7 @@
 # Hero Banner
 #
 hero_banner:
+  label: "Hero banner"
   description: "A hero banner component"
   fields:
     cite:
@@ -11,7 +12,7 @@ hero_banner:
     image:
       description: "Hero image."
       label: "Image URL"
-      preview: "https://lorempixel.com/1400/800/sports/2"
+      preview: "https://lorempixel.com/1400/800/nature/2"
       type: text
     subhead:
       description: "Secondary heading to the super head."
@@ -23,7 +24,6 @@ hero_banner:
       label: "Super Head"
       preview: "Overlay title"
       type: text
-  label: "Hero banner"
   libraries:
     -
       hero-banner_library:
