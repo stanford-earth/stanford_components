@@ -1,32 +1,33 @@
-# Card Pattern
+# Hero With Overlay
 #
 hero_with_overlay:
-  label: Hero with overlay
-  description: A hero component with overlay text
+  description: "A hero component with overlay text"
   fields:
     image:
-      type: image
+      description: "Hero image."
       label: Image
-      description: Hero image.
       preview:
+        alt: "this is a sample image"
         theme: image
-        uri: http://lorempixel.com/1400/800/sports/6
-        alt: this is a sample image
-    superhead:
-      type: text
-      label: Super Head
-      description: The super large heading text.
-      preview: <h2>Overlay title</h2>
+        uri: "http://lorempixel.com/1400/800/sports/6"
+      type: image
     subhead:
+      description: "Secondary heading to the super head."
+      label: "Sub Head"
+      preview: "<h4>Cras justo odio, dapibus ac facilisis in.</h4>"
       type: text
-      label: Sub Head
-      description: Secondary heading to the super head.
-      preview: <h4>Cras justo odio, dapibus ac facilisis in.</h4>
+    superhead:
+      description: "The super large heading text."
+      label: "Super Head"
+      preview: "<h2>Overlay title</h2>"
+      type: text
+  label: "Hero with overlay"
   libraries:
-    - hero_with_overlay_library:
+    -
+      hero_with_overlay_library:
         css:
           component:
             css/hero-with-overlay.component.css: {}
           theme:
             css/hero-with-overlay.theme.css: {}
-  use: '@stanford_components/molecules/hero-with-overlay/hero-with-overlay.html.twig'
+  use: "@stanford_components/molecules/hero-with-overlay/hero-with-overlay.html.twig"

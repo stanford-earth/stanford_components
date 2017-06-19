@@ -1,43 +1,44 @@
 # Card Pattern
 #
 secondary_sidebar_nav:
-  label: Secondary Sidebar Nav
-  description: A secondary sidebar nav list with expanded elements.
+  description: "A secondary sidebar nav list with expanded elements."
   fields:
-    items:
-      type: array
-      label: A list of navigation items as defined by menu.html.twig
-      description: This template iterates over the items to produce a nested unorderd list of links.
-      preview: item 1
     content:
-      type: text
-      label: The list of navigation items.
-      description: An un-ordered list of nav items.
+      description: "An un-ordered list of nav items."
+      label: "The list of navigation items."
       preview: |
-                <ul class="secondary-sidebar-nav menu">
-                  <li class="menu-item">
-                    <a href="/node/8" data-drupal-link-system-path="node/8">Page One</a>
-                  </li>
-                  <li class="menu-item menu-item--collapsed">
-                    <a href="/node/10" data-drupal-link-system-path="node/10">Page Three</a>
-                  </li>
-                  <li class="menu-item menu-item--expanded menu-item--active-trail">
-                    <a href="/node/9" data-drupal-link-system-path="node/9">Page Two</a>
-                    <ul class="menu">
-                      <li class="menu-item">
-                        <a href="/node/24" data-drupal-link-system-path="node/24">An Example Stanford Page Type</a>
-                      </li>
-                      <li class="menu-item menu-item--active-trail">
-                        <a href="/node/25" data-drupal-link-system-path="node/25" class="is-active">Example Page Two</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+          <ul class="secondary-sidebar-nav menu">
+            <li class="menu-item">
+              <a href="/node/8" data-drupal-link-system-path="node/8">Page One</a>
+            </li>
+            <li class="menu-item menu-item--collapsed">
+              <a href="/node/10" data-drupal-link-system-path="node/10">Page Three</a>
+            </li>
+            <li class="menu-item menu-item--expanded menu-item--active-trail">
+              <a href="/node/9" data-drupal-link-system-path="node/9">Page Two</a>
+              <ul class="menu">
+                <li class="menu-item">
+                  <a href="/node/24" data-drupal-link-system-path="node/24">An Example Stanford Page Type</a>
+                </li>
+                <li class="menu-item menu-item--active-trail">
+                  <a href="/node/25" data-drupal-link-system-path="node/25" class="is-active">Example Page Two</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      type: text
+    items:
+      description: "This template iterates over the items to produce a nested unorderd list of links."
+      label: "A list of navigation items as defined by menu.html.twig"
+      preview: "item 1"
+      type: array
+  label: "Secondary Sidebar Nav"
   libraries:
-    - secondary_sidebar_nav_library:
+    -
+      secondary_sidebar_nav_library:
         css:
           component:
             css/secondary-sidebar-nav.component.css: {}
           theme:
             css/secondary-sidebar-nav.theme.css: {}
-  use: '@stanford_components/molecules/secondary-sidebar-nav/secondary-sidebar-nav.html.twig'
+  use: "@stanford_components/molecules/secondary-sidebar-nav/secondary-sidebar-nav.html.twig"

@@ -62,6 +62,16 @@ module.exports = function(grunt) {
         }]
       }
     },
+    yamllint: {
+      all: {
+        files: {
+          src: ['**/*.yml', '**/*.yaml'],
+        },
+        options: {
+          schema: 'DEFAULT_SAFE_SCHEMA'
+        }
+      }
+    },
     sass: {
       // This will compile all of our sass files
       // Additional configuration options can be found at https://github.com/sindresorhus/grunt-sass
@@ -139,7 +149,7 @@ module.exports = function(grunt) {
         options: {
           filter: "include",
           tasks: [
-            'browserSync', 'imagemin', 'sass', 'svgmin', 'watch', 'devmode'
+            'browserSync', 'imagemin', 'sass', 'svgmin', 'watch', 'devmode', 'yamllint'
           ]
         }
       }
@@ -154,6 +164,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browser-sync');
   grunt.loadNpmTasks('grunt-available-tasks');
+  grunt.loadNpmTasks('grunt-yamllint');
   grunt.loadNpmTasks('grunt-drush');
 
   // My tasks.

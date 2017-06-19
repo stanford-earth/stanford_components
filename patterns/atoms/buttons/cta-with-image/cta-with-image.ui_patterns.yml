@@ -1,23 +1,24 @@
 # The Components
 cta_with_image:
-  label: A CTA button with an image
-  description: A Simple Call to Action Button with an image
+  description: "A Simple Call to Action Button with an image"
   fields:
-    image:
-      type: text
-      label: Image
-      description: The image tag
-      preview: '<img src="http://lorempixel.com/274/100/sports/5" alt="motorcycle" />'
     button:
-      type: text
+      description: "The CTA Button"
       label: Button
-      description: The CTA Button
-      preview: '<a class="button__simple-cta" href="https://stanford.edu/">Example CTA</a>'
+      preview: "<a class=\"button__simple-cta\" href=\"https://stanford.edu/\">Example CTA</a>"
+      type: text
+    image:
+      description: "The image tag"
+      label: Image
+      preview: "<img src=\"http://lorempixel.com/274/100/sports/5\" alt=\"motorcycle\" />"
+      type: text
+  label: "A CTA button with an image"
   libraries:
-    - cta_with_image_library:
+    -
+      cta_with_image_library:
         css:
           component:
             css/cta-with-image.component.css: {}
           theme:
             css/cta-with-image.theme.css: {}
-  use: '@stanford_components/atoms/buttons/cta-with-image/cta-with-image.html.twig'
+  use: "@stanford_components/atoms/buttons/cta-with-image/cta-with-image.html.twig"

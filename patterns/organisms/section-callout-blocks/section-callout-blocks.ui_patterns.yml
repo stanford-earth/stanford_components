@@ -1,59 +1,60 @@
 # Callout Blocks Pattern
 #
 section_callout_blocks:
-  label: Section Callout Blocks
-  description: A horizontal list callout blocks with icons and styled text
+  description: "A horizontal list callout blocks with icons and styled text"
   fields:
-    title:
-      type: text
-      label: Title
-      description: Title for the content block.
-      preview: What Makes Stanford Earth Different
-    is_centered:
-      type: text
-      label: Center
-      description: Flag to determine whether h2 should be centered.  Treat as boolean (true/false).
-      preview: true
     dash_under:
-      type: text
-      label: Dash Under Emphasis
-      description: Emphasis dash under h2 or to the left?  Treat as boolean (true/false)
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under Emphasis"
       preview: true
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: true
+      type: text
     items:
-      type: array
-      label: A list of simple image cards
-      description: This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element.
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
+      label: "A list of simple image cards"
       preview:
         -
-          link: https://www.stanford.edu
           image:
+            alt: "this is a sample image"
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Field Learning
-          intro: We Do
-          subtitle: on 7 continents
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+          intro: "We Do"
+          link: "https://www.stanford.edu"
+          subtitle: "on 7 continents"
+          title: "Field Learning"
         -
-          link: https://www.stanford.edu
           image:
+            alt: "this is a sample image"
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+          intro: "We Teach"
+          link: "https://www.stanford.edu"
+          subtitle: "on our farm"
           title: Sustainability
-          intro: We Teach
-          subtitle: on our farm
         -
-          link: https://www.stanford.edu
           image:
+            alt: "this is a sample image"
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Data Science
-          intro: We Use
-          subtitle: to understand Earth
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+          intro: "We Use"
+          link: "https://www.stanford.edu"
+          subtitle: "to understand Earth"
+          title: "Data Science"
+      type: array
+    title:
+      description: "Title for the content block."
+      label: Title
+      preview: "What Makes Stanford Earth Different"
+      type: text
+  label: "Section Callout Blocks"
   libraries:
-    - section_callout_blocks_library:
+    -
+      section_callout_blocks_library:
         css:
           component:
             css/section-callout-blocks.component.css: {}
-  use: '@stanford_components/organisms/section-callout-blocks/section-callout-blocks.html.twig'
+  use: "@stanford_components/organisms/section-callout-blocks/section-callout-blocks.html.twig"

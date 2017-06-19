@@ -1,35 +1,36 @@
 # Card Pattern
 #
 film_card:
-  label: Film card
-  description: A single card inside a filmstrip.
+  description: "A single card inside a filmstrip."
   fields:
-    image:
-      type: text
-      label: Image
-      description: Card image.
-      preview:
-        theme: image
-        uri: https://lorempixel.com/220/145/sports/6
-        alt: "this is a sample image"
-    title:
-      type: text
-      label: Title
-      description: Card title.
-      preview: Card title
-    link:
-      type: text
-      label: Link (optional)
-      description: "URI that points somewhere."
-      preview: https://stanford.edu/
     has_arrow:
-      type: text
-      label: Arrow
       description: "Render arrow on card.  Treat as boolean (true/false)."
+      label: Arrow
       preview: true
+      type: text
+    image:
+      description: "Card image."
+      label: Image
+      preview:
+        alt: "this is a sample image"
+        theme: image
+        uri: "https://lorempixel.com/220/145/sports/6"
+      type: text
+    link:
+      description: "URI that points somewhere."
+      label: "Link (optional)"
+      preview: "https://stanford.edu/"
+      type: text
+    title:
+      description: "Card title."
+      label: Title
+      preview: "Card title"
+      type: text
+  label: "Film card"
   libraries:
-    - film_card_library:
+    -
+      film_card_library:
         css:
           component:
             css/film-card.component.css: {}
-  use: '@stanford_components/molecules/film-card/film-card.html.twig'
+  use: "@stanford_components/molecules/film-card/film-card.html.twig"

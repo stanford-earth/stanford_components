@@ -1,31 +1,32 @@
 # Section Header Pattern
-section_header:
-  label: Section header
-  description: Section header with title and alternate description
+section_header: 
+  description: "Section header with title and alternate description"
   fields:
-    superhead:
-      type: text
-      label: Superhead
-      description: Card title.
-      preview: What Makes Stanford Earth Different
-    subhead:
-      type: text
-      label: Subhead
-      description: "Card text.  Renders full html (eg. <p> & <br />)"
-      preview: "<p>Today more than 7 billion people inhabit  Earth and a billion lack adequate energy.</p>"
-    is_centered:
-      type: text
-      label: Center
-      description: Flag to determine whether h2 should be centered.  Treat as boolean (true/false).
-      preview: true
     dash_under:
-      type: text
-      label: Dash Under Emphasis
-      description: Emphasis dash under h2 or to the left?  Treat as boolean (true/false)
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under Emphasis"
       preview: true
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: true
+      type: text
+    subhead:
+      description: "Card text.  Renders full html (eg. <p> & <br />)"
+      label: Subhead
+      preview: "<p>Today more than 7 billion people inhabit\xe2\x80\xa8Earth and a billion lack adequate energy.</p>"
+      type: text
+    superhead:
+      description: "Card title."
+      label: Superhead
+      preview: "What Makes Stanford Earth Different"
+      type: text
+  label: "Section header"
   libraries:
-    - section_header_library:
+    -
+      section_header_library:
         css:
           component:
             css/section-header.component.css: {}
-  use: '@stanford_components/molecules/section-header/section-header.html.twig'
+  use: "@stanford_components/molecules/section-header/section-header.html.twig"

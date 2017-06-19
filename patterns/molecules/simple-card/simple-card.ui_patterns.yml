@@ -1,31 +1,32 @@
 # Card Pattern
 simple_card:
-  label: A simple card layout
-  description: A simple card layout
+  description: "A simple card layout"
   fields:
     image:
-      type: image
+      description: "Card image."
       label: Image
-      description: Card image.
       preview:
+        alt: "this is a sample image"
         theme: image
-        uri: https://lorempixel.com/400/200/sports/6
-        alt: this is a sample image
-    title:
-      type: text
-      label: Title
-      description: Card title.
-      preview: Card title
+        uri: "https://lorempixel.com/400/200/sports/6"
+      type: image
     text:
-      type: text
+      description: "Card text."
       label: Text
-      description: Card text.
       preview: "<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>"
+      type: text
+    title:
+      description: "Card title."
+      label: Title
+      preview: "Card title"
+      type: text
+  label: "A simple card layout"
   libraries:
-    - simple_card_library:
+    -
+      simple_card_library:
         css:
           component:
             css/simple-card.component.css: {}
           theme:
             css/simple-card.theme.css: {}
-  use: '@stanford_components/molecules/simple-card/simple-card.html.twig'
+  use: "@stanford_components/molecules/simple-card/simple-card.html.twig"

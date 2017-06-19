@@ -1,32 +1,33 @@
-# Card Pattern
+# Postcard Pattern
 #
 postcard:
-  label: Postcard
-  description: A postcard component.
+  description: "A postcard component."
   fields:
     image:
-      type: text
+      description: "Card image."
       label: Image
-      description: Card image.
-      preview: https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg
-    title:
+      preview: "https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg"
       type: text
-      label: Title
-      description: Card title.
-      preview: Field Trip
-    text:
-      type: text
-      label: Text
-      description: Card text.
-      preview: <p>Stanford University has been affectionately known as "The Farm" ever since it was established by founders Leland and Jane Stanford on their Palo Alto stock farm. The Stanfords' founding grant decreed that "a farm for instruction in agriculture" should forever be maintained on university lands.</p>
     linkurl:
+      description: "The link URL that gets applied to the arrow."
+      label: "URL (optional)"
+      preview: "https://www.stanford.edu"
       type: text
-      label: URL (optional)
-      description: The link URL that gets applied to the arrow.
-      preview: https://www.stanford.edu
+    text:
+      description: "Card text."
+      label: Text
+      preview: "<p>Stanford University has been affectionately known as \"The Farm\" ever since it was established by founders Leland and Jane Stanford on their Palo Alto stock farm. The Stanfords' founding grant decreed that \"a farm for instruction in agriculture\" should forever be maintained on university lands.</p>"
+      type: text
+    title:
+      description: "Card title."
+      label: Title
+      preview: "Field Trip"
+      type: text
+  label: Postcard
   libraries:
-    - postcard_library:
+    -
+      postcard_library:
         css:
           component:
             css/postcard.component.css: {}
-  use: '@stanford_components/molecules/postcard/postcard.html.twig'
+  use: "@stanford_components/molecules/postcard/postcard.html.twig"

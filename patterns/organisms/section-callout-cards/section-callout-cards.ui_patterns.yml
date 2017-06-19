@@ -1,65 +1,66 @@
 # Callout Cards Pattern
 #
 section_callout_cards:
-  label: Section Callout Cards
-  description: A horizontal list callout cards with icons
+  description: "A horizontal list callout cards with icons"
   fields:
-    superhead:
-      type: text
-      label: Superhead
-      description: Title for the content card.
-      preview: Major Programs
-    subhead:
-      type: text
-      label: Subhead
-      description: Subhead for the content card.
-      preview: <p>Today more than 7 billion people inhabit  Earth and a billion lack adequate energy.</p>
-    is_centered:
-      type: text
-      label: Center
-      description: Flag to determine whether h2 should be centered.  Treat as boolean (true/false).
-      preview: false
     dash_under:
-      type: text
-      label: Dash Under Emphasis
-      description: Emphasis dash under h2 or to the left?  Treat as boolean (true/false)
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under Emphasis"
       preview: false
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: false
+      type: text
     items:
-      type: array
-      label: A list of simple image cards
-      description: This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element.
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
+      label: "A list of simple image cards"
       preview:
         -
-          link: https://www.stanford.edu
           image:
+            alt: "this is a sample image"
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Geological  Sciences
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+          link: "https://www.stanford.edu"
+          title: "Geological\xe2\x80\xa8Sciences"
         -
-          link: https://www.stanford.edu
           image:
+            alt: "this is a sample image"
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Energy Resources Engineering
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+          link: "https://www.stanford.edu"
+          title: "Energy Resources Engineering"
         -
-          link: https://www.stanford.edu
           image:
+            alt: "this is a sample image"
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+          link: "https://www.stanford.edu"
           title: Geophysics
         -
-          link: https://www.stanford.edu
           image:
+            alt: "this is a sample image"
             theme: image
-            uri: https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg
-            alt: this is a sample image
-          title: Earth Systems  Program
+            uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+          link: "https://www.stanford.edu"
+          title: "Earth Systems\xe2\x80\xa8Program"
+      type: collection
+    subhead:
+      description: "Subhead for the content card."
+      label: Subhead
+      preview: "<p>Today more than 7 billion people inhabit\xe2\x80\xa8Earth and a billion lack adequate energy.</p>"
+      type: text
+    superhead:
+      description: "Title for the content card."
+      label: Superhead
+      preview: "Major Programs"
+      type: text
+  label: "Section Callout Cards"
   libraries:
-    - section_callout_cards_library:
+    -
+      section_callout_cards_library:
         css:
           component:
             css/section-callout-cards.component.css: {}
-  use: '@stanford_components/organisms/section-callout-cards/section-callout-cards.html.twig'
+  use: "@stanford_components/organisms/section-callout-cards/section-callout-cards.html.twig"
