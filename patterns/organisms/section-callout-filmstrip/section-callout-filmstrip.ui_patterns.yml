@@ -36,7 +36,7 @@ section_callout_filmstrip:
             theme: image
             uri: "http://lorempixel.com/270/183/nature/2"
           link: "https://www.stanford.edu"
-          title: "Product Designer<br />Earth Systems BS '06,<br />\xe2\x80\xa8MS '10"
+          title: "Product Designer<br />Earth Systems BS '06,<br /> MS '10"
         -
           image:
             alt: "this is a sample image"

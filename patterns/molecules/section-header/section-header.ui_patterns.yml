@@ -15,8 +15,8 @@ section_header:
       type: text
     is_featured:
       type: text
-      label: Dash With Emphasis
-      description: Dash has emphasis or default brand color?  Treat as boolean (true/false)
+      label: "Dash With Emphasis"
+      description: "Dash has emphasis or default brand color?  Treat as boolean (true/false)"
       preview: false
     subhead:
       description: "Card text.  Renders full html (eg. <p> & <br />)"
