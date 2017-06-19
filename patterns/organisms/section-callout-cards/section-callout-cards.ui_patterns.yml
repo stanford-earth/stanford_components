@@ -23,7 +23,7 @@ section_callout_cards:
             theme: image
             uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
           link: "https://www.stanford.edu"
-          title: "Geological\xe2\x80\xa8Sciences"
+          title: "Geological Sciences"
         -
           image:
             alt: "this is a sample image"
@@ -44,12 +44,12 @@ section_callout_cards:
             theme: image
             uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
           link: "https://www.stanford.edu"
-          title: "Earth Systems\xe2\x80\xa8Program"
+          title: "Earth Systems Program"
       type: collection
     subhead:
       description: "Subhead for the content card."
       label: Subhead
-      preview: "<p>Today more than 7 billion people inhabit\xe2\x80\xa8Earth and a billion lack adequate energy.</p>"
+      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy.</p>"
       type: text
     superhead:
       description: "Title for the content card."
