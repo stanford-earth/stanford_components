@@ -90,18 +90,13 @@ module.exports = function(grunt) {
       dist: {
         files: {
           // Atoms.
-          'patterns/atoms/buttons/simple-cta/css/simple-cta.component.css':                   'patterns/atoms/buttons/simple-cta/scss/simple-cta.component.scss',
-          'patterns/atoms/buttons/simple-cta/css/simple-cta.theme.css':                       'patterns/atoms/buttons/simple-cta/scss/simple-cta.theme.scss',
-          'patterns/atoms/buttons/cta-with-image/css/cta-with-image.component.css':           'patterns/atoms/buttons/cta-with-image/scss/cta-with-image.component.scss',
-          'patterns/atoms/buttons/cta-with-image/css/cta-with-image.theme.css':               'patterns/atoms/buttons/cta-with-image/scss/cta-with-image.theme.scss',
+          // Nothing yet.
           // Molecules.
           'patterns/molecules/simple-card/css/simple-card.component.css':                     'patterns/molecules/simple-card/scss/simple-card.component.scss',
           'patterns/molecules/simple-card/css/simple-card.theme.css':                         'patterns/molecules/simple-card/scss/simple-card.theme.scss',
           'patterns/molecules/postcard/css/postcard.component.css':                           'patterns/molecules/postcard/scss/postcard.component.scss',
           'patterns/molecules/postcard/css/postcard.theme.css':                               'patterns/molecules/postcard/scss/postcard.theme.scss',
           'patterns/molecules/hero-banner/css/hero-banner.component.css':                     'patterns/molecules/hero-banner/scss/hero-banner.component.scss',
-          'patterns/molecules/hero-with-overlay/css/hero-with-overlay.component.css':         'patterns/molecules/hero-with-overlay/scss/hero-with-overlay.component.scss',
-          'patterns/molecules/hero-with-overlay/css/hero-with-overlay.theme.css':             'patterns/molecules/hero-with-overlay/scss/hero-with-overlay.theme.scss',
           'patterns/molecules/secondary-sidebar-nav/css/secondary-sidebar-nav.component.css': 'patterns/molecules/secondary-sidebar-nav/scss/secondary-sidebar-nav.component.scss',
           'patterns/molecules/secondary-sidebar-nav/css/secondary-sidebar-nav.theme.css':     'patterns/molecules/secondary-sidebar-nav/scss/secondary-sidebar-nav.theme.scss',
           'patterns/molecules/film-card/css/film-card.component.css':                         'patterns/molecules/film-card/scss/film-card.component.scss',
