@@ -5,19 +5,19 @@
  */
 #}
 <!-- Start hero-banner component //-->
-<div class="hero-banner has-tint" style="background-image:url({{ image }})">
+<div class="hero-banner has-tint" style="background-image:url({{ image|render|striptags|trim }})">
   <div class="hero-banner__inner is-tall">
     <div class="hero-banner__container">
       <div class="hero-banner__header is-right">
 
         {% if ispagetitle == true %}
-        <h1 class="hero-banner__title h1 page-title">{{ superhead }}</h1>
+        <h1 class="hero-banner__title h1 page-title">{{ superhead|render|striptags|trim }}</h1>
         {% else %}
-        <h2 class="hero-banner__title h1">{{ superhead }}</h2>
+        <h2 class="hero-banner__title h1">{{ superhead|render|striptags|trim }}</h2>
         {% endif %}
 
         {% if subhead is not null and subhead is not empty %}
-        <p>{{ subhead }}</p>
+        <p>{{ subhead|render|striptags|trim }}</p>
         {% endif %}
 
         {% if cite is not null and cite is not empty %}
