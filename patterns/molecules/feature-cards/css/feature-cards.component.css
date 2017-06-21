@@ -18,7 +18,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .feature-cards .feature-card {
     width: calc(33.3333333333% - 40px);
     float: left;

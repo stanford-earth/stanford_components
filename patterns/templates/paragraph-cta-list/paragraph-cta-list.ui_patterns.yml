@@ -1,8 +1,8 @@
-# Filmstrip Pattern
+# Paragraph CTA List
 #
-filmstrip:
-  label: Filmstrip
-  description: "A horizontal list of small images with text overlays and arrow buttons."
+paragraph_cta_list:
+  label: Paragraph CTA List Template
+  description: "Template for the CTA List paragraph Type."
   fields:
     content:
       description: "The rendered html markup for the items if using a view or something else that will already provide the templated output."
@@ -61,8 +61,8 @@ filmstrip:
       type: text
   libraries:
     -
-      filmstrip_library:
+      paragraph_cta_list_library:
         css:
           component:
-            css/filmstrip.component.css: {}
-  use: "@stanford_components/molecules/filmstrip/filmstrip.html.twig"
+            css/paragraph-cta-list.component.css: {}
+  use: "@stanford_components/templates/paragraph-cta-list/paragraph-cta-list.html.twig"

@@ -43,7 +43,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .filmstrip.is-flexible .film-card {
     width: calc(25% - 15px);
     float: left;

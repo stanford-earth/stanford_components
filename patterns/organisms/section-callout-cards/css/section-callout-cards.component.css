@@ -14,47 +14,47 @@
 
 @media only screen and (min-width: 768px) {
   .section-callout-cards .callout-cards__header {
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-callout-cards .callout-cards__header {
-    width: calc(25% - 25px);
+    width: calc(25% - 50px);
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .section-callout-cards .callout-cards__header {
-    margin-left: calc(8.3333333333% - 21.6666666667px + 40px);
+    margin-left: calc(8.3333333333% - 65px + 120px);
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-callout-cards .callout-cards__container {
-    width: calc(75% - 35px);
+    width: calc(75% - 70px);
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .section-callout-cards .callout-cards__container {
-    width: calc(66.6666666667% - 33.3333333333px);
+    width: calc(66.6666666667% - 100px);
     float: left;
-    margin-left: 20px;
+    margin-left: 60px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-callout-cards .callout-cards__container .callout-cards {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
   }
 }
 

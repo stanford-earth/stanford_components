@@ -27,13 +27,13 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard .postcard__image {
     width: 70%;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard .postcard__content {
     position: relative;
     margin: 0 auto;
@@ -61,7 +61,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard .postcard__content-inner {
     width: 30%;
   }
@@ -88,13 +88,13 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard.has-text-offset .postcard__image {
     width: 66.666%;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard.has-text-offset .postcard__content-inner {
     padding: 30px 0;
     width: 33.333%;
@@ -106,27 +106,27 @@
   position: relative;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard.has-text-offset .postcard__content-text {
     margin-left: -30px;
     width: calc(100% + 30px);
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard.has-text-offset.has-image-right .postcard__content-text {
     margin-right: -30px;
     margin-left: 0;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard.has-text-inset .postcard__image {
     width: 60%;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .postcard.has-text-inset .postcard__content-inner {
     padding: 40px;
     width: 40%;

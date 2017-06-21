@@ -1,4 +1,6 @@
 @charset 'UTF-8';
 
-@import 'placeholders/placeholders';
-@import 'mixins/mixins';
+@import
+  'config/config',
+  'mixins/mixins',
+  'placeholders/placeholders';

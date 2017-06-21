@@ -1,0 +1,67 @@
+@media only screen and (max-width: 575px) {
+  .paragraph__cta-list {
+    padding: 1em calc(((50% /12) * 0) + 20px);
+  }
+  .paragraph__cta-list::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .paragraph__cta-list {
+    padding: 1em calc(((50% /12) * 0) + 20px);
+  }
+  .paragraph__cta-list::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .paragraph__cta-list {
+    padding: 1em calc(((50% /12) * 0) + 40px);
+  }
+  .paragraph__cta-list::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1499px) {
+  .paragraph__cta-list {
+    padding: 1em calc(((50% /12) * 0) + 40px);
+  }
+  .paragraph__cta-list::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .paragraph__cta-list {
+    padding: 1em calc(50% - (750px - 60px));
+  }
+  .paragraph__cta-list::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only print {
+  .paragraph__cta-list {
+    padding: 1em calc(((50% /12) * 0) + 0.25in);
+  }
+  .paragraph__cta-list::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=paragraph-cta-list.component.css.map */

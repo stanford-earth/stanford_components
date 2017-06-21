@@ -112,7 +112,10 @@ module.exports = function(grunt) {
           'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css': 'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
           'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':         'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
           'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':       'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
-          'patterns/organisms/section-feature-cards/css/section-feature-cards.component.css':         'patterns/organisms/section-feature-cards/scss/section-feature-cards.component.scss'
+          'patterns/organisms/section-feature-cards/css/section-feature-cards.component.css':         'patterns/organisms/section-feature-cards/scss/section-feature-cards.component.scss',
+          // Templates.
+          'patterns/templates/paragraph-cta-list/css/paragraph-cta-list.component.css':         'patterns/templates/paragraph-cta-list/scss/paragraph-cta-list.component.scss'
+
         }
       }
     },

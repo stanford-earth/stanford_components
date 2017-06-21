@@ -11,18 +11,18 @@
 
 @media only screen and (min-width: 768px) {
   .callout-cards .callout-card {
-    width: calc(50% - 30px);
+    width: calc(50% - 60px);
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
     min-height: 200px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .callout-cards .callout-card {
-    width: calc(25% - 25px);
+    width: calc(25% - 50px);
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 

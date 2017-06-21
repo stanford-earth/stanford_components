@@ -36,7 +36,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .hero-banner__inner {
     min-height: 400px;
   }
@@ -48,7 +48,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .hero-banner__inner.is-tall {
     min-height: 660px;
   }
@@ -76,7 +76,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .hero-banner__header {
     width: 25%;
   }
@@ -100,7 +100,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .hero-banner__header.is-right {
     margin-right: 100px;
   }

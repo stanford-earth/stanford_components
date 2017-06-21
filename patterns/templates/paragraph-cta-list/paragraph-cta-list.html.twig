@@ -1,0 +1,12 @@
+{#
+/**
+ * @file
+ * Paragraph CTA List
+ */
+#}
+{# Attach the film card css and js #}
+{{ attach_library('ui_patterns/filmstrip.filmstrip_library') }}
+<div class="paragraph__cta-list">
+{% embed "@stanford_components/molecules/filmstrip/filmstrip.html.twig" ignore missing %}
+{% endembed %}
+</div>
