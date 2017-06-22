@@ -7,7 +7,7 @@
 
 .section-highlight-banner {
   @include responsive-container($default-container);
-  background-image: cover;
+  background-size: cover;
   padding-bottom: em(30px);
   padding-top: em(30px);
   position: relative;
