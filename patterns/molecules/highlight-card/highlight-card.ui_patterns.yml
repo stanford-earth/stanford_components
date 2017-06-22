@@ -1,0 +1,32 @@
+# Highlight Cards Pattern
+highlight_card:
+  label: "Highlight card"
+  description: "A single callout card"
+  fields:
+    intro:
+      description: "Intro."
+      label: Title
+      preview: "Take a Course"
+      type: text
+    description:
+      description: "Description."
+      label: Title
+      preview: "Today more than 7 billion people inhabit Earth and a billion lack adequate energy, water and food."
+      type: text
+    link:
+      description: "URI that points somewhere"
+      label: Link
+      preview: "https://stanford.edu"
+      type: url
+    title:
+      description: "Card title."
+      label: Title
+      preview: "Life At The Extremes"
+      type: text
+  libraries:
+    -
+      highlight_card_library:
+        css:
+          component:
+            css/highlight-card.component.css: {}
+  use: "@stanford_components/molecules/highlight-card/highlight-card.html.twig"

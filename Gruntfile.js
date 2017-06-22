@@ -108,11 +108,14 @@ module.exports = function(grunt) {
           'patterns/molecules/section-header/css/section-header.component.css':               'patterns/molecules/section-header/scss/section-header.component.scss',
           'patterns/molecules/feature-card/css/feature-card.component.css':                   'patterns/molecules/feature-card/scss/feature-card.component.scss',
           'patterns/molecules/feature-cards/css/feature-cards.component.css':                 'patterns/molecules/feature-cards/scss/feature-cards.component.scss',
+          'patterns/molecules/highlight-card/css/highlight-card.component.css':                   'patterns/molecules/highlight-card/scss/highlight-card.component.scss',
+          'patterns/molecules/highlight-cards/css/highlight-cards.component.css':                 'patterns/molecules/highlight-cards/scss/highlight-cards.component.scss',
           // Organisms.
           'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css': 'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
           'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':         'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
           'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':       'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
-          'patterns/organisms/section-feature-cards/css/section-feature-cards.component.css':         'patterns/organisms/section-feature-cards/scss/section-feature-cards.component.scss'
+          'patterns/organisms/section-feature-cards/css/section-feature-cards.component.css':         'patterns/organisms/section-feature-cards/scss/section-feature-cards.component.scss',
+          'patterns/organisms/section-highlight-banner/css/section-highlight-banner.component.css':   'patterns/organisms/section-highlight-banner/scss/section-highlight-banner.component.scss'
         }
       }
     },

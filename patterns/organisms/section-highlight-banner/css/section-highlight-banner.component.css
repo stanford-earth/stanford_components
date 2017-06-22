@@ -1,0 +1,180 @@
+.section-highlight-banner {
+  background-image: cover;
+  padding-bottom: 1.6666666667em;
+  padding-top: 1.6666666667em;
+  position: relative;
+}
+
+@media only screen and (max-width: 575px) {
+  .section-highlight-banner {
+    padding: 1em calc(((50% /12) * 0) + 20px);
+  }
+  .section-highlight-banner::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .section-highlight-banner {
+    padding: 1em calc(((50% /12) * 0) + 20px);
+  }
+  .section-highlight-banner::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .section-highlight-banner {
+    padding: 1em calc(((50% /12) * 0) + 20px);
+  }
+  .section-highlight-banner::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .section-highlight-banner {
+    padding: 1em calc(((50% /12) * 0) + 20px);
+  }
+  .section-highlight-banner::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-highlight-banner {
+    padding: 1em calc(50% - (600px - 20px));
+  }
+  .section-highlight-banner::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only print {
+  .section-highlight-banner {
+    padding: 1em calc(((50% /12) * 0) + 0.25in);
+  }
+  .section-highlight-banner::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-highlight-banner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-highlight-banner.is-single .highlight-banner__header {
+    width: calc(33.3333333333% - 26.6666666667px);
+    float: left;
+    margin-left: 20px;
+    margin-left: calc(8.3333333333% - 21.6666666667px + 40px);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-highlight-banner.is-single .highlight-banner__header {
+    width: calc(33.3333333333% - 26.6666666667px);
+    float: left;
+    margin-left: 20px;
+    margin-left: calc(25% - 25px + 40px);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-highlight-banner.is-single .highlight-banner__container {
+    margin-left: calc(0% - 20px + 40px);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-highlight-banner.is-single .highlight-banner__container {
+    margin-left: calc(0% - 20px + 40px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-highlight-banner.is-single .highlight-cards .highlight-card {
+    width: calc(83.3333333333% - 36.6666666667px);
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+.section-highlight-banner .highlight-banner__header {
+  position: relative;
+  padding-top: 1.6666666667em;
+  width: 100%;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-highlight-banner .highlight-banner__header {
+    width: calc(25% - 25px);
+    float: left;
+    margin-left: 20px;
+    padding-top: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-highlight-banner .highlight-banner__header {
+    width: calc(25% - 25px);
+    float: left;
+    margin-left: 20px;
+    margin-left: calc(8.3333333333% - 21.6666666667px + 40px);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-highlight-banner .highlight-banner__header {
+    margin-left: calc(16.6666666667% - 23.3333333333px + 40px);
+  }
+}
+
+.section-highlight-banner .highlight-banner__container {
+  position: relative;
+  z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-highlight-banner .highlight-banner__container {
+    width: calc(75% - 35px);
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .section-highlight-banner .highlight-banner__container {
+    width: calc(66.6666666667% - 33.3333333333px);
+    float: left;
+    margin-left: 20px;
+    margin-left: calc(8.3333333333% - 21.6666666667px + 40px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-highlight-banner .highlight-banner__container .highlight-cards {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
+  }
+}
+
+/*# sourceMappingURL=section-highlight-banner.component.css.map */
