@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Highlight cards pattern.
+ */
+#}
+{{ attach_library('ui_patterns/icon_item.icon_item_library') }}
+{{ attach_library('ui_patterns/expandable_card.expandable_card_library') }}
+<div class="expandable-cards">
+  {# Break up the individual items in to the appropriate template var. #}
+  {% for card in cards %}
+
+    {% set card_vars = {
+      'link': card.link,
+      'title': card.title,
+      'items': card.items,
+      'is_wide': card.is_wide
+      }
+    %}
+
+    {# Pass vars through to include template. #}
+    {% include '@stanford_components/molecules/expandable-card/expandable-card.html.twig' with card_vars %}
+  {% endfor %}
+</div>

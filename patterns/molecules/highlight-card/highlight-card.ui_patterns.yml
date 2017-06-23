@@ -3,15 +3,15 @@ highlight_card:
   label: "Highlight card"
   description: "A single callout card"
   fields:
-    intro:
-      description: "Intro."
-      label: Title
-      preview: "Take a Course"
-      type: text
     description:
-      description: "Description."
+      description: Description.
       label: Title
       preview: "Today more than 7 billion people inhabit Earth and a billion lack adequate energy, water and food."
+      type: text
+    intro:
+      description: Intro.
+      label: Title
+      preview: "Take a Course"
       type: text
     link:
       description: "URI that points somewhere"
