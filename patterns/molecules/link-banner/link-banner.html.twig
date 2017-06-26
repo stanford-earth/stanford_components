@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Link banner pattern.
+ */
+#}
+{{ attach_library('ui_patterns/link_item.link_item_library') }}
+<div class="link-banner" style="background-image:url({{ imgurl|default('https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg') }})">
+  <header class="link-banner__header">
+    <h3>{{ title }}</h3>
+    <p>{{ description }}</p>
+  </header>
+
+  <div class="link-items">
+
+  {# Break up the individual items in to the appropriate template var. #}
+  {% for item in items %}
+
+    {% set vars = {
+      'link': item.link,
+      'title': item.title,
+      'subtitle': item.subtitle
+      }
+    %}
+
+    {# Pass vars through to include template. #}
+    {% include '@stanford_components/atoms/link-item/link-item.html.twig' with vars %}
+  {% endfor %}
+  </div>
+</div>
