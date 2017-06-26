@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Simple blocks pattern.
+ */
+#}
+{{ attach_library('ui_patterns/simple-block.simple_block_library') }}
+<div class="simple-blocks">
+  {# Break up the individual items in to the appropriate template var. #}
+  {% for item in items %}
+    {% set vars = {
+      'description': item.description,
+      'image': item.image,
+      'link': item.link,
+      'tag': item.tag,
+      'title': item.title
+      }
+    %}
+    {# Pass vars through to include template. #}
+    {% include '@stanford_components/molecules/simple-block/simple-block.html.twig' with vars %}
+  {% endfor %}
+</div>

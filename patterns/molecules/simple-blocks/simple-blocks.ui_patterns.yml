@@ -1,0 +1,38 @@
+# Simple Blocks Pattern
+#
+simple_blocks:
+  label: "Simple Blocks"
+  description: "A horizontal list simple blocks"
+  fields:
+    items:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
+      label: "A list of simple blocks"
+      preview:
+        -
+          description: "Stanford Earth faculty and young scientists in the media."
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/380/225/nature/5"
+          link: "https://www.stanford.edu"
+          title: "What is sustainability?  A conversation with Stanford Earth Dean Pamela Matson"
+        -
+          description: "News about the School of Earth, Energy & Environmental Sciences."
+          link: "https://www.stanford.edu"
+          title: "Could a Colorado earthquake have been triggered by dinosaur extinction impact?"
+        -
+          description: "Discoveries and insights about Earth, its resources, and its environment."
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/380/225/nature/3"
+          link: "https://www.stanford.edu"
+          title: "Navigating the guts  of an ancient submarine canyon"
+      type: array
+  libraries:
+    -
+      simple_blocks_library:
+        css:
+          component:
+            css/simple-blocks.component.css: {}
+  use: "@stanford_components/molecules/simple-blocks/simple-blocks.html.twig"

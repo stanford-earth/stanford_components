@@ -1,0 +1,45 @@
+# Simple Block Pattern
+#
+simple_block:
+  label: "Simple Block"
+  description: "A single of simple block"
+  fields:
+    description:
+      description: "Block description."
+      label: Description
+      preview: "Mapping the seawater threat to California Central Coast aquifers"
+      type: text
+    has_arrow:
+      description: "Render arrow on card.  Treat as boolean (true/false)."
+      label: Arrow
+      preview: true
+      type: text
+    image:
+      description: "Block image."
+      label: Image
+      preview:
+        theme: image
+        uri: "https://lorempixel.com/270/160/nature/5"
+      type: image
+    link:
+      description: "URI that points somewhere"
+      label: Link
+      preview: "https://stanford.edu"
+      type: url
+    more:
+      description: "More link."
+      label: More
+      preview: "Explore Research News"
+      type: text
+    title:
+      description: "Simple Block Title"
+      label: Title
+      preview: "What is sustainability?"
+      type: text
+  libraries:
+    -
+      simple_block_library:
+        css:
+          component:
+            css/simple-block.component.css: {}
+  use: "@stanford_components/molecules/simple-block/simple-block.html.twig"

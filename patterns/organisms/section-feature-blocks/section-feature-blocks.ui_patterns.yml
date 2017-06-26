@@ -1,0 +1,66 @@
+# Feature Blocks Pattern
+#
+section_feature_blocks:
+  label: "Section Feature Blocks"
+  description: "A horizontal list callout blocks with images"
+  fields:
+    dash_under:
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under Emphasis"
+      preview: false
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: false
+      type: text
+    is_featured:
+      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      label: "Dash with Emphasis"
+      preview: false
+      type: text
+    items:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
+      label: "A list of simple image cards"
+      preview:
+        -
+          description: "Stanford Earth faculty and young scientists in the media."
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/380/225/nature/5"
+          link: "https://www.stanford.edu"
+          tag: "Research News"
+        -
+          description: "News about the School of Earth, Energy & Environmental Sciences."
+          image:
+            theme: image
+            uri: "https://lorempixel.com/380/225/nature/4"
+          link: "https://www.stanford.edu"
+          tag: "School Highlights"
+        -
+          description: "Discoveries and insights about Earth, its resources, and its environment."
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/380/225/nature/3"
+          link: "https://www.stanford.edu"
+          tag: "Media Mentions"
+      type: array
+    subhead:
+      description: "Subhead for the content card."
+      label: Subhead
+      preview: "<p>We make an impact through faculty research that uncovers how our planet works, by teaching the next generation to understand and manage Earth’s resources, and by communicating our science to policy makers, influencers and the public.</p>"
+      type: text
+    superhead:
+      description: "Title for the content card."
+      label: Superhead
+      preview: "Our Impact in the World"
+      type: text
+  libraries:
+    -
+      section_feature_blocks_library:
+        css:
+          component:
+            css/section-feature-blocks.component.css: {}
+  use: "@stanford_components/organisms/section-feature-blocks/section-feature-blocks.html.twig"

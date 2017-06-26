@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Simple Block pattern.
+ */
+#}
+<div class="simple-block{% if has_arrow %} has-arrow{% endif %}">
+  {% if link is not empty %}
+  <a class="simple-block__link" href="{{ link|render|striptags|trim }}">
+  {% endif %}
+    {% if image is not empty %}
+      <div class="simple-block__thumbnail">
+        {{ image }}
+        {% if tag %}
+          <div class="simple-block__tag">
+            <h6>{{ tag }}</h6>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% if link is not empty %}
+  </a>
+  {% endif %}
+  {% if title is not empty %}
+    <h3><a class="simple-block__link" href="{{ link|render|striptags|trim }}">{{ title }}</a></h3>
+  {% endif %}
+  {% if description is not empty %}
+    <p class="simple-block__description">{{ description }} <a href="{{ link|render|striptags|trim }}"><span class="simple-block__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span></a></p>
+  {% endif %}
+  {% if more is not empty %}
+  <a class="simple-block__more" href="{{ link|render|striptags|trim }}">{{ more }}</a>
+  {% endif %}
+</div>

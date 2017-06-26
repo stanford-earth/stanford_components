@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Section feature blocks pattern.
+ */
+#}
+{{ attach_library('ui_patterns/section_header.section_header_library') }}
+{{ attach_library('ui_patterns/simple_block.simple_block_library') }}
+{{ attach_library('ui_patterns/feature_blocks.feature_blocks_library') }}
+<div class="section-feature-blocks">
+  <div class="feature-blocks__header">
+    {%  set header_vars = {
+      'superhead': superhead,
+      'subhead': subhead,
+      'is-centered': is_centered,
+      'dash_under': dash_under
+    } %}
+    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+  </div>
+
+  <div class="feature-blocks__container">
+    <div class="feature-blocks">
+      {# Break up the individual items in to the appropriate template var. #}
+      {% for item in items %}
+        {% set vars = {
+          'link': item.link,
+          'image': item.image,
+          'tag': item.tag,
+          'description': item.description
+          }
+        %}
+        {# Pass vars through to include template. #}
+        {% include '@stanford_components/molecules/simple-block/simple-block.html.twig' with vars %}
+      {% endfor %}
+    </div>
+  </div>
+</div>
