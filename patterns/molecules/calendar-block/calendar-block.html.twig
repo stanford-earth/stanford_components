@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Callout blocks pattern.
+ */
+#}
+<div class="calendar-block">
+  <a class="calendar-block__action" href="{{ link|render|striptags|trim }}">
+    <div class="calendar-block__date">
+      <span class="calendar-block__day">{{ day }}</span>
+      <span class="calendar-block__month">{{ month }}</span>
+    </div>
+    <div class="calendar-block__header">
+      <h3 class="calendar-block__title">{{ title }}</h3>
+      <span class="calendar-block__subtitle">{{ subtitle }}</span>
+    </div>
+    <div class="calendar-block__arrow">
+      <svg class="i-svg i-svg--arrow-right"> <use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
+    </div>
+  </a>
+</div>

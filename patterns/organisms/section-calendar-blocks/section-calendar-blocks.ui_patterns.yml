@@ -1,0 +1,71 @@
+# Calendar Blocks Pattern
+#
+section_calendar_blocks:
+  description: "A horizontal list callout blocks with icons and styled text"
+  fields:
+    subhead:
+      description: "Card text.  Renders full html (eg. <p> & <br />)"
+      label: Subhead
+      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy.</p>"
+      type: text
+    title:
+      description: "Title for the content block."
+      label: Title
+      preview: Calendar
+      type: text
+    dash_under:
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under Emphasis"
+      preview: false
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: false
+      type: text
+    is_featured:
+      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      label: "Dash with Emphasis"
+      preview: true
+      type: text
+    items:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
+      label: "A list of simple image cards"
+      preview:
+        -
+          day: "9"
+          link: "https://www.stanford.edu"
+          month: April
+          subtitle: "Room 104, Green Earth Sciences Building, 367 Panama Street, Stanford"
+          title: "ERE Seminar: NO SEMINAR"
+        -
+          day: "10"
+          link: "https://www.stanford.edu"
+          month: April
+          subtitle: "All are welcome. Y2E2 226"
+          title: "Monday E-IPER Tea"
+        -
+          day: "21"
+          link: "https://www.stanford.edu"
+          month: April
+          subtitle: "Liberal Arts and Private Four-Year Teaching Colleges (PhDs & Postdocs)"
+          title: "Faculty Life and Hiring"
+        -
+          day: "1"
+          link: "https://www.stanford.edu"
+          month: May
+          title: "Special Screening of Documentary  ‘Tomorrow’"
+        -
+          day: "3"
+          link: "https://www.stanford.edu"
+          month: May
+          title: "Women Entrepreneurs in Sustainability’"
+      type: array
+  label: "Section Calendar Blocks"
+  libraries:
+    -
+      section_callout_blocks_library:
+        css:
+          component:
+            css/section-calendar-blocks.component.css: {}
+  use: "@stanford_components/organisms/section-calendar-blocks/section-calendar-blocks.html.twig"

@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Callout blocks pattern.
+ */
+#}
+{{ attach_library('ui_patterns/callout_block.calendar_block_library') }}
+<div class="calendar-blocks">
+  {# Break up the individual items in to the appropriate template var. #}
+  {% for item in items %}
+    {% set vars = {
+      'link': item.link,
+      'title': item.title,
+      'day': item.day,
+      'month': item.month,
+      'subtitle': item.subtitle
+      }
+    %}
+    {# Pass vars through to include template. #}
+    {% include '@stanford_components/molecules/calendar-block/calendar-block.html.twig' with vars %}
+  {% endfor %}
+</div>

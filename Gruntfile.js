@@ -100,6 +100,8 @@ module.exports = function(grunt) {
           'patterns/atoms/link-item/css/link-item.component.css':                             'patterns/atoms/link-item/scss/link-item.component.scss',
           'patterns/atoms/icon-item/css/icon-item.component.css':                             'patterns/atoms/icon-item/scss/icon-item.component.scss',
           // Molecules.
+          'patterns/molecules/calendar-block/css/calendar-block.component.css':               'patterns/molecules/calendar-block/scss/calendar-block.component.scss',
+          'patterns/molecules/calendar-blocks/css/calendar-blocks.component.css':             'patterns/molecules/calendar-blocks/scss/calendar-blocks.component.scss',
           'patterns/molecules/callout-block/css/callout-block.component.css':                 'patterns/molecules/callout-block/scss/callout-block.component.scss',
           'patterns/molecules/callout-blocks/css/callout-blocks.component.css':               'patterns/molecules/callout-blocks/scss/callout-blocks.component.scss',
           'patterns/molecules/callout-card/css/callout-card.component.css':                   'patterns/molecules/callout-card/scss/callout-card.component.scss',
@@ -122,6 +124,7 @@ module.exports = function(grunt) {
           'patterns/molecules/simple-slat/css/simple-slat.component.css':                     'patterns/molecules/simple-slat/scss/simple-slat.component.scss',
           'patterns/molecules/simple-slats/css/simple-slats.component.css':                   'patterns/molecules/simple-slats/scss/simple-slats.component.scss',
           // Organisms.
+          'patterns/organisms/section-calendar-blocks/css/section-calendar-blocks.component.css':     'patterns/organisms/section-calendar-blocks/scss/section-calendar-blocks.component.scss',
           'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':         'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
           'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':           'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
           'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css':   'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
