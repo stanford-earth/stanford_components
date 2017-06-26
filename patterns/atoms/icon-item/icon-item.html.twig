@@ -1,0 +1,10 @@
+{#
+/**
+ * @file
+ * Icon item pattern.
+ */
+#}
+<a class="icon-item" href="{{ link|render|striptags|trim }}">
+  <span class="icon-item__image">{{ image }}</span>
+  <h5 class="icon-item__name">{{ name }} <span class="icon-item__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span></h5>
+</a>

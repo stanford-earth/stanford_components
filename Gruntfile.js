@@ -8,6 +8,13 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     watch: {
       // This is where we set up all the tasks we'd like grunt to watch for changes.
+      scripts: {
+        files: ['js/source/**/*.js'],
+        tasks: ['uglify', 'drush:ccall'],
+        options: {
+          spawn: false,
+        },
+      },
       images: {
         files: ['**/*.{png,jpg,gif}'],
         tasks: ['imagemin'],
@@ -90,7 +97,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           // Atoms.
-          // Nothing yet.
+          'patterns/atoms/link-item/css/link-item.component.css':                             'patterns/atoms/link-item/scss/link-item.component.scss',
+          'patterns/atoms/icon-item/css/icon-item.component.css':                             'patterns/atoms/icon-item/scss/icon-item.component.scss',
           // Molecules.
           'patterns/molecules/simple-card/css/simple-card.component.css':                     'patterns/molecules/simple-card/scss/simple-card.component.scss',
           'patterns/molecules/simple-card/css/simple-card.theme.css':                         'patterns/molecules/simple-card/scss/simple-card.theme.scss',
@@ -106,16 +114,24 @@ module.exports = function(grunt) {
           'patterns/molecules/callout-blocks/css/callout-blocks.component.css':               'patterns/molecules/callout-blocks/scss/callout-blocks.component.scss',
           'patterns/molecules/callout-cards/css/callout-cards.component.css':                 'patterns/molecules/callout-cards/scss/callout-cards.component.scss',
           'patterns/molecules/section-header/css/section-header.component.css':               'patterns/molecules/section-header/scss/section-header.component.scss',
+          'patterns/molecules/link-banner/css/link-banner.component.css':                     'patterns/molecules/link-banner/scss/link-banner.component.scss',
           'patterns/molecules/feature-card/css/feature-card.component.css':                   'patterns/molecules/feature-card/scss/feature-card.component.scss',
           'patterns/molecules/feature-cards/css/feature-cards.component.css':                 'patterns/molecules/feature-cards/scss/feature-cards.component.scss',
+          'patterns/molecules/highlight-card/css/highlight-card.component.css':               'patterns/molecules/highlight-card/scss/highlight-card.component.scss',
+          'patterns/molecules/highlight-cards/css/highlight-cards.component.css':             'patterns/molecules/highlight-cards/scss/highlight-cards.component.scss',
+          'patterns/molecules/expandable-card/css/expandable-card.component.css':             'patterns/molecules/expandable-card/scss/expandable-card.component.scss',
+          'patterns/molecules/expandable-card/css/expandable-card.states.css':                'patterns/molecules/expandable-card/scss/expandable-card.states.scss',
+          'patterns/molecules/expandable-cards/css/expandable-cards.component.css':           'patterns/molecules/expandable-cards/scss/expandable-cards.component.scss',
           // Organisms.
-          'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css': 'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
-          'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':         'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
-          'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':       'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
-          'patterns/organisms/section-feature-cards/css/section-feature-cards.component.css':         'patterns/organisms/section-feature-cards/scss/section-feature-cards.component.scss',
+          'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css':   'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
+          'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':           'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
+          'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':         'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
+          'patterns/organisms/section-feature-cards/css/section-feature-cards.component.css':           'patterns/organisms/section-feature-cards/scss/section-feature-cards.component.scss',
+          'patterns/organisms/section-highlight-banner/css/section-highlight-banner.component.css':     'patterns/organisms/section-highlight-banner/scss/section-highlight-banner.component.scss',
+          'patterns/organisms/section-expandable-banner/css/section-expandable-banner.component.css':   'patterns/organisms/section-expandable-banner/scss/section-expandable-banner.component.scss',
+          'patterns/organisms/section-expandable-banner/css/section-expandable-banner.states.css':      'patterns/organisms/section-expandable-banner/scss/section-expandable-banner.states.scss',
           // Templates.
           'patterns/templates/paragraph-cta-list/css/paragraph-cta-list.component.css':         'patterns/templates/paragraph-cta-list/scss/paragraph-cta-list.component.scss'
-
         }
       }
     },

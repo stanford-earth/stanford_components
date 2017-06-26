@@ -1,0 +1,129 @@
+# Expandable Banner Pattern
+#
+section_expandable_banner:
+  label: "Section Expandable Banner"
+  description: "A banner with expandable cards and photo background"
+  fields:
+    cards:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, intro and description rendered as an html element."
+      label: "A list of highlight cards"
+      preview:
+        -
+          is_wide: true
+          items:
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Geological Sciences"
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Energy Resources Engineering"
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Earth Systems Program"
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Earth Systems Sciences"
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: Geophysics
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Emmett Interdisciplinary Program"
+          link: "https://www.stanford.edu"
+          title: Undergraduates
+        -
+          is_wide: false
+          items:
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Geological Sciences"
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Energy Resources Engineering"
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: "Earth Systems Program"
+            -
+              image:
+                alt: "this is a sample image"
+                theme: image
+                uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+              link: "https://www.stanford.edu"
+              name: Geophysics
+          link: "https://www.stanford.edu"
+          title: Graduates
+    dash_under:
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under Emphasis"
+      preview: false
+      type: text
+    image:
+      description: "Hero image."
+      label: "Image URL"
+      preview: "https://upload.wikimedia.org/wikipedia/commons/3/34/Rub_al_Khali_002.JPG"
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: false
+      type: text
+    is_featured:
+      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      label: "Dash with Emphasis"
+      preview: true
+      type: text
+    subhead:
+      description: "Card text.  Renders full html (eg. <p> & <br />)"
+      label: Subhead
+      preview: "<p>We offer BS, MS, MA, and PhD programs.</p>"
+      type: text
+    superhead:
+      description: "Title for the highlight banner."
+      label: Superhead
+      preview: "Degree Programs"
+      type: text
+  libraries:
+    -
+      section_expandable_banner_library:
+        css:
+          component:
+            css/section-expandable-banner.component.css: {}
+          state:
+            css/section-expandable-banner.states.css: {}
+  use: "@stanford_components/organisms/section-expandable-banner/section-expandable-banner.html.twig"

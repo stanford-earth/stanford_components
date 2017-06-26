@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Link item pattern.
+ */
+#}
+<a href="{{ link|render|striptags|trim }}" class="link-item">
+  <h4 class="link-item__title">{{ title }}
+    <span class="link-item__subtitle">{{ subtitle }}</span>
+  </h4>
+</a>

@@ -1,0 +1,31 @@
+# Icon item Pattern
+#
+icon_item:
+  label: "Icon item"
+  description: "A single of callout block"
+  fields:
+    image:
+      description: "Icon image."
+      label: Image
+      preview:
+        alt: "this is a sample image"
+        theme: image
+        uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
+      type: image
+    link:
+      description: "URI that points somewhere"
+      label: Link
+      preview: "https://stanford.edu"
+      type: url
+    name:
+      description: "Item name."
+      label: Title
+      preview: "Field Learning"
+      type: text
+  libraries:
+    -
+      icon_item_library:
+        css:
+          component:
+            css/icon-item.component.css: {}
+  use: "@stanford_components/atoms/icon-item/icon-item.html.twig"

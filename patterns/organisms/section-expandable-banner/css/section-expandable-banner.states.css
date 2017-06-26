@@ -1,0 +1,41 @@
+@media only screen and (min-width: 768px) {
+  .js-section-expandable-banner.has-overlay {
+    position: relative;
+  }
+  .js-section-expandable-banner.has-overlay::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+    content: '';
+    display: block;
+  }
+  .js-section-expandable-banner.has-overlay img {
+    display: block;
+  }
+  .js-section-expandable-banner.has-overlay .expandable-banner__header {
+    display: none;
+  }
+  .js-section-expandable-banner.has-overlay .expandable-banner__container {
+    float: none;
+    width: auto;
+    margin: -30px auto;
+  }
+  .js-section-expandable-banner.has-overlay .expandable-banner__container .expandable-cards {
+    margin: 0;
+    width: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .js-section-expandable-banner .js-expandable-card.is-open {
+    float: none;
+    z-index: 4;
+    max-width: none;
+    width: auto;
+  }
+}
+
+/*# sourceMappingURL=section-expandable-banner.states.css.map */

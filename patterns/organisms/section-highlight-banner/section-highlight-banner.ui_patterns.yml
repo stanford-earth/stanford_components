@@ -1,0 +1,58 @@
+# Highlight Banner Pattern
+#
+section_highlight_banner:
+  label: "Section Highlight Banner"
+  description: "A banner with highlight cards and photo background"
+  fields:
+    dash_under:
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under Emphasis"
+      preview: false
+      type: text
+    image:
+      description: "Hero image."
+      label: "Image URL"
+      preview: "https://i.ytimg.com/vi/MwKZLFYLRSs/maxresdefault.jpg"
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: false
+      type: text
+    is_featured:
+      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      label: "Dash with Emphasis"
+      preview: true
+      type: text
+    is_single:
+      description: "If banner has a single card adjust layout Treat as boolean (true/false)"
+      label: "If Banner only has one card"
+      preview: false
+      type: text
+    items:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, intro and description rendered as an html element."
+      label: "A list of highlight cards"
+      preview:
+        -
+          description: "Today more than 7 billion people inhabit Earth and a billion lack adequate energy, water and food."
+          intro: "Take a course"
+          link: "https://www.stanford.edu"
+          title: "Life At The Extremes"
+        -
+          description: "What do we really know about Earth's ice sheets and their influence?"
+          intro: "Attend one of our events"
+          link: "https://www.stanford.edu"
+          title: "Stanford Earth Matters San Francisco"
+      type: collection
+    superhead:
+      description: "Title for the highlight banner."
+      label: Superhead
+      preview: "Know Your Planet: Take a Course"
+      type: text
+  libraries:
+    -
+      section_highlight_banner_library:
+        css:
+          component:
+            css/section-highlight-banner.component.css: {}
+  use: "@stanford_components/organisms/section-highlight-banner/section-highlight-banner.html.twig"
