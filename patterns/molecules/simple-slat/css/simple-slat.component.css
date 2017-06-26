@@ -1,0 +1,23 @@
+.simple-slat::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@media only screen and (min-width: 768px) {
+  .simple-slat .simple-block__image {
+    width: calc(33.3333333333% - 53.3333333333px);
+    float: left;
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .simple-slat .simple-block__content {
+    width: calc(66.6666666667% - 66.6666666667px);
+    float: left;
+    margin-left: 40px;
+  }
+}
+
+/*# sourceMappingURL=simple-slat.component.css.map */

@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Simple Slat pattern.
+ */
+#}
+{{ attach_library('ui_patterns/simple_block.simple_block_library') }}
+{% for item in items %}
+  {% set vars = {
+    'link': item.link,
+    'image': item.image,
+    'tag': item.tag,
+    'title': item.title,
+    'description': item.description,
+    'is_slat': item.is_slat
+    }
+  %}
+  {# Pass vars through to include template. #}
+{% include '@stanford_components/molecules/simple-block/simple-block.html.twig' with vars %}
+{% endfor %}

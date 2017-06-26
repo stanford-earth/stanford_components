@@ -14,6 +14,11 @@ simple_block:
       label: Arrow
       preview: true
       type: text
+    is_slat:
+      description: "Render slat on medium and up screens.  Treat as boolean (true/false)."
+      label: Slat
+      preview: false
+      type: text
     image:
       description: "Block image."
       label: Image

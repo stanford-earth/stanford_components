@@ -1,0 +1,27 @@
+# Simple Slat Pattern
+#
+simple_slat:
+  label: "Simple Slat"
+  description: "A horizontal list simple slats"
+  fields:
+    items:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
+      label: "A list of simple slats"
+      preview:
+        -
+          description: "We make an impact through faculty research that uncovers how our planet works, by teaching the next generation to understand."
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/380/225/nature/5"
+          link: "https://www.stanford.edu"
+          title: "What is sustainability?  A conversation with Stanford Earth Dean Pamela Matson"
+          is_slat: true
+      type: array
+  libraries:
+    -
+      simple_slat_library:
+        css:
+          component:
+            css/simple-slat.component.css: {}
+  use: "@stanford_components/molecules/simple-slat/simple-slat.html.twig"

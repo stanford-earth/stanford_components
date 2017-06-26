@@ -4,11 +4,12 @@
  * Simple Block pattern.
  */
 #}
-<div class="simple-block{% if has_arrow %} has-arrow{% endif %}">
-  {% if link is not empty %}
-  <a class="simple-block__link" href="{{ link|render|striptags|trim }}">
-  {% endif %}
-    {% if image is not empty %}
+<div class="simple-block{% if has_arrow %} has-arrow{% endif %}{% if is_slat %} simple-slat{% endif %}">
+  {% if image is not empty %}
+  <div class="simple-block__image">
+    {% if link is not empty %}
+    <a class="simple-block__link" href="{{ link|render|striptags|trim }}">
+    {% endif %}
       <div class="simple-block__thumbnail">
         {{ image }}
         {% if tag %}
@@ -17,10 +18,12 @@
           </div>
         {% endif %}
       </div>
+    {% if link is not empty %}
+    </a>
     {% endif %}
-  {% if link is not empty %}
-  </a>
+  </div>
   {% endif %}
+  <div class="simple-block__content">
   {% if title is not empty %}
     <h3><a class="simple-block__link" href="{{ link|render|striptags|trim }}">{{ title }}</a></h3>
   {% endif %}
@@ -30,4 +33,5 @@
   {% if more is not empty %}
   <a class="simple-block__more" href="{{ link|render|striptags|trim }}">{{ more }}</a>
   {% endif %}
+  </div>
 </div>
