@@ -15,7 +15,7 @@ simple_blocks:
             theme: image
             uri: "https://lorempixel.com/380/225/nature/5"
           link: "https://www.stanford.edu"
-          title: "What is sustainability?  A conversation with Stanford Earth Dean Pamela Matson"
+          title: "What is sustainability? A conversation with Stanford Earth Dean Pamela Matson"
         -
           description: "News about the School of Earth, Energy & Environmental Sciences."
           link: "https://www.stanford.edu"
@@ -27,7 +27,7 @@ simple_blocks:
             theme: image
             uri: "https://lorempixel.com/380/225/nature/3"
           link: "https://www.stanford.edu"
-          title: "Navigating the guts  of an ancient submarine canyon"
+          title: "Navigating the guts of an ancient submarine canyon"
       type: array
   libraries:
     -
