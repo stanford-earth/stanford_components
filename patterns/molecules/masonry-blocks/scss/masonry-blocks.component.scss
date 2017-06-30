@@ -40,5 +40,13 @@
         @include grid-column(6, $simple-blocks-grid);
       }
     }
+
+    img {
+      max-width: 380px;
+
+      @include grid-media($media-md) {
+        max-width: 100%;
+      }
+    }
   }
 }

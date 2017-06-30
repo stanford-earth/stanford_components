@@ -4,6 +4,13 @@
   display: block;
 }
 
+@media only screen and (min-width: 768px) {
+  .highlight-cards {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .highlight-cards .highlight-card {
   width: 100%;
   margin: 0 auto 2em;

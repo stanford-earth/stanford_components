@@ -14,7 +14,7 @@ simple_blocks:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/380/225/nature/5"
+            uri: "https://lorempixel.com/420/282/nature/5"
           link: "https://www.stanford.edu"
           tag: "Research News"
           title: "A conversation with Stanford Earth"
@@ -28,7 +28,7 @@ simple_blocks:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/380/225/nature/3"
+            uri: "https://lorempixel.com/420/282/nature/3"
           link: "https://www.stanford.edu"
           tag: "Media Mentions"
           title: "Navigating the guts of an ancient submarine canyon"
