@@ -54,6 +54,11 @@ expandable_card:
             uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
           link: "https://www.stanford.edu"
           name: "Emmett Interdisciplinary Program"
+    link:
+      description: "URI that points somewhere"
+      label: Link
+      preview: "https://stanford.edu"
+      type: url
     title:
       description: "Card title."
       label: Title

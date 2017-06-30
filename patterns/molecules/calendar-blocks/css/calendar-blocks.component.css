@@ -25,7 +25,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .calendar-blocks .calendar-block {
     width: calc(20% - 36px);
     float: left;

@@ -21,7 +21,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-calendar-blocks .calendar-blocks__header {
     width: calc(16.6666666667% - 35px);
     float: left;
@@ -41,7 +41,7 @@
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-calendar-blocks .calendar-blocks__container {
     width: calc(83.3333333333% - 55px);
     float: left;
@@ -51,9 +51,9 @@
 
 @media only screen and (min-width: 768px) {
   .section-calendar-blocks .calendar-blocks__container .calendar-blocks {
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px);
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
   }
 }
 

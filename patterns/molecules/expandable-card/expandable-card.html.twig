@@ -13,10 +13,10 @@
     </h4>
   </header>
 
-  <div class="expandable-card__toggle js-expandable-card__toggle">
+  <a href="{{ link|render|striptags|trim }}" class="expandable-card__toggle js-expandable-card__toggle">
     <span class="expandable-card__open"><svg class="i-svg i-svg--plus"><use xlink:href="#i-plus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
     <span class="expandable-card__close"><svg class="i-svg i-svg--minus"><use xlink:href="#i-minus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
-  </div>
+  </a>
 
   <nav class="icon-items">
     {% for item in items %}
