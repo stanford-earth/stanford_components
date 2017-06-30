@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Masonry Block pattern.
+ */
+#}
+{{ attach_library('ui_patterns/tag_item.tag_item_library') }}
+<div class="masonry-block js-masonry-item{% if has_background %} has-background{% endif %}{% if has_tint %} has-tint{% endif %}{% if is_inverted %} is-inverted{% endif %}{% if is_wide %} is-wide{% endif %}{% if is_tall %} is-tall{% endif %}{% if is_sizer %} js-masonry-sizer{% endif %}" {% if background_image is not empty %} style="background-image:url('{{ background_image|render|striptags|trim }}')"{% endif %}>
+  {% if tags is not empty %}
+    <div class="masonry-block__tags">
+      {# Break up the individual items in to the appropriate template var. #}
+      {% for tag in tags %}
+        {% set tag_vars = {
+          'tag': tag.tag
+          }
+        %}
+      {# Pass vars through to include template. #}
+        {% include '@stanford_components/atoms/tag-item/tag-item.html.twig' with tag_vars %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  {% if image is not empty %}
+  <div class="masonry-block__image">  
+    <div class="masonry-block__thumbnail">
+      {{ image }}
+    </div>
+  </div>
+  {% endif %}
+  <div class="masonry-block__content">
+    <div class="masonry-block__header">
+      {% if title is not empty %}
+        <h3 class="masonry-block__tile"><a class="masonry-block__link" href="{{ link|render|striptags|trim }}">{{ title }}</a></h3>
+      {% endif %}
+      {% if description is not empty %}
+        <p class="masonry-block__description">{{ description }}</p>
+      {% endif %}
+    </div>
+    <div class="masonry-block__footer">
+      <div class="masonry-block__date"><svg class="i-svg"><use xlink:href="#i-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ date }}</div>
+
+      <div class="masonry-block__actions">
+        <span class="masonry-block__social-links">
+          <a class="masonry-block__social-link masonry-block--mail" href="{{ link|render|striptags|trim }}"><svg class="i-svg"><use xlink:href="#i-mail" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>
+          <a class="masonry-block__social-link masonry-block--linkedin" href="{{ link|render|striptags|trim }}"><svg class="i-svg"><use xlink:href="#i-linkedin" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>
+          <a class="masonry-block__social-link masonry-block--twitter" href="{{ link|render|striptags|trim }}"><svg class="i-svg"><use xlink:href="#i-twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>
+          <a class="masonry-block__social-link masonry-block--facebook" href="{{ link|render|striptags|trim }}"><svg class="i-svg"><use xlink:href="#i-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></a>
+        </span>
+
+        <a href="{{ link|render|striptags|trim }}"><span class="masonry-block__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,7 +7,8 @@ feature_blocks:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
-      preview:
+      type: collection
+      preview: 
         -
           description: "Stanford Earth faculty and young scientists in the media."
           image:
@@ -15,8 +16,8 @@ feature_blocks:
             theme: image
             uri: "https://lorempixel.com/380/225/nature/5"
           link: "https://www.stanford.edu"
-          tag: "Research News"
           more: "See More Research News"
+          tag: "Research News"
         -
           description: "News about the School of Earth, Energy & Environmental Sciences."
           image:
@@ -31,9 +32,8 @@ feature_blocks:
             theme: image
             uri: "https://lorempixel.com/380/225/nature/3"
           link: "https://www.stanford.edu"
-          tag: "Media Mentions"
           more: "See More Media Mentions"
-      type: array
+          tag: "Media Mentions"
   libraries:
     -
       feature_blocks_library:

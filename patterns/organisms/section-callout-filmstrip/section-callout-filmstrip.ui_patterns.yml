@@ -22,6 +22,7 @@ section_callout_filmstrip:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
+      type: collection
       preview:
         -
           image:
@@ -51,7 +52,6 @@ section_callout_filmstrip:
             uri: "http://lorempixel.com/270/183/nature/6"
           link: "https://www.stanford.edu"
           title: "Environmental attorney<br />Earth Systems BS, 05<br />MS '09"
-      type: array
     subhead:
       description: "Subhead for callout"
       label: Subhead

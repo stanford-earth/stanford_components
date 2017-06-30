@@ -16,6 +16,7 @@ link_banner:
     items:
       description: "This template iterates over the items to produce a grid of links."
       label: "A list of simple links"
+      type: collection
       preview:
         -
           link: "https://www.stanford.edu"
@@ -51,7 +52,6 @@ link_banner:
         -
           link: "https://www.stanford.edu"
           title: Oceans
-      type: collection
     title:
       description: "Title for the link grid"
       label: Title

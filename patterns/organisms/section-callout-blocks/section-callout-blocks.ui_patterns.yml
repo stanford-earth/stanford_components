@@ -1,8 +1,8 @@
 # Callout Blocks Pattern
 #
 section_callout_blocks:
-  label: "Section Callout Blocks"
   description: "A horizontal list callout blocks with icons and styled text"
+  label: "Section Callout Blocks"
   fields:
     dash_under:
       description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
@@ -15,14 +15,15 @@ section_callout_blocks:
       preview: true
       type: text
     is_featured:
-      type: text
-      label: "Dash with Emphasis"
       description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      label: "Dash with Emphasis"
       preview: true
+      type: text
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
-      preview:
+      type: collection
+      preview: 
         -
           image:
             alt: "this is a sample image"
@@ -50,7 +51,6 @@ section_callout_blocks:
           link: "https://www.stanford.edu"
           subtitle: "to understand Earth"
           title: "Data Science"
-      type: array
     title:
       description: "Title for the content block."
       label: Title

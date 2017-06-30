@@ -7,6 +7,7 @@ calendar_blocks:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
+      type: collection
       preview:
         -
           day: "9"
@@ -36,7 +37,6 @@ calendar_blocks:
           link: "https://www.stanford.edu"
           month: May
           title: "Women Entrepreneurs in Sustainability’"
-      type: array
   libraries:
     -
       callout_blocks_library:

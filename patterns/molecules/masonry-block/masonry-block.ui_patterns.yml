@@ -1,0 +1,62 @@
+# Masonry Block Pattern
+#
+masonry_block:
+  label: "Masonry Block"
+  description: "A single of masonry block"
+  fields:
+    description:
+      description: "Block description."
+      label: Description
+      preview: "Mapping the seawater threat to California Central Coast aquifers"
+      type: text
+    date:
+      description: "Simple Block date"
+      label: Title
+      preview: "April 24"
+      type: text
+    has_background:
+      description: "Render background image on card.  Treat as boolean (true/false)."
+      label: Background
+      preview: false
+      type: text
+    is_wide:
+      description: "Render wide on medium and up screens.  Treat as boolean (true/false)."
+      label: Slat
+      preview: false
+      type: text
+    image:
+      description: "Block image."
+      label: Image
+      preview:
+        theme: image
+        uri: "https://lorempixel.com/270/160/nature/5"
+      type: image
+    background_image:
+      description: "Card image."
+      label: Image
+      preview: 
+      type: text
+    link:
+      description: "URI that points somewhere"
+      label: Link
+      preview: "https://stanford.edu"
+      type: url
+    title:
+      description: "Simple Block Title"
+      label: Title
+      preview: "Detecting methane leaks with infrared cameras:  Are they fast and effective?"
+      type: text
+    tags:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a tag name rendered as an html element."
+      label: "A list of tags"
+      preview:
+        -
+          tag: "Earth"
+          link: "https://stanford.edu"
+  libraries:
+    -
+      masonry_block_library:
+        css:
+          component:
+            css/masonry-block.component.css: {}
+  use: "@stanford_components/molecules/masonry-block/masonry-block.html.twig"

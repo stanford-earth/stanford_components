@@ -7,7 +7,8 @@ simple_blocks:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple blocks"
-      preview:
+      type: collection
+      preview: 
         -
           description: "Stanford Earth faculty and young scientists in the media."
           image:
@@ -31,7 +32,6 @@ simple_blocks:
           link: "https://www.stanford.edu"
           tag: "Media Mentions"
           title: "Navigating the guts of an ancient submarine canyon"
-      type: array
   libraries:
     -
       simple_blocks_library:

@@ -97,8 +97,10 @@ module.exports = function(grunt) {
       dist: {
         files: {
           // Atoms.
-          'patterns/atoms/link-item/css/link-item.component.css':                             'patterns/atoms/link-item/scss/link-item.component.scss',
           'patterns/atoms/icon-item/css/icon-item.component.css':                             'patterns/atoms/icon-item/scss/icon-item.component.scss',
+          'patterns/atoms/link-item/css/link-item.component.css':                             'patterns/atoms/link-item/scss/link-item.component.scss',
+          'patterns/atoms/nav-item/css/nav-item.component.css':                               'patterns/atoms/nav-item/scss/nav-item.component.scss',
+          'patterns/atoms/tag-item/css/tag-item.component.css':                               'patterns/atoms/tag-item/scss/tag-item.component.scss',
           // Molecules.
           'patterns/molecules/calendar-block/css/calendar-block.component.css':               'patterns/molecules/calendar-block/scss/calendar-block.component.scss',
           'patterns/molecules/calendar-blocks/css/calendar-blocks.component.css':             'patterns/molecules/calendar-blocks/scss/calendar-blocks.component.scss',
@@ -106,6 +108,8 @@ module.exports = function(grunt) {
           'patterns/molecules/callout-blocks/css/callout-blocks.component.css':               'patterns/molecules/callout-blocks/scss/callout-blocks.component.scss',
           'patterns/molecules/callout-card/css/callout-card.component.css':                   'patterns/molecules/callout-card/scss/callout-card.component.scss',
           'patterns/molecules/callout-cards/css/callout-cards.component.css':                 'patterns/molecules/callout-cards/scss/callout-cards.component.scss',
+          'patterns/molecules/collapsible-menu/css/collapsible-menu.component.css':           'patterns/molecules/collapsible-menu/scss/collapsible-menu.component.scss',
+          'patterns/molecules/collapsible-menu/css/collapsible-menu.states.css':              'patterns/molecules/collapsible-menu/scss/collapsible-menu.states.scss',
           'patterns/molecules/expandable-card/css/expandable-card.component.css':             'patterns/molecules/expandable-card/scss/expandable-card.component.scss',
           'patterns/molecules/expandable-card/css/expandable-card.states.css':                'patterns/molecules/expandable-card/scss/expandable-card.states.scss',
           'patterns/molecules/expandable-cards/css/expandable-cards.component.css':           'patterns/molecules/expandable-cards/scss/expandable-cards.component.scss',
@@ -116,6 +120,8 @@ module.exports = function(grunt) {
           'patterns/molecules/highlight-card/css/highlight-card.component.css':               'patterns/molecules/highlight-card/scss/highlight-card.component.scss',
           'patterns/molecules/highlight-cards/css/highlight-cards.component.css':             'patterns/molecules/highlight-cards/scss/highlight-cards.component.scss',
           'patterns/molecules/link-banner/css/link-banner.component.css':                     'patterns/molecules/link-banner/scss/link-banner.component.scss',
+          'patterns/molecules/masonry-block/css/masonry-block.component.css':                 'patterns/molecules/masonry-block/scss/masonry-block.component.scss',
+          'patterns/molecules/masonry-blocks/css/masonry-blocks.component.css':               'patterns/molecules/masonry-blocks/scss/masonry-blocks.component.scss',
           'patterns/molecules/postcard/css/postcard.component.css':                           'patterns/molecules/postcard/scss/postcard.component.scss',
           'patterns/molecules/postcard/css/postcard.theme.css':                               'patterns/molecules/postcard/scss/postcard.theme.scss',
           'patterns/molecules/section-header/css/section-header.component.css':               'patterns/molecules/section-header/scss/section-header.component.scss',
@@ -124,7 +130,7 @@ module.exports = function(grunt) {
           'patterns/molecules/simple-slat/css/simple-slat.component.css':                     'patterns/molecules/simple-slat/scss/simple-slat.component.scss',
           'patterns/molecules/simple-slats/css/simple-slats.component.css':                   'patterns/molecules/simple-slats/scss/simple-slats.component.scss',
           // Organisms.
-          'patterns/organisms/section-calendar-blocks/css/section-calendar-blocks.component.css':     'patterns/organisms/section-calendar-blocks/scss/section-calendar-blocks.component.scss',
+          'patterns/organisms/section-calendar-blocks/css/section-calendar-blocks.component.css':       'patterns/organisms/section-calendar-blocks/scss/section-calendar-blocks.component.scss',
           'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':         'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
           'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':           'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
           'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css':   'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
@@ -132,8 +138,9 @@ module.exports = function(grunt) {
           'patterns/organisms/section-expandable-banner/css/section-expandable-banner.states.css':      'patterns/organisms/section-expandable-banner/scss/section-expandable-banner.states.scss',
           'patterns/organisms/section-feature-blocks/css/section-feature-blocks.component.css':         'patterns/organisms/section-feature-blocks/scss/section-feature-blocks.component.scss',
           'patterns/organisms/section-highlight-banner/css/section-highlight-banner.component.css':     'patterns/organisms/section-highlight-banner/scss/section-highlight-banner.component.scss',
+          'patterns/organisms/section-masonry-blocks/css/section-masonry-blocks.component.css':         'patterns/organisms/section-masonry-blocks/scss/section-masonry-blocks.component.scss',
           // Templates.
-          'patterns/templates/paragraph-cta-list/css/paragraph-cta-list.component.css':       'patterns/templates/paragraph-cta-list/scss/paragraph-cta-list.component.scss'
+          'patterns/templates/paragraph-cta-list/css/paragraph-cta-list.component.css':         'patterns/templates/paragraph-cta-list/scss/paragraph-cta-list.component.scss'
         }
       }
     },

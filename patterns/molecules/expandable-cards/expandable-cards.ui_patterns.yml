@@ -7,7 +7,8 @@ expandable_cards:
     cards:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, intro and description rendered as an html element."
       label: "A list of highlight cards"
-      preview:
+      type: collection
+      preview: 
         -
           is_wide: true
           items:

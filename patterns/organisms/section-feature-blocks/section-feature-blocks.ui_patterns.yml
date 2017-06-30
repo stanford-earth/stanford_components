@@ -46,7 +46,7 @@ section_feature_blocks:
             uri: "https://lorempixel.com/380/225/nature/3"
           link: "https://www.stanford.edu"
           tag: "Media Mentions"
-      type: array
+      type: collection
     subhead:
       description: "Subhead for the content card."
       label: Subhead

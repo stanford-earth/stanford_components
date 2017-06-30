@@ -5,7 +5,9 @@
  */
 #}
 <a href="{{ link|render|striptags|trim }}" class="link-item">
-  <h4 class="link-item__title">{{ title }}
+  <span class="link-item__title">{{ title }}
+    {% if subtitle is not empty %}
     <span class="link-item__subtitle">{{ subtitle }}</span>
-  </h4>
+    {% endif %}
+  </span>
 </a>

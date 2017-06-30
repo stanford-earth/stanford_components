@@ -2,17 +2,8 @@
 #
 section_calendar_blocks:
   description: "A horizontal list callout blocks with icons and styled text"
-  fields:
-    subhead:
-      description: "Card text.  Renders full html (eg. <p> & <br />)"
-      label: Subhead
-      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy.</p>"
-      type: text
-    title:
-      description: "Title for the content block."
-      label: Title
-      preview: Calendar
-      type: text
+  label: "Section Calendar Blocks"
+  fields: 
     dash_under:
       description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
       label: "Dash Under Emphasis"
@@ -60,8 +51,17 @@ section_calendar_blocks:
           link: "https://www.stanford.edu"
           month: May
           title: "Women Entrepreneurs in Sustainability’"
-      type: array
-  label: "Section Calendar Blocks"
+      type: collection
+    subhead:
+      description: "Card text.  Renders full html (eg. <p> & <br />)"
+      label: Subhead
+      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy.</p>"
+      type: text
+    title:
+      description: "Title for the content block."
+      label: Title
+      preview: Calendar
+      type: text
   libraries:
     -
       section_callout_blocks_library:

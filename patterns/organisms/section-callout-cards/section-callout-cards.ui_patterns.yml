@@ -15,14 +15,15 @@ section_callout_cards:
       preview: false
       type: text
     is_featured:
-      type: text
-      label: Dash with Emphasis
-      description: Emphasis has emphasis or default brand color?  Treat as boolean (true/false)
+      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      label: "Dash with Emphasis"
       preview: true
+      type: text
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
-      preview:
+      type: collection
+      preview: 
         -
           image:
             alt: "this is a sample image"
@@ -51,7 +52,6 @@ section_callout_cards:
             uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
           link: "https://www.stanford.edu"
           title: "Earth Systems Program"
-      type: collection
     subhead:
       description: "Subhead for the content card."
       label: Subhead

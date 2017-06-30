@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Simple blocks pattern.
+ */
+#}
+{{ attach_library('ui_patterns/tag_item.tag_item_library') }}
+{{ attach_library('ui_patterns/masonry_block.masonry_block_library') }}
+<div class="masonry-blocks js-masonry">
+  {# Break up the individual items in to the appropriate template var. #}
+  {% for card in cards %}
+    {% set card_vars = {
+      'date': card.date,
+      'description': card.description,
+      'image': card.image,
+      'background_image': card.background_image,
+      'has_background': card.has_background,
+      'has_tint': card.has_tint,
+      'is_inverted': card.is_inverted,
+      'is_wide': card.is_wide,
+      'is_tall': card.is_tall,
+      'link': card.link,
+      'tags': card.tags,
+      'title': card.title
+      }
+    %}
+    {# Pass vars through to include template. #}
+    {% include '@stanford_components/molecules/masonry-block/masonry-block.html.twig' with card_vars %}
+  {% endfor %}
+</div>

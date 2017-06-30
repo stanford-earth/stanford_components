@@ -7,6 +7,7 @@ simple_slats:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple slats"
+      type: collection
       preview:
         -
           description: "A new four-step “framework” aims to test the contribution of climate change to record-setting extreme weather events.After an unusually intense heat wave, downpour or drought, Noah Diffenbaugh and his research group."
@@ -34,7 +35,6 @@ simple_slats:
           link: "https://www.stanford.edu"
           title: "'Super emitters’ are responsible for more than half of U.S. methane emissions"
           is_slat: true
-      type: array
   libraries:
     -
       simple_slats_library:
