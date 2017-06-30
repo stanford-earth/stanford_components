@@ -39,6 +39,7 @@
 @media only screen and (min-width: 1024px) {
   .hero-banner__inner {
     min-height: 400px;
+    max-width: none;
   }
 }
 
@@ -84,25 +85,23 @@
 
 @media only screen and (min-width: 768px) {
   .hero-banner__header.is-right {
-    position: absolute;
-    top: 50%;
-    margin-top: auto;
-    margin-bottom: auto;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+    width: 100%;
+    max-width: 1380px;
     text-align: right;
-    right: 0;
-    left: auto;
-    margin-left: 0;
-    margin-right: 60px;
-    width: 50%;
+    padding-right: 60px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .hero-banner__header.is-right {
-    margin-right: 100px;
+    padding-right: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero-banner__header.is-right {
+    padding-right: 40px;
+    margin: 0 auto;
   }
 }
 

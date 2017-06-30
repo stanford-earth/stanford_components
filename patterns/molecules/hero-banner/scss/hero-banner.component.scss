@@ -45,6 +45,7 @@ $hero-max-width: 1380px;
 
   @include grid-media($media-lg) {
     min-height: 400px;
+    max-width: none;
   }
 
   &.is-tall {
@@ -78,17 +79,19 @@ $hero-max-width: 1380px;
 
   &.is-right {
     @include grid-media($media-md) {
-      @include center-transform(y);
+      width: 100%;
+      max-width: $hero-max-width;
       text-align: right;
-      right: 0;
-      left: auto;
-      margin-left: 0;
-      margin-right: 60px;
-      width: 50%;
+      padding-right: 60px;
     }
 
     @include grid-media($media-lg) {
-      margin-right: 100px;
+      padding-right: 40px;
+    }
+
+    @include grid-media($media-xl) {
+      padding-right: 40px;
+      margin: 0 auto;
     }
   }
 
