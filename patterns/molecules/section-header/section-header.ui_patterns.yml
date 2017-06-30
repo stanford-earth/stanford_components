@@ -18,6 +18,16 @@ section_header:
       label: "Dash With Emphasis"
       description: "Dash has emphasis or default brand color?  Treat as boolean (true/false)"
       preview: false
+    link:
+      description: "URI that points somewhere."
+      label: "Link (optional)"
+      preview: "https://stanford.edu/"
+      type: text
+    more:
+      description: "More link."
+      label: "More link (optional)"
+      preview: "All Research groups"
+      type: text
     subhead:
       description: "Card text.  Renders full html (eg. <p> & <br />)"
       label: Subhead

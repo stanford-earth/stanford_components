@@ -1,0 +1,34 @@
+@media only screen and (min-width: 768px) {
+  .section-double-filmstrip.has-columns .filmstrip__header {
+    width: calc(100% - 80px);
+    float: left;
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-double-filmstrip.has-columns .filmstrip__header {
+    width: calc(25% - 50px);
+    float: left;
+    margin-left: 40px;
+    padding-top: 2.7777777778em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-double-filmstrip.has-columns .filmstrip__container {
+    width: calc(75% - 70px);
+    float: left;
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-double-filmstrip.has-columns .filmstrip__container .filmstrip__cards {
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
+  }
+}
+
+/*# sourceMappingURL=section-double-filmstrip.component.css.map */

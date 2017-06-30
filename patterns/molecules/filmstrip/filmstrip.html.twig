@@ -7,17 +7,20 @@
 {# Attach the film card css and js #}
 {{ attach_library('ui_patterns/film_card.film_card_library') }}
 {# Template HTML #}
-<div class="filmstrip">
-  <div class="filmstrip__top_border"></div>
-  <h6 class="filmstrip__title white-text">{{ title }}</h6>
+<div class="filmstrip{% if is_flexible %} is-flexible{% endif %}{% if is_tight %} is-tight{% endif %}{% if is_double %} is-double{% endif %}{% if is_tall %} is-tall{% endif %}">
+  {% if title is not empty %}
+    <h6 class="filmstrip__title">{{ title }}</h6>
+  {% endif %}
   <div class="filmstrip__cards">
     {# Break up the individual items in to the appropriate template var. #}
     {% for item in items %}
       {% set vars = {
-        'link': item.link,
+        'has_arrow': item.has_arrow,
+        'description': item.description,
         'image': item.image,
-        'title': item.title,
-        'has_arrow': item.has_arrow
+        'link': item.link,
+        'subtitle': item.subtitle,
+        'title': item.title
         }
       %}
       {# Pass vars through to include template. #}

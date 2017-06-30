@@ -12,4 +12,7 @@
     </span>
   </h2>
   {{ subhead }}
+  {% if link is not empty %}
+  <a class="section-header__link" href="{{ link|render|striptags|trim }}">{{ more }}</a>
+  {% endif %}
 </header>

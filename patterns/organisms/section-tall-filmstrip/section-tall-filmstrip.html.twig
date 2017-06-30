@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Filmstrip pattern.
+ */
+#}
+{# Attach the film card andf filmstrip css and js #}
+{{ attach_library('ui_patterns/section_header.section_header_library') }}
+{{ attach_library('ui_patterns/film_card.film_card_library') }}
+{{ attach_library('ui_patterns/filmstrip.filmstrip_library') }}
+{{ attach_library('ui_patterns/section_callout_filmstrip.section_callout_filmstrip_library') }}
+{# Template HTML #}
+<div class="section-callout-filmstrip section-tall-filmstrip"> 
+  <div class="filmstrip__header">
+    {%  set header_vars = {
+      'dash_under': dash_under,
+      'is_centered': is_centered,
+      'link': link,
+      'more': more,
+      'subhead': subhead,
+      'superhead': superhead
+    } %}
+    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+  </div>
+
+  <div class="filmstrip__container expandable-container js-expandable-container"> 
+    {%  set strip_vars = {
+      'is_flexible': is_flexible,
+      'is_double': is_double,
+      'is_tight': is_tight,
+      'is_tall': is_tall,
+      'items': items
+    } %}
+    {% include '@stanford_components/molecules/filmstrip/filmstrip.html.twig' with strip_vars %}
+
+    <div class="expandable-container__toggle js-expandable-container__toggle"><span class="visually-hidden">Show More</span><span class="expandable-container__open"><svg class="i-svg i-svg--plus"><use xlink:href="#i-plus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span></div>
+  </div>
+</div>

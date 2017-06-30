@@ -28,35 +28,141 @@
     }
   }
 
-  // Container with flexible film cards
-  &.is-flexible {
-    $callout-filmstrip-grid: (
-      columns: 12,
-      gutter: 12px,
-    );
-
+  &.is-flexible,
+  &.is-tight {
     @include grid-container;
+    max-width: 420px;
+    margin: 0 auto;
+
+    @include grid-media($media-md) {
+      max-width: none;
+    }
 
     .film-card {
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 270px;
+
+      .film-card__thumbnail {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  // Container with flexible film cards
+  &.is-flexible {
+    $callout-filmstrip-flexible: (
+      columns: 12,
+      gutter: 30px,
+    );
+
+    .film-card {
+      margin: 0 0 30px;
 
       @include grid-media($media-md) {
-        @include grid-column(6, $callout-filmstrip-grid);
+        @include grid-column(6, $callout-filmstrip-flexible);
         max-width: none;
       }
 
       @include grid-media($media-lg) {
-        @include grid-column(3, $callout-filmstrip-grid);
+        @include grid-column(3, $callout-filmstrip-flexible);
+      }
+    }
+  }
+
+  // Container with tighter margins
+  &.is-tight {
+    $callout-filmstrip-tight: (
+      columns: 12,
+      gutter: 12px,
+    );
+
+    .film-card {
+      margin: 0 0 12px;
+
+      @include grid-media($media-md) {
+        @include grid-column(6, $callout-filmstrip-tight);
+        max-width: none;
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(3, $callout-filmstrip-tight);
+      }
+    }
+  }
+
+  // Container with double film cards
+  &.is-double {
+    $callout-filmstrip-flexible: (
+      columns: 12,
+      gutter: 30px,
+    );
+
+    .film-card__caption {
+      left: 10px;
+      bottom: 15px;
+    }
+
+    .film-card {
+      margin: 0 0 30px;
+
+      @include grid-media($media-md) {
+        @include grid-column(6, $callout-filmstrip-flexible);
+        max-width: none;
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(4, $callout-filmstrip-flexible);
+
+        &:nth-child(4n) {
+          clear: left;
+        }
       }
     }
 
-    .film-card__thumbnail {
-      img {
-        width: 100%;
-        height: auto;
+    .film-card__link {
+      @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
+    }
+  }
+
+  // Container with tall film cards
+  &.is-tall {
+    $callout-filmstrip-flexible: (
+      columns: 12,
+      gutter: 30px,
+    );
+
+    .film-card__caption {
+      left: 10px;
+      bottom: 15px;
+    }
+
+    .film-card {
+      margin: 0 0 30px;
+
+      @include grid-media($media-md) {
+        @include grid-column(6, $callout-filmstrip-flexible);
+        max-width: none;
       }
+
+      @include grid-media($media-lg) {
+        @include grid-column(3, $callout-filmstrip-flexible);
+
+        &:nth-child(2),
+        &:nth-child(4),
+        &:nth-child(5n) {
+          margin-top: -2em;
+        }
+
+        &:nth-child(5n) {
+          @include grid-push(3, $callout-filmstrip-flexible);
+          clear: left;
+        }
+      }
+    }
+
+    .film-card__link {
+      @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
     }
   }
 }

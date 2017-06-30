@@ -6,12 +6,12 @@ section_callout_cards:
   fields:
     dash_under:
       description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
-      label: "Dash Under Emphasis"
+      label: "Dash Under"
       preview: false
       type: text
     is_centered:
       description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
-      label: Center
+      label: "Center"
       preview: false
       type: text
     is_featured:
@@ -23,7 +23,7 @@ section_callout_cards:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
       type: collection
-      preview: 
+      preview:
         -
           image:
             alt: "this is a sample image"
@@ -44,7 +44,7 @@ section_callout_cards:
             theme: image
             uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
           link: "https://www.stanford.edu"
-          title: Geophysics
+          title: "Geophysics"
         -
           image:
             alt: "this is a sample image"

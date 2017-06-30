@@ -1,0 +1,20 @@
+@media only screen and (min-width: 1024px) {
+  .section-tall-filmstrip .filmstrip__container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-tall-filmstrip .filmstrip__container .filmstrip__cards {
+    margin-left: -40px;
+    margin-right: -40px;
+    width: calc(100% + 80px);
+  }
+}
+
+.section-tall-filmstrip .film-card:nth-child(n+5) {
+  display: none;
+}
+
+/*# sourceMappingURL=section-tall-filmstrip.component.css.map */

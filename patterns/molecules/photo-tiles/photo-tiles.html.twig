@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Photo tile pattern.
+ */
+#}
+{{ attach_library('ui_patterns/photo_thumb.photo_thumb_library') }}
+{{ attach_library('ui_patterns/photo_tile.photo_tile_library') }}
+<div class="photo-tiles{% if is_right %} is-right{% endif %}{% if classes is not empty %} {{ classes }}{% endif %}">
+  <div class="photo-tile tile-item tile-sizer">
+    {% if link is not empty %}
+    <a class="photo-tile__action" href="{{ link|render|striptags|trim }}">
+    {% endif %}
+      <div class="photo-tile__thumbnail">
+        {{ image }}
+        <div class="photo-tile__header">
+          <div class="photo-tile__title"><h3>{{ title }}</h3></div>
+          <p class="photo-tile__description">{{ description }}</p>
+          <span class="photo-tile__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+        </div>
+      </div>
+    {% if link is not empty %}
+    </a>
+    {% endif %}
+  </div>
+
+  <div class="photo-thumbs">
+  {% for item in items %}
+    {% set vars = {
+      'link': item.link,
+      'image': item.image
+      }
+    %}
+    {# Pass vars through to include template. #}
+    {% include '@stanford_components/atoms/photo-thumb/photo-thumb.html.twig' with vars %}
+  {% endfor %}
+  </div>
+</div>

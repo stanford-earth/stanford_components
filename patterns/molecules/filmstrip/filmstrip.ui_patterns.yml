@@ -19,7 +19,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/nature/1"
+            uri: "https://lorempixel.com/420/277/nature/1"
           link: "https://www.stanford.edu"
           title: "First Item"
         -
@@ -27,7 +27,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/nature/2"
+            uri: "https://lorempixel.com/420/277/nature/2"
           link: "https://www.stanford.edu"
           title: "Second Item"
         -
@@ -35,7 +35,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/nature/3"
+            uri: "https://lorempixel.com/420/277/nature/3"
           link: "https://www.stanford.edu"
           title: "Third Item"
         -
@@ -43,7 +43,7 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/nature/4"
+            uri: "https://lorempixel.com/420/277/nature/4"
           link: "https://www.stanford.edu"
           title: "Second Item"
         -
@@ -51,13 +51,23 @@ filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "https://lorempixel.com/220/145/nature/5"
+            uri: "https://lorempixel.com/420/277/nature/5"
           link: "https://www.stanford.edu"
           title: "Third Item"
     title:
       description: "Title for the whole filmstrip."
       label: Title
       preview: "Challenges We Tackle"
+      type: text
+    is_flexible:
+      description: "Make cards have flexible rather than fixed widths.  Treat as boolean (true/false)."
+      label: Flexible widths
+      preview: false
+      type: text
+    is_tight:
+      description: "Make cards have flexible rather than fixed widths and tighter margins.  Treat as boolean (true/false)."
+      label: Flexible widths and tighter margins
+      preview: false
       type: text
   libraries:
     -

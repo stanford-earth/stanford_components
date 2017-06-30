@@ -6,7 +6,7 @@ section_callout_filmstrip:
   fields:
     dash_under:
       description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
-      label: "Dash Under Emphasis"
+      label: "Dash Under"
       preview: true
       type: text
     is_centered:
@@ -19,6 +19,16 @@ section_callout_filmstrip:
       label: "Dash with Emphasis"
       description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
       preview: true
+    is_flexible:
+      description: "Make cards have flexible rather than fixed widths.  Treat as boolean (true/false)."
+      label: Flexible widths
+      preview: true
+      type: text
+    is_tight:
+      description: "Make cards have flexible rather than fixed widths and tighter margins.  Treat as boolean (true/false)."
+      label: Flexible widths and tighter margins
+      preview: true
+      type: text
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
@@ -28,39 +38,43 @@ section_callout_filmstrip:
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/270/183/nature/1"
+            uri: "http://lorempixel.com/420/277/nature/1"
           link: "https://www.stanford.edu"
           title: "Green Venture Capitalist<br />MBA/MS Environmental<br />Resources '08"
+          has_arrow: false
         -
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/270/183/nature/2"
+            uri: "http://lorempixel.com/420/277/nature/2"
           link: "https://www.stanford.edu"
           title: "Product Designer<br />Earth Systems BS '06,<br /> MS '10"
+          has_arrow: false
         -
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/270/183/nature/3"
+            uri: "http://lorempixel.com/420/277/nature/3"
           link: "https://www.stanford.edu"
           title: "Energy Engineer<br />Energy Resources Engineering<br />MS '16"
+          has_arrow: false
         -
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/270/183/nature/6"
+            uri: "http://lorempixel.com/420/277/nature/6"
           link: "https://www.stanford.edu"
           title: "Environmental attorney<br />Earth Systems BS, 05<br />MS '09"
+          has_arrow: false
     subhead:
       description: "Subhead for callout"
       label: Subhead
-      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy. Check some career Examples </p>"
+      preview: "<p>Other challenges  we tackle.</p>"
       type: text
     superhead:
       description: "Title for callout"
       label: Superhead
-      preview: "Where Our Programs Can Lead You"
+      preview: "Explore"
       type: text
   libraries:
     -

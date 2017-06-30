@@ -9,12 +9,13 @@
 {{ attach_library('ui_patterns/calendar_blocks.callout_blocks_library') }}
 <div class="section-calendar-blocks">
   <div class="calendar-blocks__header">
-  {%  set header_vars = {
-    'superhead': title,
-    'is-centered': false,
-    'dash_under': dash_under
-  } %}
-  {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+    {%  set header_vars = {
+      'superhead': superhead,
+      'subhead': subhead,
+      'is_centered': is_centered,
+      'dash_under': dash_under
+    } %}
+    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
   </div>
 
   <div class="calendar-blocks__container">

@@ -1,11 +1,5 @@
 .film-card {
-  max-width: 220px;
-  margin-right: 18px;
-  padding: 0;
-  position: relative;
-  box-shadow: none !important;
-  border: 0;
-  overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .film-card.has-arrow .film-card__caption {
@@ -19,38 +13,54 @@
   bottom: auto;
 }
 
-.film-card__thumbnail {
+.film-card__link {
   position: relative;
-}
-
-.film-card__thumbnail .film-card__caption {
-  position: absolute;
-  max-width: 180px;
-  margin: 55px 4px 55px 22px;
+  position: relative;
+  display: inline-block;
   color: #fff;
 }
 
+.film-card__link::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  content: '';
+  display: block;
+}
+
+.film-card__link img {
+  display: block;
+}
+
+.film-card__link:hover, .film-card__link:active, .film-card__link:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
 .film-card__thumbnail img {
-  width: 220px;
+  display: block;
 }
 
 .film-card__caption {
   position: absolute;
-  padding: 0 22px;
-  color: #fff;
-  bottom: 22px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
 }
 
 .film-card__arrow {
-  width: 25px;
   position: absolute;
-  right: 22px;
-  bottom: 12px;
-  color: #fff;
+  bottom: 10px;
+  right: 20px;
 }
 
 .film-card__arrow svg {
   vertical-align: middle;
+  display: inline;
+  margin-left: 5px;
 }
 
 /*# sourceMappingURL=film-card.component.css.map */

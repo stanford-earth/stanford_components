@@ -4,6 +4,11 @@ film_card:
   label: "Film card"
   description: "A single card inside a filmstrip."
   fields:
+    description:
+      description: "Card description."
+      label: Title
+      preview: "Understand the properties and processes in the top ~100 meters of the earth."
+      type: text
     has_arrow:
       description: "Render arrow on card.  Treat as boolean (true/false)."
       label: Arrow
@@ -21,6 +26,11 @@ film_card:
       description: "URI that points somewhere."
       label: "Link (optional)"
       preview: "https://stanford.edu/"
+      type: text
+    subtitle:
+      description: "Card subtitle."
+      label: Subtitle
+      preview: "Card subtitle"
       type: text
     title:
       description: "Card title."

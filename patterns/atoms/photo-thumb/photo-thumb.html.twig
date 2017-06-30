@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Photo thumb pattern.
+ */
+#}
+<div class="photo-thumb tile-item">
+  {% if link is not empty %}
+  <a class="photo-thumb__link" href="{{ link|render|striptags|trim }}">
+  {% endif %}
+    {{ image }}
+  {% if link is not empty %}
+  </a>
+  {% endif %}
+</div>

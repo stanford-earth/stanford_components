@@ -1,0 +1,125 @@
+# Callout Filmstrip Tall Pattern
+#
+section_tall_filmstrip:
+  label: "Section Tall Filmstrip"
+  description: "A horizontal list of small images with section header"
+  fields:
+    dash_under:
+      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
+      label: "Dash Under"
+      preview: true
+      type: text
+    is_centered:
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      label: Center
+      preview: true
+      type: text
+    is_double:
+      description: "Flexible cards rather than default fixed widths and 3 columns.  Treat as boolean (true/false)."
+      label: "Flexible widths and three columns"
+      preview: false
+      type: text
+    is_featured:
+      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      label: "Dash with Emphasis"
+      preview: true
+      type: text
+    is_flexible:
+      description: "Flexible cards rather than default fixed widths.  Treat as boolean (true/false)."
+      label: "Flexible widths"
+      preview: true
+      type: text
+    is_tall:
+      description: "Flexible cards and taller aspect ratio.  Treat as boolean (true/false)."
+      label: "Flexible widths and taller images"
+      preview: true
+      type: text
+    is_tight:
+      description: "Flexible cards and tighter margins.  Treat as boolean (true/false)."
+      label: "Flexible widths and tighter margins"
+      preview: false
+      type: text
+    items:
+      description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
+      label: "A list of simple image cards"
+      preview:
+        -
+          has_arrow: false
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "http://lorempixel.com/380/604/nature/1"
+          link: "https://www.stanford.edu"
+          subtitle: "Associate Professor Earth System Science"
+          title: "David Lobell"
+        -
+          has_arrow: false
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "http://lorempixel.com/380/604/nature/2"
+          link: "https://www.stanford.edu"
+          subtitle: "Professor of Earth System Science"
+          title: "Rob Jackson"
+        -
+          has_arrow: false
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "http://lorempixel.com/380/604/nature/3"
+          link: "https://www.stanford.edu"
+          subtitle: "Geophysisc Professor"
+          title: "Rosemary Knight"
+        -
+          has_arrow: false
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "http://lorempixel.com/380/604/nature/6"
+          link: "https://www.stanford.edu"
+          subtitle: "Associate Professor Earth System Science"
+          title: "David Lobell"
+        -
+          has_arrow: false
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "http://lorempixel.com/380/604/nature/1"
+          link: "https://www.stanford.edu"
+          subtitle: "Assistant Professor, Earth System Science"
+          title: "Marshall Burke"
+        -
+          has_arrow: false
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "http://lorempixel.com/380/604/nature/2"
+          link: "https://www.stanford.edu"
+          subtitle: "Professor of Earth System Science"
+          title: "Scott Fendorff"
+      type: array
+    more:
+      description: "More link."
+      label: "More link (optional)"
+      preview: "All Research groups"
+      type: text
+    subhead:
+      description: "Subhead for callout"
+      label: Subhead
+      preview: "<p>Our multidisciplinary research groups bring together cutting-edge knowledge to test ideas for new solutions.</p>"
+      type: text
+    superhead:
+      description: "Title for callout"
+      label: Superhead
+      preview: "Research Groups"
+      type: text
+  libraries:
+    -
+      section_tall_filmstrip_library:
+        css:
+          component:
+            css/section-tall-filmstrip.component.css: {}
+            css/section-tall-filmstrip.state.css: {}
+        js:
+          js/section-tall-filmstrip.js: {}
+  use: "@stanford_components/organisms/section-tall-filmstrip/section-tall-filmstrip.html.twig"

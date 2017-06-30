@@ -97,6 +97,7 @@ module.exports = function(grunt) {
       dist: {
         files: {
           // Atoms.
+          'patterns/atoms/photo-thumb/css/photo-thumb.component.css':                         'patterns/atoms/photo-thumb/scss/photo-thumb.component.scss',
           'patterns/atoms/icon-item/css/icon-item.component.css':                             'patterns/atoms/icon-item/scss/icon-item.component.scss',
           'patterns/atoms/link-item/css/link-item.component.css':                             'patterns/atoms/link-item/scss/link-item.component.scss',
           'patterns/atoms/nav-item/css/nav-item.component.css':                               'patterns/atoms/nav-item/scss/nav-item.component.scss',
@@ -125,6 +126,8 @@ module.exports = function(grunt) {
           'patterns/molecules/postcard/css/postcard.component.css':                           'patterns/molecules/postcard/scss/postcard.component.scss',
           'patterns/molecules/postcard/css/postcard.theme.css':                               'patterns/molecules/postcard/scss/postcard.theme.scss',
           'patterns/molecules/section-header/css/section-header.component.css':               'patterns/molecules/section-header/scss/section-header.component.scss',
+          'patterns/molecules/photo-tile/css/photo-tile.component.css':                       'patterns/molecules/photo-tile/scss/photo-tile.component.scss',
+          'patterns/molecules/photo-tiles/css/photo-tiles.component.css':                     'patterns/molecules/photo-tiles/scss/photo-tiles.component.scss',
           'patterns/molecules/simple-block/css/simple-block.component.css':                   'patterns/molecules/simple-block/scss/simple-block.component.scss',
           'patterns/molecules/simple-blocks/css/simple-blocks.component.css':                 'patterns/molecules/simple-blocks/scss/simple-blocks.component.scss',
           'patterns/molecules/simple-slat/css/simple-slat.component.css':                     'patterns/molecules/simple-slat/scss/simple-slat.component.scss',
@@ -134,6 +137,9 @@ module.exports = function(grunt) {
           'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':         'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
           'patterns/organisms/section-callout-cards/css/section-callout-cards.component.css':           'patterns/organisms/section-callout-cards/scss/section-callout-cards.component.scss',
           'patterns/organisms/section-callout-filmstrip/css/section-callout-filmstrip.component.css':   'patterns/organisms/section-callout-filmstrip/scss/section-callout-filmstrip.component.scss',
+          'patterns/organisms/section-double-filmstrip/css/section-double-filmstrip.component.css':     'patterns/organisms/section-double-filmstrip/scss/section-double-filmstrip.component.scss',
+          'patterns/organisms/section-tall-filmstrip/css/section-tall-filmstrip.component.css':         'patterns/organisms/section-tall-filmstrip/scss/section-tall-filmstrip.component.scss',
+          'patterns/organisms/section-tall-filmstrip/css/section-tall-filmstrip.state.css':             'patterns/organisms/section-tall-filmstrip/scss/section-tall-filmstrip.state.scss',
           'patterns/organisms/section-expandable-banner/css/section-expandable-banner.component.css':   'patterns/organisms/section-expandable-banner/scss/section-expandable-banner.component.scss',
           'patterns/organisms/section-expandable-banner/css/section-expandable-banner.states.css':      'patterns/organisms/section-expandable-banner/scss/section-expandable-banner.states.scss',
           'patterns/organisms/section-feature-blocks/css/section-feature-blocks.component.css':         'patterns/organisms/section-feature-blocks/scss/section-feature-blocks.component.scss',

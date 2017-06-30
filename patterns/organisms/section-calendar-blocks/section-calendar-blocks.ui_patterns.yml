@@ -1,9 +1,19 @@
 # Calendar Blocks Pattern
 #
 section_calendar_blocks:
-  description: "A horizontal list callout blocks with icons and styled text"
   label: "Section Calendar Blocks"
-  fields: 
+  description: "A horizontal list callout blocks with icons and styled text"
+  fields:
+    subhead:
+      description: "Card text.  Renders full html (eg. <p> & <br />)"
+      label: Subhead
+      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy.</p>"
+      type: text
+    superhead:
+      description: "Title for the content block."
+      label: Superhead
+      preview: "Calendar"
+      type: text
     dash_under:
       description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
       label: "Dash Under Emphasis"
@@ -22,6 +32,7 @@ section_calendar_blocks:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
+      type: collection
       preview:
         -
           day: "9"
@@ -51,12 +62,6 @@ section_calendar_blocks:
           link: "https://www.stanford.edu"
           month: May
           title: "Women Entrepreneurs in Sustainability’"
-      type: collection
-    subhead:
-      description: "Card text.  Renders full html (eg. <p> & <br />)"
-      label: Subhead
-      preview: "<p>Today more than 7 billion people inhabit Earth and a billion lack adequate energy.</p>"
-      type: text
     title:
       description: "Title for the content block."
       label: Title
