@@ -93,6 +93,16 @@ $hero-max-width: 1380px;
       padding-right: 40px;
       margin: 0 auto;
     }
+
+    .hero-banner__hgroup {
+      padding-top: 40px;
+
+      @include grid-media($media-md) {
+        float: right;
+        padding-top: 0;
+        width: 50%;
+      }
+    }
   }
 
   .cite {
