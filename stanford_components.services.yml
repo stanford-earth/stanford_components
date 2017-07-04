@@ -1,0 +1,6 @@
+services:
+  stanford_components.twig.extension:
+    class: Drupal\stanford_components\TwigExtension\StanfordComponentsTwigExtension
+    arguments: ['@renderer']
+    tags:
+      - {name: twig.extension}
