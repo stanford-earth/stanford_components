@@ -5,12 +5,12 @@ highlight_card:
   fields:
     description:
       description: Description.
-      label: Title
+      label: Description
       preview: "Today more than 7 billion people inhabit Earth and a billion lack adequate energy, water and food."
       type: text
     intro:
       description: Intro.
-      label: Title
+      label: Intro
       preview: "Take a Course"
       type: text
     link:
