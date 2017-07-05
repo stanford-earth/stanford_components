@@ -9,6 +9,7 @@
 
 .simple-block__thumbnail img {
   display: block;
+  width: 100%;
 }
 
 .simple-block__tag {

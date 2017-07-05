@@ -14,14 +14,14 @@ section_double_filmstrip:
       label: Center
       preview: false
       type: text
+    is_featured:
+      type: text
+      label: "Dash with Emphasis"
+      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
+      preview: true
     is_double:
       description: "Make cards have flexible rather than fixed widths and 3 columns.  Treat as boolean (true/false)."
       label: "Flexible widths and three columns"
-      preview: true
-      type: text
-    is_featured:
-      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
-      label: "Dash with Emphasis"
       preview: true
       type: text
     is_flexible:

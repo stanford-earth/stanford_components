@@ -4,15 +4,21 @@ photo_tiles:
   label: "Photo Tiles"
   description: "A collecion of photo tiles"
   fields:
-    classes:
-      description: "Render custom classes"
-      label: Classes
-      preview: my-class
-      type: text
+
     description:
       description: "Tile description."
       label: Description
       preview: "Ornare. Nulla tempus sagittis Etiam."
+      type: text
+    is_right:
+      description: "Render tiles left or right  Treat as boolean (true/false)."
+      label: Arrow
+      preview: false
+      type: text
+    classes:
+      description: "Render custom classes"
+      label: Classes
+      preview: "my-class"
       type: text
     image:
       description: "Tile image."
@@ -21,10 +27,15 @@ photo_tiles:
         theme: image
         uri: "https://lorempixel.com/380/380/nature/10"
       type: image
-    is_right:
-      description: "Render tiles left or right  Treat as boolean (true/false)."
-      label: Arrow
-      preview: false
+    link:
+      description: "URI that points somewhere"
+      label: Link
+      preview: "https://stanford.edu"
+      type: url
+    title:
+      description: "Photo tile title"
+      label: Title
+      preview: "Students"
       type: text
     items:
       description: "This template iterates over the items to produce a collection of divs. Each item must have a url, title, description and an image rendered as an html element."
@@ -49,16 +60,6 @@ photo_tiles:
             theme: image
             uri: "https://lorempixel.com/380/380/nature/2"
           link: "https://www.stanford.edu"
-    link:
-      description: "URI that points somewhere"
-      label: Link
-      preview: "https://stanford.edu"
-      type: url
-    title:
-      description: "Photo tile title"
-      label: Title
-      preview: Students
-      type: text
   libraries:
     -
       photo_tiles_library:

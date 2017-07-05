@@ -9,6 +9,11 @@ photo_tile:
       label: Description
       preview: "Ornare. Nulla tempus sagittis Etiam."
       type: text
+    is_right:
+      description: "Render tiles left or right  Treat as boolean (true/false)."
+      label: Arrow
+      preview: false
+      type: text
     image:
       description: "Tile image."
       label: Image
@@ -16,11 +21,6 @@ photo_tile:
         theme: image
         uri: "https://lorempixel.com/380/380/nature/10"
       type: image
-    is_right:
-      description: "Render tiles left or right  Treat as boolean (true/false)."
-      label: Arrow
-      preview: false
-      type: text
     link:
       description: "URI that points somewhere"
       label: Link
@@ -29,7 +29,7 @@ photo_tile:
     title:
       description: "Photo tile title"
       label: Title
-      preview: Students
+      preview: "Students"
       type: text
   libraries:
     -

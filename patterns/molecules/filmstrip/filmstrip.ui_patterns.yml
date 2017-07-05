@@ -69,6 +69,11 @@ filmstrip:
       label: Flexible widths and tighter margins
       preview: false
       type: text
+    is_tall:
+      description: "Tall cards."
+      label: "Flexible tall cards"
+      preview: false
+      type: text
   libraries:
     -
       filmstrip_library:

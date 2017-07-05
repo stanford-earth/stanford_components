@@ -71,18 +71,18 @@
 
 @media only screen and (min-width: 768px) {
   .filmstrip.is-tight .film-card {
-    width: calc(50% - 18px);
+    width: calc(50% - 45px);
     float: left;
-    margin-left: 12px;
+    margin-left: 30px;
     max-width: none;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .filmstrip.is-tight .film-card {
-    width: calc(25% - 15px);
+    width: calc(25% - 37.5px);
     float: left;
-    margin-left: 12px;
+    margin-left: 30px;
   }
 }
 
@@ -115,11 +115,11 @@
   }
 }
 
-.filmstrip.is-double .film-card__link {
+.filmstrip.is-double .film-card .film-card__link {
   position: relative;
 }
 
-.filmstrip.is-double .film-card__link::before {
+.filmstrip.is-double .film-card .film-card__link::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -131,7 +131,7 @@
   display: block;
 }
 
-.filmstrip.is-double .film-card__link img {
+.filmstrip.is-double .film-card .film-card__link img {
   display: block;
 }
 

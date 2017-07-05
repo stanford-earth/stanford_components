@@ -74,7 +74,7 @@
   &.is-tight {
     $callout-filmstrip-tight: (
       columns: 12,
-      gutter: 12px,
+      gutter: 30px,
     );
 
     .film-card {
@@ -95,7 +95,7 @@
   &.is-double {
     $callout-filmstrip-flexible: (
       columns: 12,
-      gutter: 30px,
+      gutter: 30px
     );
 
     .film-card__caption {
@@ -113,15 +113,14 @@
 
       @include grid-media($media-lg) {
         @include grid-column(4, $callout-filmstrip-flexible);
-
         &:nth-child(4n) {
           clear: left;
         }
       }
-    }
 
-    .film-card__link {
-      @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
+      .film-card__link {
+        @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
+      }
     }
   }
 

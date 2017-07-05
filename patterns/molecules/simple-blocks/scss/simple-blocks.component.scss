@@ -22,6 +22,12 @@
       max-width: 100%;
     }
 
+    @include grid-media($media-md-max) {
+      &:nth-child(2n+1) {
+        clear: both;
+      }
+    }
+
     @include grid-media($media-lg) {
       @include grid-column(4, $simple-blocks-grid);
     }

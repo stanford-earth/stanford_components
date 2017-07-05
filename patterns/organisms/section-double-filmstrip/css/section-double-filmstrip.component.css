@@ -31,4 +31,10 @@
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .section-double-filmstrip.has-columns .filmstrip__container .filmstrip__cards .film-card:nth-child(2n+1) {
+    clear: both;
+  }
+}
+
 /*# sourceMappingURL=section-double-filmstrip.component.css.map */

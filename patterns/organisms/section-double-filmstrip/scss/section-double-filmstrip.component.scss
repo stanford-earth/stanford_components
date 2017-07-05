@@ -28,6 +28,14 @@
         @include grid-media($media-md) {
           @include grid-collapse;
         }
+
+        @include grid-media($media-sm-max) {
+          .film-card:nth-child(2n+1) {
+            clear: both;
+          }
+        }
+
+
       }
     }
   }
