@@ -3,6 +3,20 @@
 postcard:
   label: Postcard
   description: "A postcard component."
+  variants:
+    image_orientation:
+      label: "Image Orientation"
+      description: "Choose which side the image should appear on."
+      default: has-image-left
+      options:
+        has-image-right: "Image on the right"
+        has-image-left: "Image on the left"
+    text_orientation:
+      label: "Text Orientation"
+      description: "Choose where the text should appear."
+      options:
+        has-text-offset: "Text should overlap over a portion of the image"
+        has-text-inset: "Text should be beside the image"
   fields:
     image:
       description: "Card image."
