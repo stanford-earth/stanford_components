@@ -5,14 +5,12 @@
  */
 #}
 {{ attach_library('ui_patterns/link_item.link_item_library') }}
-
-{% set classes = [ 'link-banner' ] %}
-{% set styles = [] %}
+{% set attributes = attributes.addClass('link-banner') %}
 {% if image|get_img_src is not empty %}
-  {% set styles = ['background-image:url(' ~ image|get_img_src ~ ')'] %}
+  {% set attributes = attributes.setAttribute('style', ['background-image:url(' ~ image|get_img_src ~ ')']) %}
 {% endif %}
 
-<div {{ create_attribute({'class': classes, 'style': styles}) }}>
+<div {{ attributes }}>
   <header class="link-banner__header">
     <h3>{{ title }}</h3>
     <p>{{ description|render|striptags|trim }}</p>
