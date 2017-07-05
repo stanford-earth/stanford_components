@@ -5,26 +5,35 @@
  */
 #}
 {{ attach_library('ui_patterns/link_item.link_item_library') }}
-<div class="link-banner" style="background-image:url({{ imgurl|default('https://upload.wikimedia.org/wikipedia/commons/3/36/Hopetoun_falls.jpg') }})">
+
+{% set classes = [ 'link-banner' ] %}
+{% set styles = [] %}
+{% if image|get_img_src is not empty %}
+  {% set styles = ['background-image:url(' ~ image|get_img_src ~ ')'] %}
+{% endif %}
+
+<div {{ create_attribute({'class': classes, 'style': styles}) }}>
   <header class="link-banner__header">
     <h3>{{ title }}</h3>
-    <p>{{ description }}</p>
+    <p>{{ description|render|striptags|trim }}</p>
   </header>
 
   <div class="link-items">
+    {# Break up the individual items in to the appropriate template var. #}
+    {% for item in items %}
+      {% if item.title %}
+        {% set vars = {
+        'link': item.link,
+        'title': item.title,
+        'subtitle': item.subtitle
+        } %}
 
-  {# Break up the individual items in to the appropriate template var. #}
-  {% for item in items %}
-
-    {% set vars = {
-      'link': item.link,
-      'title': item.title,
-      'subtitle': item.subtitle
-      }
-    %}
-
-    {# Pass vars through to include template. #}
-    {% include '@stanford_components/atoms/link-item/link-item.html.twig' with vars %}
-  {% endfor %}
+        {# Pass vars through to include template. #}
+        {% include '@stanford_components/atoms/link-item/link-item.html.twig' with vars %}
+      {% else %}
+        {# We have to use raw since striptags doesn't mark as safe. see https://www.drupal.org/node/2705249. #}
+        {{ item|render|striptags('<a><span>')|trim|raw }}
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
