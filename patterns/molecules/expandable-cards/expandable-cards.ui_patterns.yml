@@ -4,7 +4,7 @@ expandable_cards:
   label: "Expandable Cards"
   description: "A horizontal list expandable cards with icons"
   fields:
-    cards:
+    items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, intro and description rendered as an html element."
       label: "A list of highlight cards"
       type: collection
@@ -17,44 +17,38 @@ expandable_cards:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Geological Sciences"
+              link: "<a href=\"https://www.stanford.edu\">Geological Sciences</a>"
             -
               image:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Energy Resources Engineering"
+              link: "<a href=\"https://www.stanford.edu\">Energy Resources Engineering</a>"
             -
               image:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Earth Systems Program"
+              link: "<a href=\"https://www.stanford.edu\">Earth Systems Program</a>"
             -
               image:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Earth Systems Sciences"
+              link: "<a href=\"https://www.stanford.edu\">Earth Systems Sciences</a>"
             -
               image:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: Geophysics
+              link: "<a href=\"https://www.stanford.edu\">Geophysics</a>"
             -
               image:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Emmett Interdisciplinary Program"
-          link: "https://www.stanford.edu"
+              link: "<a href=\"https://www.stanford.edu\">Emmett Interdisciplinary Program</a>"
+          link: "<a href=\"https://www.stanford.edu"
           title: Undergraduates
         -
           is_wide: false
@@ -64,37 +58,32 @@ expandable_cards:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Geological Sciences"
+              link: "<a href=\"https://www.stanford.edu\">Geological Sciences</a>"
             -
               icon:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Energy Resources Engineering"
+              link: "<a href=\"https://www.stanford.edu\">Energy Resources Engineering</a>"
             -
               icon:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Earth Systems Program"
+              link: "<a href=\"https://www.stanford.edu\">Earth Systems Program</a>"
             -
               icon:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: Geophysics
+              link: "<a href=\"https://www.stanford.edu\">Geophysics</a>"
             -
               icon:
                 alt: "this is a sample image"
                 theme: image
                 uri: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Rectilinear_minimum_spanning_tree.svg"
-              link: "https://www.stanford.edu"
-              name: "Emmett Interdisciplinary Program"
-          link: "https://www.stanford.edu"
+              link: "<a href=\"https://www.stanford.edu\">Emmett Interdisciplinary Program"
+          link: "<a href=\"https://www.stanford.edu"
           title: Graduates
   libraries:
     -
@@ -102,4 +91,6 @@ expandable_cards:
         css:
           component:
             css/expandable-cards.component.css: {}
+        dependencies:
+          - ui_patterns/expandable_card.expandable_card_library
   use: "@stanford_components/molecules/expandable-cards/expandable-cards.html.twig"

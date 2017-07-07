@@ -15,13 +15,8 @@ icon_item:
     link:
       description: "URI that points somewhere"
       label: Link
-      preview: "https://stanford.edu"
+      preview: "<a href=\"https://stanford.edu\">Field Learning</a>"
       type: url
-    name:
-      description: "Item name."
-      label: Title
-      preview: "Field Learning"
-      type: text
   libraries:
     -
       icon_item_library:

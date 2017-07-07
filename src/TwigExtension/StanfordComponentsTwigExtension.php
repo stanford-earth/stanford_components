@@ -4,11 +4,30 @@ namespace Drupal\stanford_components\TwigExtension;
 
 use Drupal\Core\Link;
 use Drupal\Core\Url;
+use Drupal\Component\Utility\Xss;
+use Symfony\Component\HttpFoundation\RequestStack;
 
 /**
  * Class StanfordComponentsTwigExtension.
  */
 class StanfordComponentsTwigExtension extends \Twig_Extension {
+
+  /**
+   * Used for getting $_GET parameters.
+   *
+   * @var \Symfony\Component\HttpFoundation\RequestStack
+   */
+  protected $requestStack;
+
+  /**
+   * StanfordComponentsTwigExtension constructor.
+   *
+   * @param \Symfony\Component\HttpFoundation\RequestStack $requestStack
+   *   Drupal::request()
+   */
+  public function __construct(RequestStack $requestStack) {
+    $this->requestStack = $requestStack;
+  }
 
   /**
    * {@inheritdoc}
@@ -26,6 +45,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       new \Twig_SimpleFilter('closelink', [$this, 'closeLink']),
       new \Twig_SimpleFilter('first_char', [$this, 'firstChar']),
       new \Twig_SimpleFilter('get_img_src', [$this, 'getImgSrc']),
+      new \Twig_SimpleFilter('md5', [$this, 'md5']),
     ];
   }
 
@@ -38,6 +58,8 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       new \Twig_SimpleFunction('closelink', [$this, 'closeLink']),
       new \Twig_SimpleFunction('first_char', [$this, 'firstChar']),
       new \Twig_SimpleFunction('get_img_src', [$this, 'getImgSrc']),
+      new \Twig_SimpleFunction('get_param', [$this, 'getParam']),
+      new \Twig_SimpleFunction('md5', [$this, 'md5']),
     ];
   }
 
@@ -156,6 +178,37 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
 
     $trimmed = trim(strip_tags($item));
     return $trimmed ? $trimmed : NULL;
+  }
+
+  /**
+   * Get parameter from $_GET.
+   *
+   * @param string $name
+   *   Parameter key.
+   * @param mixed $default
+   *   The default value if the parameter key does not exist.
+   * @param bool $deep
+   *   If true, a path like foo[bar] will find deeper items.
+   *
+   * @return mixed|null
+   *   Value of the parameter or null if nothing.
+   */
+  public function getParam($name, $default = NULL, $deep = FALSE) {
+    $value = $this->requestStack->getCurrentRequest()->query->get($name, $default, $deep);
+    return Xss::filter($value);
+  }
+
+  /**
+   * Get an md5 of an item.
+   *
+   * @param mixed $item
+   *   Something to get an md5 hash for.
+   *
+   * @return string
+   *   Md5 of serialized item.
+   */
+  public function md5($item) {
+    return md5(serialize($item));
   }
 
 }

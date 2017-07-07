@@ -2,31 +2,33 @@
 section_header:
   description: "Section header with title and alternate description"
   label: "Section header"
-  fields:
+  variants:
     dash_under:
       label: "Dash Under Header"
       description: "Dash under h2 or to the left?  Treat as boolean (true/false)"
-      preview: true
-      type: text
+      default: 1
+      options:
+        0: Left
+        1: Under
     is_centered:
-      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
       label: Center
-      preview: true
-      type: text
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      default: 1
+      options:
+        0: Not Centered
+        1: Centered
     is_featured:
-      type: text
       label: "Dash With Emphasis"
       description: "Dash has emphasis or default brand color?  Treat as boolean (true/false)"
-      preview: false
+      default: 0
+      options:
+        0: No
+        1: Yes
+  fields:
     link:
-      description: "URI that points somewhere."
+      description: "Read More Link."
       label: "Link (optional)"
-      preview: "https://stanford.edu/"
-      type: text
-    more:
-      description: "More link."
-      label: "More link (optional)"
-      preview: "All Research groups"
+      preview: "<a href=\"https://stanford.edu/\">All Research Groups</a>"
       type: text
     subhead:
       description: "Card text.  Renders full html (eg. <p> & <br />)"

@@ -4,15 +4,17 @@
  * Section header.
  */
 #}
-<header class="section-header{% if is_centered %} is-centered{% endif %}">
-  <h2 class="drop-cap-title{% if dash_under %} has-dash--under{% else %} has-dash--left{% endif %}{% if is_featured %} has-dash--emphasis{% endif %}">
+{% set attributes = attributes.addClass('section-header') %}
+{% if variants.is_centered %}
+  {% set attributes = attributes.addClass('is-centered') %}
+{% endif %}
+
+<header{{ attributes }}>
+  <h2 class="drop-cap-title{% if variants.dash_under %} has-dash--under{% else %} has-dash--left{% endif %}{% if variants.is_featured %} has-dash--emphasis{% endif %}">
     <span class="drop-cap-title__name">{{ superhead }}</span>
-    <span class="drop-cap-title__drop-cap" aria-hidden="true">
-      {{ superhead|render|striptags|trim|slice(0, 1) }}
-    </span>
+    <span class="drop-cap-title__drop-cap" aria-hidden="true">{{ superhead|first_char }}</span>
   </h2>
-  {{ subhead }}
-  {% if link is not empty %}
-  <a class="section-header__link" href="{{ link|render|striptags|trim }}">{{ more }}</a>
-  {% endif %}
+  <p>{{ subhead|render|striptags|trim }}</p>
+
+  {{ link }}
 </header>

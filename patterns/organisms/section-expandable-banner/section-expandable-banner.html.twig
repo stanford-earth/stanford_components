@@ -4,35 +4,31 @@
  * Expandable banner pattern.
  */
 #}
-{{ attach_library('ui_patterns/section_header.section_header_library') }}
-{{ attach_library('ui_patterns/expandable_card.expandable_card_library') }}
-{{ attach_library('ui_patterns/expandable_cards.expandable_cards_library') }}
-<div class="section-expandable-banner js-section-expandable-banner" style="background-image:url({{ image|render|striptags|trim }})">
+
+{% set classes = ['section-expandable-banner', 'js-section-expandable-banner'] %}
+{% set header_vars = {
+'superhead': superhead,
+'subhead': subhead,
+'is_centered': variants.is_centered,
+'dash_under': variants.dash_under
+} %}
+
+<div{{ attributes.addClass(classes) }} style="background-image:url({{ image|get_img_src }})">
   <div class="expandable-banner__header">
-    {%  set header_vars = {
-      'superhead': superhead,
-      'subhead': subhead,
-      'is_centered': is_centered,
-      'dash_under': dash_under
-    } %}
-    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+    {{ pattern('section_header', header_vars) }}
   </div>
 
   <div class="expandable-banner__container">
     <div class="expandable-cards">
       {# Break up the individual items in to the appropriate template var. #}
-      {% for card in cards %}
-
-        {% set card_vars = {
-          'link': card.link,
-          'title': card.title,
-          'items': card.items,
-          'is_wide': card.is_wide
-          }
-        %}
-
-        {# Pass vars through to include template. #}
-        {% include '@stanford_components/molecules/expandable-card/expandable-card.html.twig' with card_vars %}
+      {% for item in items %}
+        {% if item.title %}
+          {# Preview page. #}
+          {{ pattern('expandable_card', item) }}
+        {% else %}
+          {# Entities. #}
+          {{ item }}
+        {% endif %}
       {% endfor %}
     </div>
   </div>

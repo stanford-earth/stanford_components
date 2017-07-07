@@ -6,3 +6,25 @@
  *
  * Long description.
  */
+
+use Drupal\ui_patterns\UiPatterns;
+
+/**
+ * Implements hook_preprocess().
+ */
+function stanford_components_preprocess(&$variables, $hook) {
+  foreach (array_keys(UiPatterns::getPatternDefinitions()) as $pattern_id) {
+    if (strpos($hook, $pattern_id) !== FALSE) {
+      $ids = &drupal_static(__FUNCTION__, []);
+      if (!isset($ids[$pattern_id])) {
+        $ids[$pattern_id] = 0;
+      }
+
+      if (!isset($variables['attributes']['id'])) {
+        $variables['attributes']['id'] = "$pattern_id-{$ids[$pattern_id]}";
+        $ids[$pattern_id]++;
+      }
+      break;
+    }
+  }
+}
