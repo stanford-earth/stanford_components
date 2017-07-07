@@ -21,6 +21,7 @@
 
   .masonry-block {
     margin-bottom: 30px;
+    width: 100%;
 
     @include grid-media($media-md) {
       @include grid-column(6, $simple-blocks-grid);
@@ -38,14 +39,6 @@
 
       @include grid-media($media-lg) {
         @include grid-column(6, $simple-blocks-grid);
-      }
-    }
-
-    img {
-      max-width: 380px;
-
-      @include grid-media($media-md) {
-        max-width: 100%;
       }
     }
   }

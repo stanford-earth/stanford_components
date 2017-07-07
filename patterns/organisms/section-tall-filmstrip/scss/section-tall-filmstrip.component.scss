@@ -7,9 +7,15 @@
 
 .section-tall-filmstrip {
   .filmstrip__container {
+    max-width: 240px;
+    margin: 0 auto;
+
+    @include grid-media($media-md) {
+      max-width: 50%;
+    }
+
     @include grid-media($media-lg) {
       max-width: 800px;
-      margin: 0 auto;
     }
 
     .filmstrip__cards {

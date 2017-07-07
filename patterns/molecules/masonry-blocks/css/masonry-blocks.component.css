@@ -17,6 +17,7 @@
 
 .masonry-blocks .masonry-block {
   margin-bottom: 30px;
+  width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
@@ -49,16 +50,6 @@
     width: calc(50% - 45px);
     float: left;
     margin-left: 30px;
-  }
-}
-
-.masonry-blocks .masonry-block img {
-  max-width: 380px;
-}
-
-@media only screen and (min-width: 768px) {
-  .masonry-blocks .masonry-block img {
-    max-width: 100%;
   }
 }
 

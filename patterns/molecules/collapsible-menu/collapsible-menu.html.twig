@@ -4,8 +4,12 @@
  * Link banner pattern.
  */
 #}
+{%
+  set muid = "cmenu-" ~ random()
+%}
+
 {{ attach_library('ui_patterns/nav_item.nav_item_library') }}
-<nav class="collapsible-menu js-collapsible-menu">
+<nav id="{{ muid }}" class="collapsible-menu js-collapsible-menu">
   <ul class="nav-items">
 
   {# Break up the individual items in to the appropriate template var. #}
@@ -22,8 +26,11 @@
   {% endfor %}
   </ul>
 
-   <div class="collapsible-menu__toggle js-collapsible-menu__toggle">
+  <a class="collapsible-menu__toggle collapsible-menu__toggle--open js-collapsible-menu__toggle" href="#{{ muid }}">
     <span class="collapsible-menu__open">Explore Topics <svg class="i-svg i-svg--plus"><use xlink:href="#i-plus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+  </a>
+
+  <a class="collapsible-menu__toggle collapsible-menu__toggle--close js-collapsible-menu__toggle" href="#{{ muid }}">
     <span class="collapsible-menu__close">Hide Topics <svg class="i-svg i-svg--minus"><use xlink:href="#i-minus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
-  </div>
+  </a>
 </nav>

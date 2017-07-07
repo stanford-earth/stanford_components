@@ -1,7 +1,17 @@
+.section-tall-filmstrip .filmstrip__container {
+  max-width: 240px;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .section-tall-filmstrip .filmstrip__container {
+    max-width: 50%;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .section-tall-filmstrip .filmstrip__container {
     max-width: 800px;
-    margin: 0 auto;
   }
 }
 

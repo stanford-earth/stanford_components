@@ -4,8 +4,8 @@
   $(window).load(function () {
     $(".js-expandable-container__toggle").unbind('click').bind('click', function(e) { // expandable card
       // Must be attached to anchor element to prevent bubbling.
-      event.stopPropagation();
       e.preventDefault();
+      e.stopPropagation();
       $(this).parent(".js-expandable-container").addClass('is-open');
     });
   });

@@ -7,12 +7,12 @@ section_callout_filmstrip:
     dash_under:
       description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
       label: "Dash Under"
-      preview: true
+      preview: false
       type: text
     is_centered:
       description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
       label: Center
-      preview: true
+      preview: false
       type: text
     is_featured:
       type: text

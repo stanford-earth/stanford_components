@@ -1,7 +1,7 @@
-# Link Banner Pattern
+# Collapsible Menu Pattern
 #
 collapsible_menu:
-  label: "collapsible Menu"
+  label: "Collapsible Menu"
   description: "A menu of links that collapses on mobile"
   fields:
     items:
