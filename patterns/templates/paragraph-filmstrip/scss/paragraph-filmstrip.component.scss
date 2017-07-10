@@ -1,0 +1,9 @@
+@charset 'UTF-8';
+
+// Grab our settings.
+@import 'patterns/utilities/utilities';
+@import 'decanter/core/utilities/decanter-utilities';
+
+.paragraph__filmstrip {
+  @include responsive-container($default-container);
+}

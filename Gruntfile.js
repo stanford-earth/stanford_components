@@ -146,7 +146,8 @@ module.exports = function(grunt) {
           'patterns/organisms/section-highlight-banner/css/section-highlight-banner.component.css':     'patterns/organisms/section-highlight-banner/scss/section-highlight-banner.component.scss',
           'patterns/organisms/section-masonry-blocks/css/section-masonry-blocks.component.css':         'patterns/organisms/section-masonry-blocks/scss/section-masonry-blocks.component.scss',
           // Templates.
-          'patterns/templates/paragraph-cta-list/css/paragraph-cta-list.component.css':         'patterns/templates/paragraph-cta-list/scss/paragraph-cta-list.component.scss'
+          'patterns/templates/paragraph-cta-list/css/paragraph-cta-list.component.css':       'patterns/templates/paragraph-cta-list/scss/paragraph-cta-list.component.scss',
+          'patterns/templates/paragraph-filmstrip/css/paragraph-filmstrip.component.css':       'patterns/templates/paragraph-filmstrip/scss/paragraph-filmstrip.component.scss'
         }
       }
     },
