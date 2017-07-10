@@ -28,3 +28,40 @@ function stanford_components_preprocess(&$variables, $hook) {
     }
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function stanford_components_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'field') {
+    $entity_type = $variables['element']['#entity_type'];
+    $bundle = $variables['element']['#bundle'];
+    $view_mode = $variables['element']['#view_mode'];
+
+    // Load display settings for the entity.
+    /** @var \Drupal\Core\Entity\Entity\EntityViewDisplay $entity_display */
+    $entity_display = \Drupal::entityTypeManager()
+      ->getStorage('entity_view_display')
+      ->load($entity_type . '.' . $bundle . '.' . $view_mode);
+
+    if (!$entity_display) {
+      return;
+    }
+
+    // Allow specific field templates for each pattern.
+    $ds_settings = $entity_display->getThirdPartySettings('ds');
+    if (isset($ds_settings['layout'])) {
+      $pattern_id = substr($ds_settings['layout']['id'], 8);
+      $suggestions[] = "field__pattern";
+      $suggestions[] = "field__pattern__$pattern_id";
+
+      // Allows templates for each pattern region.
+      foreach ($ds_settings['regions'] as $region_name => $fields) {
+        if (in_array($variables['element']['#field_name'], $fields)) {
+          $suggestions[] = "field__pattern__$region_name";
+          $suggestions[] = "field__pattern__{$pattern_id}__$region_name";
+        }
+      }
+    }
+  }
+}
