@@ -1,9 +1,0 @@
-@charset 'UTF-8';
-
-// Grab our settings.
-@import 'patterns/utilities/utilities';
-@import 'decanter/core/utilities/decanter-utilities';
-
-.paragraph__cta-list {
-  @include responsive-container($default-container);
-}
