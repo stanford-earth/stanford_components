@@ -34,5 +34,15 @@
     {# Pass vars through to include template. #}
     {% include '@stanford_components/atoms/photo-thumb/photo-thumb.html.twig' with vars %}
   {% endfor %}
+
+    {% if quote is not empty %}
+    <div class="photo-tiles__quote">
+      <svg class="i-svg i-svg--quote"><use xlink:href="#i-quote" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+      <blockquote>
+        <p>{{ quote }}</p>
+        <cite><strong>{{ cite_name }}</strong>{{ cite_title }}</cite>
+      </blockquote>
+    </div>
+    {% endif %}
   </div>
 </div>

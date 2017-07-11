@@ -4,7 +4,6 @@ photo_tiles:
   label: "Photo Tiles"
   description: "A collecion of photo tiles"
   fields:
-
     description:
       description: "Tile description."
       label: Description

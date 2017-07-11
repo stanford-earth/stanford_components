@@ -1,0 +1,45 @@
+{#
+/**
+ * @file
+ * Section photo mosaic quotes pattern.
+ */
+#}
+{{ attach_library('ui_patterns/section_header.section_header_library') }}
+{{ attach_library('ui_patterns/photo_thumb.photo_thumb_library') }}
+{{ attach_library('ui_patterns/photo_tile.photo_tile_library') }}
+{{ attach_library('ui_patterns/photo_tiles.photo_tiles_library') }}
+{{ attach_library('ui_patterns/section_photo_mosaic.section_photo_mosaic_library') }}
+<div class="section-photo-mosaic section-photo-mosaic--quotes">
+  <div class="photo-mosaic__header">
+    {%  set header_vars = {
+      'superhead': superhead,
+      'subhead': subhead,
+      'is_centered': is_centered,
+      'dash_under': dash_under
+    } %}
+    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+  </div>
+
+  <div class="photo-mosaic__container">
+    <div class="photo-mosaic">
+      {# Break up the individual items in to the appropriate template var. #}
+      {% for tile in tiles %}
+        {% set tile_vars = {
+          'link': tile.link,
+          'image': tile.image,
+          'description': tile.description,
+          'title': tile.title,
+          'items': tile.items,
+          'is_right': tile.is_right,
+          'classes': tile.classes,
+          'cite_name': tile.cite_name,
+          'cite_title': tile.cite_title,
+          'quote': tile.quote
+          }
+        %}
+        {# Pass vars through to include template. #}
+        {% include '@stanford_components/molecules/photo-tiles/photo-tiles.html.twig' with tile_vars %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

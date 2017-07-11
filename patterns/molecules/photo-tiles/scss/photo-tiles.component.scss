@@ -29,6 +29,10 @@
     width: 200px;
   }
 
+  .photo-tile__action {
+    @include image-zoom;
+  }
+
   .photo-thumbs {
     display: none;
 
@@ -52,5 +56,10 @@
     @include grid-media($media-md) {
       margin-right: 20px;
     }
+  }
+
+  .photo-tiles__quote {
+    margin-bottom: 20px;
+    clear: both;
   }
 }

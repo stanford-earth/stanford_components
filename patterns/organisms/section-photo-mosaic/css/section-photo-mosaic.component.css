@@ -15,17 +15,17 @@
 
 @media only screen and (min-width: 768px) {
   .section-photo-mosaic .photo-mosaic__header {
-    width: calc(100% - 40px);
+    width: calc(100% - 80px);
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-photo-mosaic .photo-mosaic__header {
-    width: calc(50% - 30px);
+    width: calc(50% - 60px);
     float: left;
-    margin-left: 20px;
+    margin-left: 40px;
   }
 }
 
@@ -52,13 +52,13 @@
   display: block;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-photo-mosaic .photo-mosaic {
     max-width: 880px;
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .section-photo-mosaic .photo-tiles {
     float: left;
   }
@@ -72,11 +72,18 @@
   width: 420px;
 }
 
+.photo-mosaic--thumbs-up.photo-tiles .photo-tile::after {
+  right: auto;
+  left: 100px;
+  top: auto;
+  bottom: 100px;
+}
+
 .photo-mosaic--thumbs-up .photo-thumbs {
   width: 200px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .photo-mosaic--thumbs-up .photo-thumbs {
     margin-top: -110px;
   }
@@ -101,11 +108,24 @@
   left: -110px;
 }
 
+.photo-mosaic--thumbs-down.photo-tiles .photo-tile::after {
+  width: 200px;
+  top: 50px;
+  left: auto;
+  right: 50px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .photo-mosaic--thumbs-down.photo-tiles .photo-tile::after {
+    width: 400px;
+  }
+}
+
 .photo-mosaic--thumbs-down .photo-thumbs {
   margin-top: 55px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1024px) {
   .photo-mosaic--thumbs-down .photo-thumbs {
     margin-top: 110px;
   }

@@ -54,6 +54,15 @@
 .photo-mosaic--thumbs-up {
   width: 420px;
 
+  &.photo-tiles .photo-tile {
+    &::after {
+      right: auto;
+      left: 100px;
+      top: auto;
+      bottom: 100px;
+    }
+  }
+
   .photo-thumbs {
     width: 200px;
 
@@ -83,6 +92,18 @@
 }
 
 .photo-mosaic--thumbs-down {
+  &.photo-tiles .photo-tile {
+    &::after {
+      width: 200px;
+      top: 50px;
+      left: auto;
+      right: 50px;
+
+      @include grid-media($media-xl) {
+        width: 400px;
+      }
+    }
+  }
 
   .photo-thumbs {
     margin-top: 55px;
