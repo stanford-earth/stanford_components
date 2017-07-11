@@ -6,24 +6,31 @@ section_header:
     dash_under:
       label: "Dash Under Header"
       description: "Dash under h2 or to the left?  Treat as boolean (true/false)"
-      default: 1
+      default: has-dash-under
       options:
-        0: Left
-        1: Under
+        has-dash-left: Left
+        has-dash-under: Under
     is_centered:
-      label: Center
+      label: Centered
       description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
-      default: 1
+      default: left-aligned
       options:
-        0: Not Centered
-        1: Centered
+        left-aligned: Left Aligned
+        is-centered: Centered
     is_featured:
       label: "Dash With Emphasis"
       description: "Dash has emphasis or default brand color?  Treat as boolean (true/false)"
-      default: 0
+      default: no-emphasis
       options:
-        0: No
-        1: Yes
+        no-emphasis: No Branding
+        has-dash-emphasis: Brand color
+    height:
+      description: "A tall or short banner"
+      label: Height
+      default: is-tall
+      options:
+        is-tall: Tall
+        is-short: Short
   fields:
     link:
       description: "Read More Link."

@@ -4,41 +4,25 @@
  * Highlight banner pattern.
  */
 #}
-{{ attach_library('ui_patterns/section_header.section_header_library') }}
-{{ attach_library('ui_patterns/highlight_card.highlight_card_library') }}
-{{ attach_library('ui_patterns/highlight_cards.highlight_cards_library') }}
 
-<div class="section-highlight-banner{% if is_single %} is-single{% endif %}" style="background-image:url({{ image|render|striptags|trim }})">
+
+{% set attributes = attributes.addClass(['section-highlight-banner', variants.height]) %}
+{% if items|field_count == 1 %}
+  {% set attributes = attributes.addClass('is-single') %}
+{% endif %}
+
+{% if image|get_img_src is not empty %}
+  {% set attributes = attributes.setAttribute('style', ['background-image:url(' ~ image|get_img_src ~ ')']) %}
+{% endif %}
+
+{% set header_vars = {'superhead': superhead, 'subhead': subhead, 'context': context} %}
+
+<div{{ attributes }}>
   <div class="highlight-banner__header">
-    {%  set header_vars = {
-      'superhead': superhead,
-      'subhead': subhead,
-      'is_centered': is_centered,
-      'dash_under': dash_under
-      }
-    %}
-    {# Pass vars through to include template. #}
-    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+    {{ pattern('section_header', header_vars) }}
   </div>
 
   <div class="highlight-banner__container">
-    <div class="highlight-cards">
-      {# Break up the individual items in to the appropriate template var. #}
-      {% if (items.0 and items.0.title) %}
-        {% for item in items %}
-          {% set vars = {
-            'link': item.link,
-            'title': item.title,
-            'intro': item.intro,
-            'description': item.description
-            }
-          %}
-           {#Pass vars through to include template.#}
-          {% include '@stanford_components/molecules/highlight-card/highlight-card.html.twig' with vars %}
-        {% endfor %}
-      {% else %}
-        {{ items }}
-      {% endif %}
-    </div>
+    {{ pattern('highlight_cards', {'items': items, 'context': context}) }}
   </div>
 </div>

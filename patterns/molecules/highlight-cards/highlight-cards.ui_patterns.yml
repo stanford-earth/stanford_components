@@ -3,6 +3,14 @@
 highlight_cards:
   label: "Highlight Cards"
   description: "A horizontal list callout cards with icons"
+  variants:
+    card_width:
+      label: Width
+      description: "Width of the individual cards"
+      default: is-narrow
+      options:
+        is-narrow: Narrow
+        is-wide: Wide
   fields:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, intro and description rendered as an html element."
@@ -25,4 +33,6 @@ highlight_cards:
         css:
           component:
             css/highlight-cards.component.css: {}
+        dependencies:
+          - ui_patterns/highlight_card.highlight_card_library
   use: "@stanford_components/molecules/highlight-cards/highlight-cards.html.twig"

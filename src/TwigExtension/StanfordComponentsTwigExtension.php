@@ -46,6 +46,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       new \Twig_SimpleFilter('first_char', [$this, 'firstChar']),
       new \Twig_SimpleFilter('get_img_src', [$this, 'getImgSrc']),
       new \Twig_SimpleFilter('md5', [$this, 'md5']),
+      new \Twig_SimpleFilter('field_count', [$this, 'fieldCount']),
     ];
   }
 
@@ -60,6 +61,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       new \Twig_SimpleFunction('get_img_src', [$this, 'getImgSrc']),
       new \Twig_SimpleFunction('get_param', [$this, 'getParam']),
       new \Twig_SimpleFunction('md5', [$this, 'md5']),
+      new \Twig_SimpleFunction('field_count', [$this, 'fieldCount']),
     ];
   }
 
@@ -209,6 +211,36 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
    */
   public function md5($item) {
     return md5(serialize($item));
+  }
+
+  /**
+   * Since there's no way to get number of field items in twig, we do this.
+   *
+   * @param mixed $item
+   *   Field item render array.
+   *
+   * @return int
+   *   Number of field items.
+   */
+  public function fieldCount($item) {
+    // Only 1 field in the region.
+    if (count($item) == 1) {
+      $field_key = key($item);
+
+      // Only when its an actual field.
+      if (isset($item[$field_key]['#theme']) && $item[$field_key]['#theme'] == 'field') {
+        /** @var \Drupal\Core\Field\FieldItemList $items */
+        $items = $item[$field_key]['#items'];
+        return $items->count();
+      }
+    }
+    // The item is the field render array.
+    elseif (is_array($item) && isset($item['#theme']) && $item['#theme'] == 'field') {
+      /** @var \Drupal\Core\Field\FieldItemList $items */
+      $items = $item['#items'];
+      return $items->count();
+    }
+    return count($item);
   }
 
 }

@@ -4,18 +4,16 @@
  * Highlight cards pattern.
  */
 #}
-{{ attach_library('ui_patterns/callout_card.highlight_card_library') }}
-<div class="highlight-cards">
+
+{% set attributes = attributes.addClass(['highlight-cards', variants.card_width]) %}
+
+<div{{ attributes }}>
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
-    {% set vars = {
-      'link': item.link,
-      'title': item.title,
-      'intro': item.intro,
-      'description': item.description
-      }
-    %}
-    {# Pass vars through to include template. #}
-    {% include '@stanford_components/molecules/highlight-card/highlight-card.html.twig' with vars %}
+    {% if item.title %}
+      {{ pattern('highlight_card', item) }}
+    {% else %}
+      {{ item }}
+    {% endif %}
   {% endfor %}
 </div>
