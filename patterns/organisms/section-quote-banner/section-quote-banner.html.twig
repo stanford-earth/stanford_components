@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Section Quote Banner pattern.
+ */
+#}
+
+{{ attach_library('ui_patterns/section_quote_banner.section_quote_banner_library') }}
+{{ attach_library('ui_patterns/photo_banner.photo_banner_library') }}
+{{ attach_library('ui_patterns/quote_card.quote_card_library') }}
+<div class="section-quote-banner" style="background-image:url('{{ image|render|striptags|trim }}')">
+  {%  set quote_vars = {
+    'quote': quote,
+    'name': name,
+    'title': title,
+    'image': quote_image
+  } %}
+
+  {% include '@stanford_components/molecules/quote-card/quote-card.html.twig' with quote_vars %}
+</div>

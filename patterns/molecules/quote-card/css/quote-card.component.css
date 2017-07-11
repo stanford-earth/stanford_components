@@ -1,0 +1,47 @@
+.quote-card {
+  background-color: #fff;
+  padding: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  .quote-card {
+    padding: 30px 100px;
+  }
+}
+
+.quote-card__quote {
+  margin: 0;
+  position: relative;
+}
+
+.quote-card__footer::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.quote-card__source {
+  padding-top: 1em;
+  display: inline-block;
+}
+
+.quote-card__thumbnail {
+  float: left;
+  margin-right: 1.8333333333em;
+}
+
+.quote-card__icon {
+  display: inline-block;
+  margin-bottom: 1em;
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .quote-card__icon {
+    position: absolute;
+    top: 10px;
+    left: -60px;
+  }
+}
+
+/*# sourceMappingURL=quote-card.component.css.map */

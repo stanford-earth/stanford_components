@@ -132,6 +132,8 @@ module.exports = function(grunt) {
           'patterns/molecules/simple-blocks/css/simple-blocks.component.css':                 'patterns/molecules/simple-blocks/scss/simple-blocks.component.scss',
           'patterns/molecules/simple-slat/css/simple-slat.component.css':                     'patterns/molecules/simple-slat/scss/simple-slat.component.scss',
           'patterns/molecules/simple-slats/css/simple-slats.component.css':                   'patterns/molecules/simple-slats/scss/simple-slats.component.scss',
+          'patterns/molecules/photo-banner/css/photo-banner.component.css':                   'patterns/molecules/photo-banner/scss/photo-banner.component.scss',
+          'patterns/molecules/quote-card/css/quote-card.component.css':                       'patterns/molecules/quote-card/scss/quote-card.component.scss',
           // Organisms.
           'patterns/organisms/section-calendar-blocks/css/section-calendar-blocks.component.css':       'patterns/organisms/section-calendar-blocks/scss/section-calendar-blocks.component.scss',
           'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':         'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
@@ -145,6 +147,7 @@ module.exports = function(grunt) {
           'patterns/organisms/section-feature-blocks/css/section-feature-blocks.component.css':         'patterns/organisms/section-feature-blocks/scss/section-feature-blocks.component.scss',
           'patterns/organisms/section-highlight-banner/css/section-highlight-banner.component.css':     'patterns/organisms/section-highlight-banner/scss/section-highlight-banner.component.scss',
           'patterns/organisms/section-masonry-blocks/css/section-masonry-blocks.component.css':         'patterns/organisms/section-masonry-blocks/scss/section-masonry-blocks.component.scss',
+          'patterns/organisms/section-quote-banner/css/section-quote-banner.component.css':             'patterns/organisms/section-quote-banner/scss/section-quote-banner.component.scss',
           // Templates.
           'patterns/templates/paragraph-filmstrip/css/paragraph-filmstrip.component.css':       'patterns/templates/paragraph-filmstrip/scss/paragraph-filmstrip.component.scss'
         }
