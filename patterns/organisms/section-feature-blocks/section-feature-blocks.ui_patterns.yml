@@ -11,7 +11,7 @@ section_feature_blocks:
       type: text
     is_centered:
       description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
-      label: Center
+      label: "Center"
       preview: false
       type: text
     is_featured:

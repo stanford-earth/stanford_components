@@ -10,7 +10,7 @@
 {{ attach_library('ui_patterns/filmstrip.filmstrip_library') }}
 {# Template HTML #}
 {# has-columns: adds two column layout to filmstrip #}
-<div class="section-callout-filmstrip has-columns"> 
+<div class="section-callout-filmstrip{% if has_columns %} has-columns{% endif %}"> 
   <div class="filmstrip__header">
     {%  set header_vars = {
       'superhead': superhead,

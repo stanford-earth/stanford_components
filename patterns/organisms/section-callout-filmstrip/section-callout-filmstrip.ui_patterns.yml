@@ -9,6 +9,11 @@ section_callout_filmstrip:
       label: "Dash Under"
       preview: false
       type: text
+    has_columns:
+      description: "Add left column to grid for section header. Treat as boolean (true/false)"
+      label: "Has Columns"
+      preview: true
+      type: text
     is_centered:
       description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
       label: Center
