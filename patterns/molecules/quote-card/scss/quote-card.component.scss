@@ -31,6 +31,11 @@
 .quote-card__thumbnail {
   float: left;
   margin-right: em(33px);
+
+  img {
+    max-width: 64px;
+    max-height: 64px;
+  }
 }
 
 .quote-card__icon {

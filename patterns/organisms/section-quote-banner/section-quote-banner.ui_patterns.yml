@@ -16,7 +16,7 @@ section_quote_banner:
       type: text
     title:
       description: "Professional title."
-      label: Name
+      label: Professional title
       preview: "Geophysics Professor"
       type: text
     image:

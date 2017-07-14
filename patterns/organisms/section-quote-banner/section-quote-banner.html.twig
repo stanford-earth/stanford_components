@@ -8,7 +8,7 @@
 {{ attach_library('ui_patterns/section_quote_banner.section_quote_banner_library') }}
 {{ attach_library('ui_patterns/photo_banner.photo_banner_library') }}
 {{ attach_library('ui_patterns/quote_card.quote_card_library') }}
-<div class="section-quote-banner" style="background-image:url('{{ image|render|striptags|trim }}')">
+<div class="section-quote-banner" style="background-image:url('{{ image|get_img_src }}')">
   {%  set quote_vars = {
     'quote': quote,
     'name': name,

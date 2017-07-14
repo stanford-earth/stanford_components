@@ -30,6 +30,11 @@
   margin-right: 1.8333333333em;
 }
 
+.quote-card__thumbnail img {
+  max-width: 64px;
+  max-height: 64px;
+}
+
 .quote-card__icon {
   display: inline-block;
   margin-bottom: 1em;
