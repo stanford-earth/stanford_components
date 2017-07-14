@@ -1,0 +1,9 @@
+@charset 'UTF-8';
+
+// Grab our settings.
+@import 'patterns/utilities/utilities';
+@import 'decanter/core/utilities/decanter-utilities';
+
+.component-centered-container {
+  @include responsive-container($default-container);
+}

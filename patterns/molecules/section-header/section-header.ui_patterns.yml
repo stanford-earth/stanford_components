@@ -24,13 +24,6 @@ section_header:
       options:
         no-emphasis: No Branding
         has-dash-emphasis: Brand color
-    height:
-      description: "A tall or short banner"
-      label: Height
-      default: is-tall
-      options:
-        is-tall: Tall
-        is-short: Short
   fields:
     link:
       description: "Read More Link."

@@ -1,7 +1,3 @@
-.section-feature-blocks {
-  padding: 3.2222222222em 0;
-}
-
 .section-feature-blocks::after {
   clear: both;
   content: "";

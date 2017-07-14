@@ -96,6 +96,8 @@ module.exports = function(grunt) {
       },
       dist: {
         files: {
+          // Module Utility.
+          'css/component-centered-container.css':                                             'scss/component-centered-container.scss',
           // Atoms.
           'patterns/atoms/photo-thumb/css/photo-thumb.component.css':                         'patterns/atoms/photo-thumb/scss/photo-thumb.component.scss',
           'patterns/atoms/icon-item/css/icon-item.component.css':                             'patterns/atoms/icon-item/scss/icon-item.component.scss',

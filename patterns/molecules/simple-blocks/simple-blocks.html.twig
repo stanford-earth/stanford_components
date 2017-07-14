@@ -4,19 +4,22 @@
  * Simple blocks pattern.
  */
 #}
-{{ attach_library('ui_patterns/simple_block.simple_block_library') }}
 <div class="simple-blocks">
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
-    {% set vars = {
-      'description': item.description,
-      'image': item.image,
-      'link': item.link,
-      'tag': item.tag,
-      'title': item.title
-      }
-    %}
-    {# Pass vars through to include template. #}
-    {% include '@stanford_components/molecules/simple-block/simple-block.html.twig' with vars %}
+    {% if item.title is not empty %}
+      {% set vars = {
+        'description': item.description,
+        'image': item.image,
+        'link': item.link,
+        'tag': item.tag,
+        'title': item.title,
+        'context': context
+        }
+      %}
+      {{ pattern('simple_block', vars) }}
+    {% else %}
+      {{ item }}
+    {% endif %}
   {% endfor %}
 </div>

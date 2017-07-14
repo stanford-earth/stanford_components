@@ -3,21 +3,26 @@
 simple_block:
   label: "Simple Block"
   description: "A single of simple block"
+  variants:
+    has_arrow:
+      label: "Has Arrow"
+      description: "Render arrow on card.  Treat as boolean (true/false)."
+      default: true
+      options:
+        true: "Has arrow"
+        false: "Does not have arrow"
+    is_slat:
+      label: "Is a slat"
+      description: "Render slat on medium and up screens.  Treat as boolean (true/false)."
+      default: false
+      options:
+        true: "Render as a slat"
+        false: "Render as a block"
   fields:
     description:
       description: "Block description."
       label: Description
       preview: "Mapping the seawater threat to California Central Coast aquifers"
-      type: text
-    has_arrow:
-      description: "Render arrow on card.  Treat as boolean (true/false)."
-      label: Arrow
-      preview: true
-      type: text
-    is_slat:
-      description: "Render slat on medium and up screens.  Treat as boolean (true/false)."
-      label: Slat
-      preview: false
       type: text
     image:
       description: "Block image."
@@ -31,6 +36,11 @@ simple_block:
       label: Link
       preview: "https://stanford.edu"
       type: url
+    tag:
+      description: "Text that overlays the image with a background"
+      label: Tag
+      preview: "Research News"
+      type: text
     more:
       description: "More link."
       label: More
