@@ -32,6 +32,7 @@
       @include grid-column(3, $simple-blocks-grid);
     }
 
+    &.has-columns,
     &.is-wide {
       @include grid-media($media-md) {
         @include grid-column(12, $simple-blocks-grid);
@@ -39,6 +40,19 @@
 
       @include grid-media($media-lg) {
         @include grid-column(6, $simple-blocks-grid);
+      }
+    }
+
+    &.is-full-width {
+      width: 100%;
+
+      @include grid-media($media-md) {
+        @include grid-column(12, $simple-blocks-grid);
+        max-width: none;
+      }
+
+      @include grid-media($media-lg) {
+        @include grid-column(12, $simple-blocks-grid);
       }
     }
   }

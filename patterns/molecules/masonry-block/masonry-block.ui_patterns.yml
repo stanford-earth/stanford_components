@@ -4,6 +4,11 @@ masonry_block:
   label: "Masonry Block"
   description: "A single of masonry block"
   fields:
+    action:
+      description: "Optional. Inverts color scheme adds button. Only used with no image or social links"
+      label: Action
+      preview: ~
+      type: text
     description:
       description: "Block description."
       label: Description
@@ -19,9 +24,34 @@ masonry_block:
       label: Background
       preview: false
       type: text
+    has_image_right:
+      description: "Used with has-columns. Render image to the right of content on medium up.  Treat as boolean (true/false)."
+      label: Columns
+      preview: true
+      type: text
+    has_columns:
+      description: "Render image and content as columns.  Treat as boolean (true/false)."
+      label: Columns
+      preview: true
+      type: text
+    is_column_width:
+      description: "Set default column width for masonry grid.  Treat as boolean (true/false)."
+      label: Masonry Column width
+      preview: true
+      type: text
+    is_full_width:
+      description: "Render image and content as columns. Span all columns, full width.  Treat as boolean (true/false)."
+      label: Full
+      preview: false
+      type: text
+    is_tall:
+      description: "Render extra padding at the top of photo background blocks.  Treat as boolean (true/false)."
+      label: Wide
+      preview: false
+      type: text
     is_wide:
       description: "Render wide on medium and up screens.  Treat as boolean (true/false)."
-      label: Slat
+      label: Wide
       preview: false
       type: text
     image:
@@ -34,7 +64,7 @@ masonry_block:
     background_image:
       description: "Card image."
       label: Image
-      preview: 
+      preview: ~
       type: text
     link:
       description: "URI that points somewhere"

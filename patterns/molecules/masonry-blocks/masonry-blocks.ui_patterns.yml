@@ -9,15 +9,38 @@ masonry_blocks:
       label: "A list of simple blocks"
       preview:
         -
+          description: "A new four-step “framework” aims to test the contribution of climate change to record-setting extreme weather events.After an unusually intense heat wave, downpour or drought, Noah Diffenbaugh and his research group."
+          link: "https://www.stanford.edu"
+          title: "Stanford scientists test links between extreme weather and climate change"
+          date: "April 2"
+          is_full_width: true
+          background_image: "https://lorempixel.com/420/225/nature/6"
+          tags:
+            -
+              tag: "Earth"
+              link: "https://stanford.edu"
+        -
+          description: "Stanford Earth faculty and young scientists in the media."
+          link: "https://www.stanford.edu"
+          title: "A conversation with Stanford Earth"
+          date: "April 2"
+          is_full_width: true
+          has_image_right: true
+          background_image: "https://lorempixel.com/420/225/nature/6"
+          tags:
+            -
+              tag: "Earth"
+              link: "https://stanford.edu"
+        -
           description: "Stanford Earth faculty and young scientists in the media."
           image:
             alt: "this is a sample image"
             theme: image
             uri: "https://lorempixel.com/420/225/nature/5"
           link: "https://www.stanford.edu"
-          tag: "Research News"
           title: "A conversation with Stanford Earth"
           date: "April 2"
+          is_column_width: true
           tags:
             -
               tag: "Earth"
@@ -25,7 +48,6 @@ masonry_blocks:
         -
           description: "News about the School of Earth, Energy & Environmental Sciences."
           link: "https://www.stanford.edu"
-          tag: "School Highlights"
           title: "What is sustainability!  A conversation with Stanford Earth Dean Pamela Matson"
           date: "April 13"
           has_background: true
@@ -39,19 +61,9 @@ masonry_blocks:
               tag: "Dynamic Earth"
               link: "https://stanford.edu"
         -
-          description: "Discoveries and insights about Earth, its resources, and its environment."
+          title: "Subscribe and get curated content of the latest news about future of Earth, resources and environment."
+          action: "Join"
           link: "https://www.stanford.edu"
-          tag: "Media Mentions"
-          title: "Navigating the guts  of an ancient submarine canyon"
-          date: "April 24"
-          is_inverted: true
-          tags:
-            -
-              tag: "Energy"
-              link: "https://stanford.edu"
-            -
-              tag: "Natural Hazards"
-              link: "https://stanford.edu"
         -
           description: "Stanford Earth faculty and young scientists in the media."
           image:
@@ -59,7 +71,6 @@ masonry_blocks:
             theme: image
             uri: "https://lorempixel.com/700/420/nature/2"
           link: "https://www.stanford.edu"
-          tag: "Research News"
           title: "A conversation with Stanford Earth"
           date: "April 2"
           is_wide: true
@@ -73,7 +84,6 @@ masonry_blocks:
         -
           description: "News about the School of Earth, Energy & Environmental Sciences."
           link: "https://www.stanford.edu"
-          tag: "School Highlights"
           title: "What is sustainability?  A conversation with Stanford Earth Dean Pamela Matson"
           date: "April 13"
           has_background: true
@@ -90,7 +100,6 @@ masonry_blocks:
         -
           description: "Discoveries and insights about Earth, its resources, and its environment."
           link: "https://www.stanford.edu"
-          tag: "Media Mentions"
           title: "Navigating the guts  of an ancient submarine canyon"
           date: "April 24"
           is_inverted: true
@@ -100,6 +109,35 @@ masonry_blocks:
               link: "https://stanford.edu"
             -
               tag: "Climate Change"
+              link: "https://stanford.edu"
+        -
+          description: "Stanford Earth faculty and young scientists in the media."
+          link: "https://www.stanford.edu"
+          title: "A conversation with Stanford Earth"
+          date: "April 2"
+          has_columns: true
+          background_image: "https://lorempixel.com/420/225/nature/6"
+          tags:
+            -
+              tag: "Earth"
+              link: "https://stanford.edu"
+            -
+              tag: "Energy"
+              link: "https://stanford.edu"
+        -
+          description: "Stanford Earth faculty and young scientists in the media."
+          link: "https://www.stanford.edu"
+          title: "A conversation with Stanford Earth"
+          date: "April 2"
+          has_columns: true
+          has_image_right: true
+          background_image: "https://lorempixel.com/420/225/nature/6"
+          tags:
+            -
+              tag: "Earth"
+              link: "https://stanford.edu"
+            -
+              tag: "Energy"
               link: "https://stanford.edu"
       type: array
   libraries:

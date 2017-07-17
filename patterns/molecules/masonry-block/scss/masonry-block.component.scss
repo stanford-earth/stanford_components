@@ -22,12 +22,106 @@
   }
 
   &.is-inverted {
-    padding-top: 60px;
+    padding-top: 30px;
+
+    .masonry-block__tags {
+      position: relative;
+      top: auto;
+    }
   }
 
-  &.is-wide {
-    .masonry-block__tile {
-      font-size: 30px;
+  &.has-columns,
+  &.is-full-width {
+    @include grid-container;
+
+    .masonry-block__image,
+    .masonry-block__content {
+      width: 100%;
+    }
+
+    .masonry-block__image {
+      min-height: 150px;
+      background-size: cover;
+      overflow: hidden;
+
+      @include grid-media($media-md) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    .masonry-block__thumbnail {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      img {
+        max-width: none;
+        height: 100%;
+      }
+    }
+
+    .masonry-block__content {
+      position: relative;
+      padding-top: 30px;
+
+      @include grid-media($media-md) {
+        float: right;
+      }
+    }
+
+    .masonry-block__tags {
+      position: relative;
+      top: auto;
+    }
+  }
+
+  &.has-columns {
+    .masonry-block__image {
+      @include grid-media($media-md) {
+        width: 33%;
+      }
+    }
+
+    .masonry-block__content {
+      @include grid-media($media-md) {
+        width: 66%;
+      }
+    }
+  }
+
+  &.is-full-width {
+    .masonry-block__image {
+      @include grid-media($media-md) {
+        width: 50%;
+      }
+    }
+
+    .masonry-block__content {
+      @include grid-media($media-md) {
+        float: right;
+        width: 50%;
+      }
+    }
+  }
+
+  &.has-columns.has-image-right,
+  &.is-full-width.has-image-right {
+    .masonry-block__image {
+      @include grid-media($media-md) {
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .masonry-block__content {
+      @include grid-media($media-md) {
+        float: left;
+      }
     }
   }
 }
@@ -50,10 +144,6 @@
   top: 30px;
   left: 30px;
   z-index: 2;
-}
-
-.masonry-block__content {
-  position: relative;
 }
 
 .masonry-block__header {

@@ -7,18 +7,23 @@
 {{ attach_library('ui_patterns/tag_item.tag_item_library') }}
 {{ attach_library('ui_patterns/masonry_block.masonry_block_library') }}
 <div class="masonry-blocks js-masonry">
-  {# Break up the individual items in to the appropriate template var. #}
+  {# Break up the individual items in to the appropriate template var. At least one narrow card needs to have is_column_width set to true #}
   {% for card in cards %}
     {% set card_vars = {
+      'action': card.action,
       'date': card.date,
       'description': card.description,
       'image': card.image,
       'background_image': card.background_image,
       'has_background': card.has_background,
       'has_tint': card.has_tint,
+      'has_columns': card.has_columns,
+      'has_image_right': card.has_image_right,
+      'is_column_width': card.is_column_width, 
       'is_inverted': card.is_inverted,
-      'is_wide': card.is_wide,
+      'is_full_width': card.is_full_width,
       'is_tall': card.is_tall,
+      'is_wide': card.is_wide,
       'link': card.link,
       'tags': card.tags,
       'title': card.title
