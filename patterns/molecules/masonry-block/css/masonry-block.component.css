@@ -24,7 +24,6 @@
   background-color: rgba(0, 0, 0, 0.35);
   content: '';
   display: block;
-  z-index: 1;
 }
 
 .masonry-block.has-background.has-tint img {

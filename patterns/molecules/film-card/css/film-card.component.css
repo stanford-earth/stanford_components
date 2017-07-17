@@ -15,7 +15,6 @@
 
 .film-card__link {
   position: relative;
-  position: relative;
   display: inline-block;
   color: #fff;
 }
@@ -29,7 +28,6 @@
   background-color: rgba(0, 0, 0, 0.35);
   content: '';
   display: block;
-  z-index: 1;
 }
 
 .film-card__link img {

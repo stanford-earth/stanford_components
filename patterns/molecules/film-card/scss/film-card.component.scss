@@ -22,7 +22,6 @@
 
 .film-card__link {
   @include image-overlay;
-  position: relative;
   display: inline-block;
   color: color(white);
 
