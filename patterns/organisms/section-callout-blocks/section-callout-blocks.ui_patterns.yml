@@ -4,6 +4,13 @@ section_callout_blocks:
   description: "A horizontal list callout blocks with icons and styled text"
   label: "Section Callout Blocks"
   variants:
+    centered_container:
+      label: "Centered Component"
+      description: "Center the component in a responsive container"
+      default: true
+      options:
+        true: "Centered"
+        false: "Full Width"
     dash_under:
       label: "Dash Under Header"
       description: "Dash under h2 or to the left?  Treat as boolean (true/false)"
@@ -35,7 +42,7 @@ section_callout_blocks:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
       type: collection
-      preview: 
+      preview:
         -
           image:
             alt: "this is a sample image"
