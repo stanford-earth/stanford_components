@@ -4,19 +4,14 @@
  * Callout blocks pattern.
  */
 #}
-{{ attach_library('ui_patterns/callout_block.callout_block_library') }}
-<div class="callout-blocks">
+
+<div{{ attributes.addClass('callout-blocks') }}>
   {# Break up the individual items in to the appropriate template var. #}
-  {% for item in items %}
-    {% set vars = {
-      'link': item.link,
-      'image': item.image,
-      'title': item.title,
-      'intro': item.intro,
-      'subtitle': item.subtitle
-      }
-    %}
-    {# Pass vars through to include template. #}
-    {% include '@stanford_components/molecules/callout-block/callout-block.html.twig' with vars %}
-  {% endfor %}
+  {% if items.0 and items.0.title %}
+    {% for item in items %}
+      {{ pattern('callout_block', item) }}
+    {% endfor %}
+  {% else %}
+    {{ items }}
+  {% endif %}
 </div>
