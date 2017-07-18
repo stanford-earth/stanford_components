@@ -24,6 +24,13 @@ section_header:
       options:
         no-emphasis: No Branding
         has-dash-emphasis: Brand color
+    centered_container:
+      label: "Centered Component"
+      description: "Center the component in a responsive container"
+      default: false
+      options:
+        true: "Centered"
+        false: "Normal"
   fields:
     link:
       description: "Read More Link."
