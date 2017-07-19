@@ -4,33 +4,40 @@
  * Callout cards pattern.
  */
 #}
-{{ attach_library('ui_patterns/section_header.section_header_library') }}
-{{ attach_library('ui_patterns/callout_card.callout_card_library') }}
-{{ attach_library('ui_patterns/callout_cards.callout_cards_library') }}
-<div class="section-callout-cards">
+{#
+  Center the container if variant is true by including the library/css and adding
+  a class to the main wrapping div.
+#}
+{% if variants.centered_container %}
+  {{ attach_library('stanford_components/component_centered_container') }}
+  {% set attributes = attributes.addClass('component-centered-container') %}
+{% endif %}
+{#
+  Add my attributes.
+#}
+{% set attributes = attributes.addClass('section-callout-cards') %}
+
+{% set header_vars = {
+'superhead': superhead,
+'subhead': subhead,
+'context': context
+} %}
+
+<div{{ attributes }}>
   <div class="callout-cards__header">
-    {%  set header_vars = {
-      'superhead': superhead,
-      'subhead': subhead,
-      'is_centered': is_centered,
-      'dash_under': dash_under
-    } %}
-    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+    {{ pattern("section_header", header_vars) }}
   </div>
 
   <div class="callout-cards__container">
     <div class="callout-cards">
       {# Break up the individual items in to the appropriate template var. #}
-      {% for item in items %}
-        {% set vars = {
-          'link': item.link,
-          'image': item.image,
-          'title': item.title
-          }
-        %}
-        {# Pass vars through to include template. #}
-        {% include '@stanford_components/molecules/callout-card/callout-card.html.twig' with vars %}
-      {% endfor %}
+      {% if items.0 and items.0.title %}
+        {% for item in items %}
+          {{ pattern('callout_card', item) }}
+        {% endfor %}
+      {% else %}
+        {{ items }}
+      {% endif %}
     </div>
   </div>
 </div>

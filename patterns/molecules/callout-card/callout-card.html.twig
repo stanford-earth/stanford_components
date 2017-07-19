@@ -4,12 +4,18 @@
  * Callout card pattern.
  */
 #}
-<div class="callout-card">
+{% set attributes = attributes.addClass("callout-card") %}
+<div{{ attributes }}>
   <div class="callout-card__title">
-    <h3 class="callout-card__title--name"><a href="{{ link }}">{{ title }}</a></h3>
+    <h3 class="callout-card__title--name">
+      {{ link|openlink }}{{ title }}{{ link|closelink }}</h3>
   </div>
-  <a class="callout-card__action" href="{{ link|render|striptags|trim }}">
+  {% if link|openlink is not empty %}
+  {{ link|openlink({'class': 'callout-card__action'}) }}
     <svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
-  </a>
+  {{ link|closelink }}
+  {% endif %}
+  {% if image is not empty %}
   <div class="callout-card__icon">{{ image }}</div>
+  {% endif %}
 </div>
