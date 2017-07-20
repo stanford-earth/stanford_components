@@ -37,6 +37,4 @@ section_quote_banner:
         css:
           component:
             css/section-quote-banner.component.css: {}
-          state:
-            css/section-quote-banner.states.css: {}
   use: "@stanford_components/organisms/section-quote-banner/section-quote-banner.html.twig"

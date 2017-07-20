@@ -23,6 +23,10 @@
     <span class="drop-cap-title__name">{{ superhead }}</span>
     <span class="drop-cap-title__drop-cap" aria-hidden="true">{{ superhead|first_char }}</span>
   </h2>
-  <p>{{ subhead|render|striptags|trim }}</p>
-  {{ link }}
+  {% if subhead %}
+    <p>{{ subhead|render|striptags|trim }}</p>
+  {% endif %}
+  {% if link %}
+    {{ link }}
+  {% endif %}
 </header>

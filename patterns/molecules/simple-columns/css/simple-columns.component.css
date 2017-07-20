@@ -1,0 +1,21 @@
+.simple-columns::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+@media only screen and (min-width: 1024px) {
+  .simple-columns {
+    max-width: 792px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .simple-columns {
+    column-count: 2;
+    column-gap: 27px;
+  }
+}
+
+/*# sourceMappingURL=simple-columns.component.css.map */
