@@ -138,6 +138,7 @@ module.exports = function(grunt) {
           'patterns/molecules/quote-card/css/quote-card.component.css':                       'patterns/molecules/quote-card/scss/quote-card.component.scss',
           'patterns/molecules/spotlight-card/css/spotlight-card.component.css':               'patterns/molecules/spotlight-card/scss/spotlight-card.component.scss',
           'patterns/molecules/simple-columns/css/simple-columns.component.css':               'patterns/molecules/simple-columns/scss/simple-columns.component.scss',
+          'patterns/molecules/header-card/css/header-card.component.css':                     'patterns/molecules/header-card/scss/header-card.component.scss',
           // Organisms.
           'patterns/organisms/section-calendar-blocks/css/section-calendar-blocks.component.css':       'patterns/organisms/section-calendar-blocks/scss/section-calendar-blocks.component.scss',
           'patterns/organisms/section-callout-blocks/css/section-callout-blocks.component.css':         'patterns/organisms/section-callout-blocks/scss/section-callout-blocks.component.scss',
@@ -156,6 +157,7 @@ module.exports = function(grunt) {
           'patterns/organisms/section-quote-banner/css/section-quote-banner.component.css':             'patterns/organisms/section-quote-banner/scss/section-quote-banner.component.scss',
           'patterns/organisms/section-spotlight-banner/css/section-spotlight-banner.component.css':     'patterns/organisms/section-spotlight-banner/scss/section-spotlight-banner.component.scss',
           'patterns/organisms/section-header-columns/css/section-header-columns.component.css':         'patterns/organisms/section-header-columns/scss/section-header-columns.component.scss',
+          'patterns/organisms/section-header-banner/css/section-header-banner.component.css':           'patterns/organisms/section-header-banner/scss/section-header-banner.component.scss',
           // Templates.
           'patterns/templates/paragraph-filmstrip/css/paragraph-filmstrip.component.css':       'patterns/templates/paragraph-filmstrip/scss/paragraph-filmstrip.component.scss'
         }
