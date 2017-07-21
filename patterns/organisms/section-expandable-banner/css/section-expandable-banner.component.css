@@ -81,30 +81,15 @@
 
 .section-expandable-banner .expandable-banner__header {
   padding-top: 1.6666666667em;
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .section-expandable-banner .expandable-banner__header {
-    width: calc(25% - 50px);
-    float: left;
-    margin-left: 40px;
-    padding-top: 0;
-  }
+  margin-left: 1.6666666667em;
 }
 
 @media only screen and (min-width: 1024px) {
   .section-expandable-banner .expandable-banner__header {
-    width: calc(25% - 50px);
+    width: calc(50% - 60px);
     float: left;
     margin-left: 40px;
     margin-left: calc(8.3333333333% - 43.3333333333px + 80px);
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .section-expandable-banner .expandable-banner__header {
-    margin-left: calc(16.6666666667% - 70px + 120px);
   }
 }
 
@@ -113,15 +98,6 @@
     width: calc(75% - 70px);
     float: left;
     margin-left: 40px;
-  }
-}
-
-@media only screen and (min-width: 1024px) {
-  .section-expandable-banner .expandable-banner__container {
-    width: calc(66.6666666667% - 66.6666666667px);
-    float: left;
-    margin-left: 40px;
-    margin-left: calc(8.3333333333% - 43.3333333333px + 80px);
   }
 }
 

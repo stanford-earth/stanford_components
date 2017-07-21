@@ -1,6 +1,15 @@
 .expandable-card {
   background-color: #fff;
-  max-width: 285px;
+  margin-bottom: 14px;
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .expandable-card {
+    float: left;
+    margin: 14px;
+    width: 270px;
+  }
 }
 
 @media only screen and (min-width: 768px) {

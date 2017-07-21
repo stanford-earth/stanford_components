@@ -6,10 +6,15 @@
 @import 'patterns/utilities/utilities';
 
 .js-section-expandable-banner {
+
   // open state on single expandable card
   &.has-overlay {
     @include grid-media($media-md) {
       @include image-overlay();
+
+      &::before {
+        @include fade-in(.75s);
+      }
 
       .expandable-banner__header {
         display: none;
@@ -31,8 +36,10 @@
   // open state on single expandable card
   .js-expandable-card {
     &.is-open {
+      @include fade-in(.75s);
       @include grid-media($media-md) {
         float: none;
+        margin: 30px;
         z-index: 4;
         max-width: none;
         width: auto;

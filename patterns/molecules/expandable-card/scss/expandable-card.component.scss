@@ -6,8 +6,16 @@
 @import 'patterns/utilities/utilities';
 
 .expandable-card {
+
   background-color: color(white);
-  max-width: 285px;
+  margin-bottom: 14px;
+  width: 100%;
+
+  @include grid-media($media-md) {
+    float: left;
+    margin: 14px;
+    width: 270px;
+  }
 
   // has two column layout
   &.is-narrow {

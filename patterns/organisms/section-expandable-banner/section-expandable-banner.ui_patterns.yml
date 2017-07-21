@@ -4,34 +4,34 @@ section_expandable_banner:
   label: "Section Expandable Banner"
   description: "A banner with expandable cards and photo background"
   variants:
-    is_centered:
-      label: Center
-      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
-      default: 0
-      options:
-        0: No
-        1: Yes
-    is_featured:
-      label: "Dash with Emphasis"
-      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
-      default: 0
-      options:
-        0: No
-        1: Yes
     dash_under:
-      label: "Dash Under Emphasis"
-      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
-      default: 0
+      label: "Dash Under Header"
+      description: "Dash under h2 or to the left?  Treat as boolean (true/false)"
+      default: has-dash-left
       options:
-        0: Left
-        1: Under
+        has-dash-left: Left
+        has-dash-under: Under
+    is_centered:
+      label: Centered
+      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      default: left-aligned
+      options:
+        left-aligned: Left Aligned
+        is-centered: Centered
+    is_featured:
+      label: "Dash With Emphasis"
+      description: "Dash has emphasis or default brand color?  Treat as boolean (true/false)"
+      default: has-dash-emphasis
+      options:
+        no-emphasis: No Branding
+        has-dash-emphasis: Brand color
   fields:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, intro and description rendered as an html element."
       label: "A list of highlight cards"
+      type: collection
       preview:
         -
-          is_wide: true
           items:
             -
               image:
@@ -71,7 +71,6 @@ section_expandable_banner:
               link: "<a href=\"https://www.stanford.edu\">Emmett Interdisciplinary Program</a>"
           title: Undergraduates
         -
-          is_wide: false
           items:
             -
               image:

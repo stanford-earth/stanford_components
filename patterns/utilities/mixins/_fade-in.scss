@@ -1,9 +1,9 @@
-@mixin fade-type {
-  -webkit-animation: fadein 2s; // Safari, Chrome and Opera > 12.1
-  -moz-animation: fadein 2s; // Firefox < 16
-  -ms-animation: fadein 2s; // Internet Explorer
-  -o-animation: fadein 2s; // Opera < 12.1
-  animation: fadein 2s;
+@mixin fade-in($speed: 2s) {
+  -webkit-animation: fadein $speed; // Safari, Chrome and Opera > 12.1
+  -moz-animation: fadein $speed; // Firefox < 16
+  -ms-animation: fadein $speed; // Internet Explorer
+  -o-animation: fadein $speed; // Opera < 12.1
+  animation: fadein $speed;
 
   @keyframes fadein {
     from { opacity: 0; }
@@ -33,5 +33,4 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
-
 }
