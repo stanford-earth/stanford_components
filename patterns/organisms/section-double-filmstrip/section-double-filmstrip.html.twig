@@ -4,32 +4,27 @@
  * Filmstrip pattern.
  */
 #}
-{# Attach the film card andf filmstrip css and js #}
-{{ attach_library('ui_patterns/section_header.section_header_library') }}
-{{ attach_library('ui_patterns/film_card.film_card_library') }}
-{{ attach_library('ui_patterns/filmstrip.filmstrip_library') }}
-{{ attach_library('ui_patterns/section_callout_filmstrip.section_callout_filmstrip_library') }}
+
+{% set attributes = attributes.addClass(['section-callout-filmstrip', 'section-double-filmstrip', 'has-columns']) %}
+
 {# Template HTML #}
-<div class="section-callout-filmstrip section-double-filmstrip has-columns"> 
+<div{{ attributes }}>
   <div class="filmstrip__header">
     {%  set header_vars = {
-      'dash_under': dash_under,
-      'is_centered': is_centered,
+      'context': context,
       'link': link,
       'more': more,
       'subhead': subhead,
       'superhead': superhead
     } %}
-    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+    {{ pattern('section_header', header_vars) }}
   </div>
 
-  <div class="filmstrip__container"> 
+  <div class="filmstrip__container">
     {%  set strip_vars = {
-      'is_flexible': is_flexible,
-      'is_double': is_double,
-      'is_tight': is_tight,
+      'context': context,
       'items': items
     } %}
-    {% include '@stanford_components/molecules/filmstrip/filmstrip.html.twig' with strip_vars %}
+    {{ pattern('filmstrip', strip_vars) }}
   </div>
 </div>

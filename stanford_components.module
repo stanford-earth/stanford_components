@@ -8,6 +8,7 @@
  */
 
 use Drupal\ui_patterns\UiPatterns;
+use Drupal\Component\Utility\Html;
 
 /**
  * Implements hook_preprocess().
@@ -21,9 +22,9 @@ function stanford_components_preprocess(&$variables, $hook) {
       }
 
       if (!isset($variables['attributes']['id'])) {
-        $variables['attributes']['id'] = "$pattern_id-{$ids[$pattern_id]}";
-        $ids[$pattern_id]++;
+        $variables['attributes']['id'] = Html::getUniqueId($pattern_id);
       }
+
       break;
     }
   }

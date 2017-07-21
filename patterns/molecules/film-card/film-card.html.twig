@@ -4,27 +4,27 @@
  * Card pattern.
  */
 #}
-<div class="film-card{% if has_arrow %} has-arrow{% endif %}">
-  {% if link is not empty %}
-  <a class="film-card__link" href="{{ link|render|striptags|trim }}">
-  {% endif %}
+
+{% set attributes = attributes.addClass(['film-card', variants.arrow]) %}
+
+<div{{ attributes }}>
+  {{ link|openlink({class:'film-card__link'}) }}
     <div class="film-card__thumbnail">
       {{ image }}
       <div class="film-card__caption">
         <h6 class="film-card__title">{{ title|render|striptags|trim }}</h6>
         <p class="film-card__subtitle">{{ subtitle|render|striptags|trim }}</p>
       </div>
-      {% if has_arrow %}
+      {% if variants.arrow == 'has-arrow' %}
         <div class="film-card__arrow">
           <svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
         </div>
       {% endif %}
     </div>
-  {% if link is not empty %}
-  </a>
-  {% endif %}
 
-  {% if description is not empty %}
-  <p class="film-card__description">{{ description|render|striptags|trim }}</p>
+  {{ link|closelink }}
+
+  {% if description %}
+    <p class="film-card__description">{{ description|render|striptags|trim }}</p>
   {% endif %}
 </div>

@@ -3,16 +3,19 @@
 film_card:
   label: "Film card"
   description: "A single card inside a filmstrip."
+  variants:
+    arrow:
+      description: "Render arrow on card."
+      label: Arrow
+      default: has-arrow
+      options:
+        has-arrow: Show Arrow
+        no-arrow: No Arrow
   fields:
     description:
       description: "Card description."
-      label: Title
+      label: Description
       preview: "Understand the properties and processes in the top ~100 meters of the earth."
-      type: text
-    has_arrow:
-      description: "Render arrow on card.  Treat as boolean (true/false)."
-      label: Arrow
-      preview: true
       type: text
     image:
       description: "Card image."
@@ -25,7 +28,7 @@ film_card:
     link:
       description: "URI that points somewhere."
       label: "Link (optional)"
-      preview: "https://stanford.edu/"
+      preview: "<a href=\"https://stanford.edu/\">Stanford</a>"
       type: text
     subtitle:
       description: "Card subtitle."

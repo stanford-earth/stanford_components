@@ -4,35 +4,32 @@
  * Filmstrip pattern.
  */
 #}
-{# Attach the film card andf filmstrip css and js #}
-{{ attach_library('ui_patterns/section_header.section_header_library') }}
-{{ attach_library('ui_patterns/film_card.film_card_library') }}
-{{ attach_library('ui_patterns/filmstrip.filmstrip_library') }}
-{{ attach_library('ui_patterns/section_callout_filmstrip.section_callout_filmstrip_library') }}
+{% set header_vars = {
+'link': link,
+'subhead': subhead,
+'superhead': superhead,
+'context': context
+} %}
+
+{% if variants.centered_container %}
+  {{ attach_library('stanford_components/component_centered_container') }}
+  {% set attributes = attributes.addClass('component-centered-container') %}
+{% endif %}
+{% set attributes = attributes.addClass(['section-callout-filmstrip', 'section-tall-filmstrip']) %}
+
 {# Template HTML #}
-<div class="section-callout-filmstrip section-tall-filmstrip"> 
+<div{{ attributes }}>
   <div class="filmstrip__header">
-    {%  set header_vars = {
-      'dash_under': dash_under,
-      'is_centered': is_centered,
-      'link': link,
-      'more': more,
-      'subhead': subhead,
-      'superhead': superhead
-    } %}
-    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+    {{ pattern('section_header', header_vars) }}
   </div>
 
-  <div class="filmstrip__container expandable-container js-expandable-container"> 
-    {%  set strip_vars = {
-      'is_flexible': is_flexible,
-      'is_double': is_double,
-      'is_tight': is_tight,
-      'is_tall': is_tall,
-      'items': items
-    } %}
-    {% include '@stanford_components/molecules/filmstrip/filmstrip.html.twig' with strip_vars %}
+  <div class="filmstrip__container expandable-container js-expandable-container {% if variants.is_expanded %}is-open{% endif %}">
+    {{ pattern('filmstrip', {'items': items, 'context': context}) }}
 
-    <a href="#" class="expandable-container__toggle js-expandable-container__toggle"><span class="visually-hidden">Show More</span><span class="expandable-container__open"><svg class="i-svg i-svg--plus"><use xlink:href="#i-plus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span></a>
+    {% if not variants.is_expanded and field_count(items) > 4%}
+      <a href="#" class="expandable-container__toggle js-expandable-container__toggle">
+        <span class="visually-hidden">Show More</span><span class="expandable-container__open"><svg class="i-svg i-svg--plus"><use xlink:href="#i-plus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+      </a>
+    {% endif %}
   </div>
 </div>

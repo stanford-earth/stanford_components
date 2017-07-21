@@ -3,106 +3,132 @@
 section_tall_filmstrip:
   label: "Section Tall Filmstrip"
   description: "A horizontal list of small images with section header"
-  fields:
+  variants:
+    arrow:
+      description: "Render arrow on card."
+      label: Arrow
+      default: no-arrow
+      options:
+        has-arrow: Show Arrow
+        no-arrow: No Arrow
     dash_under:
-      description: "Emphasis dash under h2 or to the left?  Treat as boolean (true/false)"
-      label: "Dash Under"
-      preview: true
-      type: text
+      label: "Dash Under Header"
+      description: "Dash under h2 or to the left?  Treat as boolean (true/false)"
+      default: has-dash-under
+      options:
+        has-dash-left: Left
+        has-dash-under: Under
     is_centered:
+      label: Centered
       description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
-      label: Center
-      preview: true
-      type: text
-    is_double:
-      description: "Flexible cards rather than default fixed widths and 3 columns.  Treat as boolean (true/false)."
-      label: "Flexible widths and three columns"
-      preview: false
-      type: text
+      default: left-aligned
+      options:
+        left-aligned: Left Aligned
+        is-centered: Centered
     is_featured:
-      description: "Emphasis has emphasis or default brand color?  Treat as boolean (true/false)"
-      label: "Dash with Emphasis"
-      preview: true
-      type: text
-    is_flexible:
-      description: "Flexible cards rather than default fixed widths.  Treat as boolean (true/false)."
-      label: "Flexible widths"
-      preview: true
-      type: text
-    is_tall:
-      description: "Flexible cards and taller aspect ratio.  Treat as boolean (true/false)."
-      label: "Flexible widths and taller images"
-      preview: true
-      type: text
-    is_tight:
-      description: "Flexible cards and tighter margins.  Treat as boolean (true/false)."
-      label: "Flexible widths and tighter margins"
-      preview: false
-      type: text
+      label: "Dash With Emphasis"
+      description: "Dash has emphasis or default brand color?  Treat as boolean (true/false)"
+      default: has-dash-emphasis
+      options:
+        no-emphasis: No Branding
+        has-dash-emphasis: Brand color
+    centered_container:
+      label: "Centered Component"
+      description: "Center the component in a responsive container"
+      default: true
+      options:
+        true: "Centered"
+        false: "Normal"
+    card_widths:
+      description: "Make cards have flexible rather than fixed widths."
+      label: Flexible widths
+      default: is-flexible
+      options:
+        is-flexible: Flexible Widths
+        fixed-width: Fixed Widths
+    tight:
+      description: "Make cards have flexible rather than fixed widths and tighter margins."
+      label: Flexible widths and tighter margins
+      default: not-tight
+      options:
+        is-tight: Tight
+        not-tight: Loose
+    height:
+      description: "Tall cards."
+      label: "Flexible tall cards"
+      default: is-tall
+      options:
+        is-tall: Tall
+        is-short: Short
+    double:
+      label: "Double or Single"
+      description: "Show the cards as double or single rows."
+      default: is-single
+      options:
+        is-double: Double
+        is-single: Single
+    is_expanded:
+      description: "Defaults to an expanded view instead of the collapsed with toggle view"
+      type: boolean
+      label: "Expanded by default"
+      default: false
+      options:
+        true: "Expanded by default"
+        false: "Collapsed by default"
+  fields:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
       preview:
         -
-          has_arrow: false
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/380/604/nature/1"
+            uri: "https://lorempixel.com/380/604/nature/1"
           link: "https://www.stanford.edu"
           subtitle: "Associate Professor Earth System Science"
           title: "David Lobell"
         -
-          has_arrow: false
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/380/604/nature/2"
+            uri: "https://lorempixel.com/380/604/nature/2"
           link: "https://www.stanford.edu"
           subtitle: "Professor of Earth System Science"
           title: "Rob Jackson"
         -
-          has_arrow: false
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/380/604/nature/3"
+            uri: "https://lorempixel.com/380/604/nature/3"
           link: "https://www.stanford.edu"
           subtitle: "Geophysisc Professor"
           title: "Rosemary Knight"
         -
-          has_arrow: false
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/380/604/nature/6"
+            uri: "https://lorempixel.com/380/604/nature/6"
           link: "https://www.stanford.edu"
           subtitle: "Associate Professor Earth System Science"
           title: "David Lobell"
         -
-          has_arrow: false
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/380/604/nature/1"
+            uri: "https://lorempixel.com/380/604/nature/1"
           link: "https://www.stanford.edu"
           subtitle: "Assistant Professor, Earth System Science"
           title: "Marshall Burke"
         -
-          has_arrow: false
           image:
             alt: "this is a sample image"
             theme: image
-            uri: "http://lorempixel.com/380/604/nature/2"
+            uri: "https://lorempixel.com/380/604/nature/2"
           link: "https://www.stanford.edu"
           subtitle: "Professor of Earth System Science"
           title: "Scott Fendorff"
       type: array
-    more:
-      description: "More link."
-      label: "More link (optional)"
-      preview: "All Research groups"
-      type: text
     subhead:
       description: "Subhead for callout"
       label: Subhead
@@ -122,4 +148,8 @@ section_tall_filmstrip:
             css/section-tall-filmstrip.state.css: {}
         js:
           js/section-tall-filmstrip.js: {}
+        dependencies:
+          - ui_patterns/section_header.section_header_library
+          - ui_patterns/filmstrip.filmstrip_library
+          - ui_patterns/section_callout_filmstrip.section_callout_filmstrip_library
   use: "@stanford_components/organisms/section-tall-filmstrip/section-tall-filmstrip.html.twig"

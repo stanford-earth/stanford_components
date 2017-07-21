@@ -23,7 +23,7 @@ quote_card:
       label: Image of person being quoted
       preview:
         theme: image
-        uri: "http://lorempixel.com/output/people-q-g-64-64-1.jpg"
+        uri: "https://lorempixel.com/output/people-q-g-64-64-1.jpg"
       type: image
   libraries:
     -
