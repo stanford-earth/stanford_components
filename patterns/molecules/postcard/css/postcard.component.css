@@ -68,13 +68,13 @@
 }
 
 .postcard .postcard__content-text {
-  padding: 1.1111111111em;
+  padding: 1.5384615385em;
   width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
   .postcard .postcard__content-text {
-    padding: 1.6666666667em;
+    padding: 2.3076923077em;
   }
 }
 

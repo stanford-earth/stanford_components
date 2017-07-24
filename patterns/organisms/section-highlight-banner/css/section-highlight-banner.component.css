@@ -1,13 +1,13 @@
 .section-highlight-banner {
   background-size: cover;
-  padding-bottom: 1.6666666667em;
-  padding-top: 1.6666666667em;
+  padding-bottom: 2.3076923077em;
+  padding-top: 2.3076923077em;
   position: relative;
 }
 
 @media only screen and (max-width: 575px) {
   .section-highlight-banner {
-    padding: 1em calc(((50% /12) * 0) + 20px);
+    padding: 1em calc(((50% /12) * 0) + 15px);
   }
   .section-highlight-banner::after {
     clear: both;
@@ -18,7 +18,7 @@
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .section-highlight-banner {
-    padding: 1em calc(((50% /12) * 0) + 20px);
+    padding: 1em calc(((50% /12) * 0) + 15px);
   }
   .section-highlight-banner::after {
     clear: both;
@@ -29,7 +29,7 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .section-highlight-banner {
-    padding: 1em calc(((50% /12) * 0) + 20px);
+    padding: 1em calc(((50% /12) * 0) + 15px);
   }
   .section-highlight-banner::after {
     clear: both;
@@ -40,7 +40,7 @@
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-highlight-banner {
-    padding: 1em calc(((50% /12) * 0) + 20px);
+    padding: 1em calc(((50% /12) * 0) + 15px);
   }
   .section-highlight-banner::after {
     clear: both;
@@ -51,7 +51,7 @@
 
 @media only screen and (min-width: 1200px) {
   .section-highlight-banner {
-    padding: 1em calc(50% - (600px - 20px));
+    padding: 1em calc(50% - (750px - 15px));
   }
   .section-highlight-banner::after {
     clear: both;
@@ -80,25 +80,25 @@
 
 @media only screen and (min-width: 768px) {
   .section-highlight-banner.is-single .highlight-banner__header {
-    width: calc(33.3333333333% - 53.3333333333px);
+    width: calc(33.3333333333% - 40px);
     float: left;
-    margin-left: 40px;
-    margin-left: calc(8.3333333333% - 43.3333333333px + 80px);
+    margin-left: 30px;
+    margin-left: calc(8.3333333333% - 32.5px + 60px);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-highlight-banner.is-single .highlight-banner__header {
-    width: calc(33.3333333333% - 53.3333333333px);
+    width: calc(33.3333333333% - 40px);
     float: left;
-    margin-left: 40px;
-    margin-left: calc(25% - 50px + 80px);
+    margin-left: 30px;
+    margin-left: calc(25% - 37.5px + 60px);
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-highlight-banner.is-single .highlight-banner__container {
-    margin-left: calc(0% - 40px + 80px);
+    margin-left: calc(0% - 30px + 60px);
   }
 }
 
@@ -110,34 +110,34 @@
 
 @media only screen and (min-width: 768px) {
   .section-highlight-banner.is-single .highlight-cards .highlight-card {
-    width: calc(83.3333333333% - 73.3333333333px);
+    width: calc(83.3333333333% - 55px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 .section-highlight-banner .highlight-banner__header {
   position: relative;
-  padding-top: 1.6666666667em;
+  padding-top: 2.3076923077em;
   width: 100%;
   z-index: 2;
 }
 
 @media only screen and (min-width: 768px) {
   .section-highlight-banner .highlight-banner__header {
-    width: calc(25% - 50px);
+    width: calc(25% - 37.5px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
     padding-top: 0;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-highlight-banner .highlight-banner__header {
-    width: calc(25% - 50px);
+    width: calc(25% - 37.5px);
     float: left;
-    margin-left: 40px;
-    margin-left: calc(8.3333333333% - 43.3333333333px + 80px);
+    margin-left: 30px;
+    margin-left: calc(8.3333333333% - 32.5px + 60px);
   }
 }
 
@@ -154,26 +154,26 @@
 
 @media only screen and (min-width: 768px) {
   .section-highlight-banner .highlight-banner__container {
-    width: calc(75% - 70px);
+    width: calc(75% - 52.5px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-highlight-banner .highlight-banner__container {
-    width: calc(66.6666666667% - 66.6666666667px);
+    width: calc(66.6666666667% - 50px);
     float: left;
-    margin-left: 40px;
-    margin-left: calc(8.3333333333% - 43.3333333333px + 80px);
+    margin-left: 30px;
+    margin-left: calc(8.3333333333% - 32.5px + 60px);
   }
 }
 
 @media only screen and (min-width: 768px) {
   .section-highlight-banner .highlight-banner__container .highlight-cards {
-    margin-left: -40px;
-    margin-right: -40px;
-    width: calc(100% + 80px);
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
   }
 }
 

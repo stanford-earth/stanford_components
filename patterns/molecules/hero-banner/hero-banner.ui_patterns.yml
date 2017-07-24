@@ -3,6 +3,49 @@
 hero_banner:
   label: "Hero banner"
   description: "A hero banner component"
+  variants:
+    has_tint:
+      label: "Has background tinting"
+      description: "Slight shade over background image"
+      default: has-tint
+      options:
+        no-tint: "No tint"
+        has-tint: "Enabled tint"
+    header_position:
+      label: "Positioning of the text overlay"
+      description: "Choose where you would like to see the text appear over the image"
+      default: 'is-right'
+      options:
+        not-centered: "Centered"
+        is-right: "On the right"
+    is_page_title:
+      label: "Should the banner use an h1 page title?"
+      description: "Use an h1 instead of an h2 for the superhead"
+      default: 0
+      options:
+        0: "Normal header"
+        1: "Page title"
+    is_tall:
+      label: "Is the tall banner (homepage)"
+      description: "The taller version of the hero banner when enabled."
+      default: 0
+      options:
+        is-tall: "Tall"
+        is-short: "Short"
+    racing_stripe:
+      label: "Include lockup and racing stripe"
+      description: "Add a stripe to the header that includes the main site logotype."
+      default: false
+      options:
+        no-racing-stripe: "No"
+        has-racing-stripe: "Yes"
+    stripe_block:
+      label: "Include a block in the racing stripe"
+      description: provide a block machine name to render in the stripe.
+      default: false
+      text_input: true
+      options:
+        system_branding: "System Branding Block"
   fields:
     cite:
       description: "Citation for hero banner background image."
@@ -23,6 +66,11 @@ hero_banner:
       description: "The super large heading text."
       label: "Super Head"
       preview: "Overlay title"
+      type: text
+    racing_stripe:
+      label: "Racing Stripe"
+      description: "Content for the racing stripe bar when used"
+      preview: ~
       type: text
   libraries:
     -

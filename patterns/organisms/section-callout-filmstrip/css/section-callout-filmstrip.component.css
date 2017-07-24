@@ -1,9 +1,9 @@
 .section-callout-filmstrip {
-  padding-bottom: 4.7777777778em;
+  padding-bottom: 6.6153846154em;
 }
 
 .section-callout-filmstrip.has-columns {
-  padding: 3.2222222222em 0;
+  padding: 4.4615384615em 0;
 }
 
 .section-callout-filmstrip.has-columns::after {
@@ -19,44 +19,44 @@
 
 @media only screen and (min-width: 768px) {
   .section-callout-filmstrip.has-columns .filmstrip__header {
-    width: calc(100% - 80px);
+    width: calc(100% - 60px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-callout-filmstrip.has-columns .filmstrip__header {
-    width: calc(16.6666666667% - 46.6666666667px);
+    width: calc(16.6666666667% - 35px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .section-callout-filmstrip.has-columns .filmstrip__header {
-    padding-right: 3.8888888889em;
+    padding-right: 5.3846153846em;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-callout-filmstrip.has-columns .filmstrip__container {
-    width: calc(83.3333333333% - 73.3333333333px);
+    width: calc(83.3333333333% - 55px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .section-callout-filmstrip.has-columns .filmstrip__container .filmstrip__cards {
-    margin-left: -40px;
-    margin-right: -40px;
-    width: calc(100% + 80px);
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
   }
 }
 
 .section-callout-filmstrip .section-header {
-  padding-bottom: 3.7222222222em;
+  padding-bottom: 5.1538461538em;
 }
 
 @media only screen and (min-width: 768px) {

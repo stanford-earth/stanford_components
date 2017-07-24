@@ -1,5 +1,5 @@
 .section-header-columns {
-  padding: 1.6666666667em 0;
+  padding: 2.3076923077em 0;
 }
 
 .section-header-columns::after {
@@ -16,7 +16,7 @@
 }
 
 .section-header-columns .section-header-columns__header {
-  padding: 0.8333333333em 0;
+  padding: 1.1538461538em 0;
 }
 
 /*# sourceMappingURL=section-header-columns.component.css.map */

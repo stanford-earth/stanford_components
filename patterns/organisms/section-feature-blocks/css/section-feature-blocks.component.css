@@ -11,39 +11,39 @@
 
 @media only screen and (min-width: 768px) {
   .section-feature-blocks .feature-blocks__header {
-    width: calc(100% - 80px);
+    width: calc(100% - 60px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-feature-blocks .feature-blocks__header {
-    width: calc(25% - 50px);
+    width: calc(25% - 37.5px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
   .section-feature-blocks .feature-blocks__header {
-    padding-right: 3.8888888889em;
+    padding-right: 5.3846153846em;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .section-feature-blocks .feature-blocks__container {
-    width: calc(75% - 70px);
+    width: calc(75% - 52.5px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .section-feature-blocks .feature-blocks__container .feature-blocks {
-    margin-left: -40px;
-    margin-right: -40px;
-    width: calc(100% + 80px);
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
   }
 }
 

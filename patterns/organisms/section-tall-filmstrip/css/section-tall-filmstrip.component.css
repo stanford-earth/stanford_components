@@ -17,9 +17,9 @@
 
 @media only screen and (min-width: 768px) {
   .section-tall-filmstrip .filmstrip__container .filmstrip__cards {
-    margin-left: -40px;
-    margin-right: -40px;
-    width: calc(100% + 80px);
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
   }
 }
 

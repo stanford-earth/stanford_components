@@ -14,9 +14,9 @@
 
 @media only screen and (min-width: 768px) {
   .expandable-card.is-narrow .icon-item {
-    width: calc(50% - 60px);
+    width: calc(50% - 45px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
   .expandable-card.is-narrow .icon-item:nth-child(2n+1) {
     clear: both;
@@ -25,9 +25,9 @@
 
 @media only screen and (min-width: 768px) {
   .expandable-card.is-wide .icon-item {
-    width: calc(33.3333333333% - 53.3333333333px);
+    width: calc(33.3333333333% - 40px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
   .expandable-card.is-wide .icon-item:nth-child(3n+1) {
     clear: both;

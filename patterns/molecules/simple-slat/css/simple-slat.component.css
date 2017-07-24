@@ -6,17 +6,17 @@
 
 @media only screen and (min-width: 768px) {
   .simple-slat .simple-block__image {
-    width: calc(33.3333333333% - 53.3333333333px);
+    width: calc(33.3333333333% - 40px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .simple-slat .simple-block__content {
-    width: calc(66.6666666667% - 66.6666666667px);
+    width: calc(66.6666666667% - 50px);
     float: left;
-    margin-left: 40px;
+    margin-left: 30px;
   }
 }
 

@@ -4,13 +4,34 @@
  * Hero banner pattern.
  */
 #}
-<!-- Start hero-banner component //-->
-<div class="hero-banner has-tint" style="background-image:url({{ image|render|striptags|trim }})">
-  <div class="hero-banner__inner is-tall">
+
+{# WRAPPING DIV ATTRIBUTES #}
+{% set attributes = attributes.addClass(['hero-banner', variants.has_tint, variants.racing_stripe]) %}
+
+{% if image|get_img_src is not empty %}
+  {% set attributes = attributes.setAttribute('style', ['background-image:url(' ~ image|get_img_src ~ ')']) %}
+{% endif %}
+
+{# INNER DIV ATTRIBUTES #}
+{% set inner_attributes = create_attribute({'class': ['hero-banner__inner', variants.is_tall]}) %}
+
+{# HEADER DIV ATTRIBUTES #}
+{% set header_attributes = create_attribute({'class': ['hero-banner__header', variants.header_position]}) %}
+
+<div{{ attributes }}>
+  {% if variants.racing_stripe %}
+    <div class="hero-banner__racing_stripe">
+      {% if variants.stripe_block is not empty %}
+        {{ drupal_block(variants.stripe_block) }}
+      {% endif %}
+      {{ racing_stripe }}
+    </div>
+  {% endif %}
+  <div{{ inner_attributes }}>
     <div class="hero-banner__container">
-      <div class="hero-banner__header is-right">
+      <div{{ header_attributes }}>
         <div class="hero-banner__hgroup">
-          {% if ispagetitle == true %}
+          {% if variants.is_page_title == true %}
           <h1 class="hero-banner__title h1 page-title">{{ superhead|render|striptags|trim }}</h1>
           {% else %}
           <h2 class="hero-banner__title h1">{{ superhead|render|striptags|trim }}</h2>
@@ -20,12 +41,11 @@
           <p>{{ subhead|render|striptags|trim }}</p>
           {% endif %}
 
-          {% if cite is not null and cite is not empty %}
-          <p class="cite">{{ cite }}</p>
+          {% if cite and cite is not empty %}
+          <p class="cite"><cite>{{ cite }}</cite></p>
           {% endif %}
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- End hero-banner component //-->

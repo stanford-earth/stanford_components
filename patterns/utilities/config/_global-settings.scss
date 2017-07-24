@@ -3,14 +3,14 @@
 /// Decanter global default settings
 $decanter-default-settings: (
   root-font-size: 10px,
-  base-font-size: 18px,
-  modular-scale-ratio: 1.25,
+  base-font-size: 13px,
+  modular-scale-ratio: 1.333,
   columns: 12,
-  gutter: 20px,
+  gutter: 15px,
   max-container-width: 1500px,
   breakpoint-helper: false,
   breakpoint-helper-selector: #breakpoint-helper,
-) !default;
+);
 
 /// @name Bourbon Settings
 ///
@@ -47,8 +47,9 @@ $decanter-default-settings: (
 ///   );
 ///
 /// @group settings
+///
 $bourbon: (
-    "modular-scale-ratio": 1.25,
+  "modular-scale-ratio": 1.333,
 );
 
 /// This variable is a sass map that overrides Neat's default grid settings.
@@ -86,6 +87,9 @@ $neat-grid: (
     direction: ltr,
 );
 
+/// Header MD Min
+$header-md-min: 860px;
+
 // Lower boundaries
 // ----------------
 
@@ -121,49 +125,56 @@ $screen-lg-max:               $screen-xl-min - 1px;
 
 /// Media MD
 $media-md: (
-    columns: 12,
-    gutter: 40px,
-    media: $screen-md-min,
+  columns: 12,
+  gutter: 30px,
+  media: $screen-md-min,
 );
 
 /// Media MD only
 $media-md-only: (
-    columns: 12,
-    gutter: 40px,
-    media: 'only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})',
+  columns: 12,
+  gutter: 30px,
+  media: 'only screen and (min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})',
 );
 
 /// Media MD max
 $media-md-max: (
-    columns: 12,
-    gutter: 40px,
-    media: 'only screen and (max-width: #{$screen-md-max})',
+  columns: 12,
+  gutter: 30px,
+  media: 'only screen and (max-width: #{$screen-md-max})',
+);
+
+ /// Component Header
+$header-md: (
+  columns: 12,
+  gutter: 30px,
+  media: $header-md-min,
 );
 
 /// Media LG
 $media-lg: (
-    columns: 12,
-    gutter: 40px,
-    media: $screen-lg-min,
+  columns: 12,
+  gutter: 30px,
+  media: $screen-lg-min,
 );
 
 /// Media LG only
 $media-lg-only: (
-    columns: 12,
-    gutter: 40px,
-    media: 'only screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max})',
+  columns: 12,
+  gutter: 30px,
+  media: 'only screen and (min-width: #{$screen-lg-min}) and (max-width: #{$screen-lg-max})',
 );
 
 /// Media LG max
 $media-lg-max: (
-    columns: 12,
-    gutter: 40px,
-    media: 'only screen and (max-width: #{$screen-lg-max})',
+  columns: 12,
+  gutter: 30px,
+  media: 'only screen and (max-width: #{$screen-lg-max})',
 );
 
 /// Media XL
 $media-xl: (
-    columns: 12,
-    gutter: 60px,
-    media: $screen-xl-min,
+  columns: 12,
+  gutter: 60px,
+  media: $screen-xl-min,
 );
