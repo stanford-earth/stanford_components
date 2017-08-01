@@ -37,16 +37,6 @@
     @include grid-media($media-md) {
       max-width: none;
     }
-
-    .film-card {
-
-      .film-card__thumbnail {
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-    }
   }
 
   // Container with flexible film cards
@@ -104,6 +94,7 @@
     }
 
     .film-card {
+      @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
       margin: 0 0 30px;
 
       @include grid-media($media-md) {
@@ -118,9 +109,15 @@
         }
       }
 
-      .film-card__link {
-        @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
+      .film-card__thumbnail {
+        width: 100%;
+        height: 110px;
       }
+
+      .film-card__link {
+        display: block;
+      }
+
     }
   }
 
@@ -158,6 +155,12 @@
           clear: left;
         }
       }
+
+      .film-card__thumbnail {
+        height: 263px;
+        width: initial;
+      }
+
     }
 
     .film-card__link {
