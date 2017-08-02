@@ -29,7 +29,7 @@ section_spotlight_banner:
       label: Image of person being quoted
       preview:
         theme: image
-        uri: "https://lorempixel.com/228/266/people"
+        uri: "https://lorempixel.com/228/266/people/9"
       type: image
   libraries:
     -
