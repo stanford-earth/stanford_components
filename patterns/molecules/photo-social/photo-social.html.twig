@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Photo Social pattern.
+ */
+#}
+{{ attach_library('ui_patterns/photo_thumb.photo_thumb_library') }}
+<div class="photo-social">
+  <img class="social-media__badge" src="/modules/stanford/stanford_components/assets/instagram.png"/>
+    {% if link is not empty %}
+    <a class="photo-social__action" href="{{ link|render|striptags|trim }}">
+    {% endif %}
+      {{ image }}
+    {% if link is not empty %}
+    </a>
+    {% endif %}
+</div>

@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Section Social Media pattern.
+ */
+#}
+
+{% set header_vars = {'superhead': superhead, 'subhead': subhead, 'context': context} %}
+
+{# Template HTML #}
+<div class="section-social-media">
+  <div class="social-media__header">
+    {{ pattern('header_card', header_vars) }}
+  </div>
+
+  <div class="social-media__container">
+    {# Break up the individual items in to the appropriate template var. #}
+    {% for item in items %}
+      {% if item.platform == 'instagram' %}
+        {% set photo_vars = {
+        'link': item.link,
+        'image': item.image
+        } %}
+        {# Pass vars through to include template. #}
+        {{ pattern('photo_social', photo_vars) }}
+      {% elseif item.platform == 'twitter' %}
+        {% set card_vars = {
+        'link': item.link,
+        'handle': item.handle,
+        'handle_link': item.handle_link,
+        'description': item.description
+        } %}
+        {# Pass vars through to include template. #}
+        {{ pattern('social_card', card_vars) }}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

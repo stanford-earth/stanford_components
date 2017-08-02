@@ -40,8 +40,25 @@
 }
 
 .film-card__thumbnail {
+  position: relative;
   width: 220px;
   height: 145px;
+}
+
+.film-card__thumbnail::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, transparent 35%, rgba(0, 0, 0, 0.75));
+  content: '';
+  display: block;
+}
+
+.film-card__thumbnail img {
+  display: block;
 }
 
 .film-card__thumbnail img {

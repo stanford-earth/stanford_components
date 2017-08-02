@@ -4,21 +4,20 @@
  * Simple Slats pattern.
  */
 #}
-{{ attach_library('ui_patterns/simple_block.simple_block_library') }}
-{{ attach_library('ui_patterns/simple_slat.simple_slat_library') }}
+{% set variants = variants|merge({'is_slat': true}) %}
 <div class="simple-slats">
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
     {% set vars = {
       'image': item.image,
-      'is_slat': item.is_slat,
       'link': item.link,
       'description': item.description,
       'tag': item.tag,
-      'title': item.title
+      'title': item.title,
+      'context': context
       }
     %}
     {# Pass vars through to include template. #}
-    {% include '@stanford_components/molecules/simple-block/simple-block.html.twig' with vars %}
+    {{ pattern("simple_slat", vars) }}
   {% endfor %}
 </div>

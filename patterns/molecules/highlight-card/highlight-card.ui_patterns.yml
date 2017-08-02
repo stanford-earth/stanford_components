@@ -1,7 +1,7 @@
 # Highlight Cards Pattern
 highlight_card:
   label: "Highlight card"
-  description: "A single callout card"
+  description: "A single hightlight card"
   fields:
     description:
       description: Description.

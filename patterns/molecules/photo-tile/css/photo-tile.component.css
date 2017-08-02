@@ -1,5 +1,6 @@
 .photo-tile {
   margin-bottom: 20px;
+  max-width: 380px;
 }
 
 .photo-tile__action {
@@ -28,6 +29,11 @@
 .photo-tile__action:hover, .photo-tile__action:active, .photo-tile__action:focus {
   color: #fff;
   text-decoration: none;
+}
+
+.photo-tile__action:hover::before, .photo-tile__action:active::before, .photo-tile__action:focus::before {
+  opacity: 0;
+  transition: all 0.5s;
 }
 
 .photo-tile__thumbnail img {

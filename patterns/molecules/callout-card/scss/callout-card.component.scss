@@ -7,11 +7,12 @@
 
 .callout-card {
   min-height: 150px;
-}
+  max-width: 400px;
 
-.callout-card__icon {
-  img {
-    height: 50px;
-    width: 50px;
+  .callout-card__icon {
+    img {
+      height: 50px;
+      width: 50px;
+    }
   }
 }

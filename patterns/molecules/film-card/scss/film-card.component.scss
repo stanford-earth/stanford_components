@@ -32,6 +32,7 @@
 }
 
 .film-card__thumbnail {
+  @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
   width: 220px;
   height: 145px;
 
