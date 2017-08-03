@@ -117,6 +117,23 @@
 
 .filmstrip.is-double .film-card .film-card__link {
   display: block;
+  position: relative;
+}
+
+.filmstrip.is-double .film-card .film-card__link::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  background-image: linear-gradient(to bottom, transparent 35%, rgba(0, 0, 0, 0.75));
+  content: '';
+  display: block;
+}
+
+.filmstrip.is-double .film-card .film-card__link img {
+  display: block;
 }
 
 .filmstrip.is-tall .film-card__caption {

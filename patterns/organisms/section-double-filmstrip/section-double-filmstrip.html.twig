@@ -7,24 +7,22 @@
 
 {% set attributes = attributes.addClass(['section-callout-filmstrip', 'section-double-filmstrip', 'has-columns']) %}
 
+{%  set header_vars = {
+'context': context,
+'link': link,
+'subhead': subhead,
+'superhead': superhead
+} %}
+
 {# Template HTML #}
+{% spaceless %}
 <div{{ attributes }}>
   <div class="filmstrip__header">
-    {%  set header_vars = {
-      'context': context,
-      'link': link,
-      'more': more,
-      'subhead': subhead,
-      'superhead': superhead
-    } %}
     {{ pattern('section_header', header_vars) }}
   </div>
 
   <div class="filmstrip__container">
-    {%  set strip_vars = {
-      'context': context,
-      'items': items
-    } %}
-    {{ pattern('filmstrip', strip_vars) }}
+    {{ pattern('filmstrip', {'context': context, 'items': items}) }}
   </div>
 </div>
+{% endspaceless %}

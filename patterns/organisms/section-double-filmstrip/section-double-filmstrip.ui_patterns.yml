@@ -117,12 +117,7 @@ section_double_filmstrip:
     link:
       description: "URI that points somewhere."
       label: "Link (optional)"
-      preview: "https://stanford.edu/"
-      type: text
-    more:
-      description: "More link."
-      label: "More link (optional)"
-      preview: "All Research groups"
+      preview: "<a href=\"https://stanford.edu/\">Stanford</a>"
       type: text
     subhead:
       description: "Subhead for callout"
