@@ -25,8 +25,7 @@
 
   <div class="filmstrip__container expandable-container js-expandable-container {% if variants.is_expanded %}is-open{% endif %}">
     {{ pattern('filmstrip', {'items': items, 'context': context}) }}
-
-    {% if not variants.is_expanded and field_count(items) > 4%}
+    {% if not variants.is_expanded and field_count(items) > 4 %}
       <a href="#" class="expandable-container__toggle js-expandable-container__toggle">
         <span class="visually-hidden">Show More</span><span class="expandable-container__open"><svg class="i-svg i-svg--plus"><use xlink:href="#i-plus" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
       </a>

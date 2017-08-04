@@ -224,22 +224,21 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
    */
   public function fieldCount($item) {
     // Only 1 field in the region.
-    if (count($item) == 1) {
+    if (count($item) == 1 && strpos(key($item), "field_") === 0) {
       $field_key = key($item);
 
-      // Only when its an actual field.
-      if (isset($item[$field_key]['#theme']) && $item[$field_key]['#theme'] == 'field') {
-        /** @var \Drupal\Core\Field\FieldItemList $items */
+      if (isset($item[$field_key]['#items'])) {
         $items = $item[$field_key]['#items'];
         return $items->count();
       }
     }
     // The item is the field render array.
-    elseif (is_array($item) && isset($item['#theme']) && $item['#theme'] == 'field') {
+    elseif (is_array($item) && isset($item['#items'])) {
       /** @var \Drupal\Core\Field\FieldItemList $items */
       $items = $item['#items'];
       return $items->count();
     }
+
     return count($item);
   }
 

@@ -23,7 +23,7 @@
   }
 }
 
-.section-tall-filmstrip .film-card:nth-child(n+5) {
+.section-tall-filmstrip .film-card:nth-of-type(n+5) {
   display: none;
 }
 
