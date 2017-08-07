@@ -5,7 +5,8 @@
  */
 #}
 {% set variants = variants|merge({'is_slat': true}) %}
-<div class="simple-slats">
+{% set attributes = attributes.addClass("simple-slats") %}
+<div{{ attributes }}>
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
     {% set vars = {

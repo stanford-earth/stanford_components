@@ -4,34 +4,23 @@
  * Callout blocks pattern.
  */
 #}
-{{ attach_library('ui_patterns/section_header.section_header_library') }}
-{{ attach_library('ui_patterns/calendar_block.callout_block_library') }}
-{{ attach_library('ui_patterns/calendar_blocks.callout_blocks_library') }}
-<div class="section-calendar-blocks">
+{% set attributes = attributes.addClass("section-calendar-blocks") %}
+<div{{ attributes }}>
   <div class="calendar-blocks__header">
     {%  set header_vars = {
       'superhead': superhead,
       'subhead': subhead,
-      'is_centered': is_centered,
-      'dash_under': dash_under
+      'context': context
     } %}
-    {% include '@stanford_components/molecules/section-header/section-header.html.twig' with header_vars %}
+    {{ pattern('section_header', header_vars) }}
   </div>
 
   <div class="calendar-blocks__container">
     <div class="calendar-blocks">
       {# Break up the individual items in to the appropriate template var. #}
       {% for item in items %}
-        {% set vars = {
-          'link': item.link,
-          'title': item.title,
-          'day': item.day,
-          'month': item.month,
-          'subtitle': item.subtitle
-          }
-        %}
         {# Pass vars through to include template. #}
-        {% include '@stanford_components/molecules/calendar-block/calendar-block.html.twig' with vars %}
+        {{ pattern('calendar_block', item|merge({'context': context}) ) }}
       {% endfor %}
     </div>
   </div>

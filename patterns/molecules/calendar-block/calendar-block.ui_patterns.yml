@@ -12,7 +12,7 @@ calendar_block:
     link:
       description: "URI that points somewhere"
       label: Link
-      preview: "https://stanford.edu"
+      preview: "<a href=\"https://stanford.edu\">Stanford</a>"
       type: url
     month:
       description: Month.

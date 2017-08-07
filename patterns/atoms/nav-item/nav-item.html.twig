@@ -4,4 +4,5 @@
  * Nav item pattern.
  */
 #}
-<a class="nav-item" href="{{ link|render|striptags|trim }}">{{ name }}</a>
+{# Set title to false since the name will be sufficient #}
+{{ link|openlink({class:"nav-item", title: false}) }}{{ name }}{{ link|closelink }}

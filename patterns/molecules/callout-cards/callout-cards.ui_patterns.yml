@@ -42,4 +42,6 @@ callout_cards:
         css:
           component:
             css/callout-cards.component.css: {}
+        dependencies:
+          - ui_patterns/callout_card.callout_card_library
   use: '@stanford_components/molecules/callout-cards/callout-cards.html.twig'

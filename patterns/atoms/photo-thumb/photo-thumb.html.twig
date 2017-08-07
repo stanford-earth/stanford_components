@@ -4,12 +4,9 @@
  * Photo thumb pattern.
  */
 #}
-<div class="photo-thumb tile-item">
-  {% if link is not empty %}
-  <a class="photo-thumb__link" href="{{ link|render|striptags|trim }}">
-  {% endif %}
+{% set attributes = attributes.addClass("photo-thumb tile-item") %}
+<div{{ attributes }}>
+  {{ link|openlink({class:"photo-thumb__link"}) }}
     {{ image }}
-  {% if link is not empty %}
-  </a>
-  {% endif %}
+  {{ link|closelink }}
 </div>

@@ -4,4 +4,7 @@
  * Tag item pattern.
  */
 #}
-<a class="tag-item" href="{{ link|render|striptags|trim }}">{{ tag }}</a>
+{# Set title to false since the tag will be sufficient #}
+{{ link|openlink({class:"tag-item", title: false}) }}
+  {{ tag }}
+{{ link|closelink }}

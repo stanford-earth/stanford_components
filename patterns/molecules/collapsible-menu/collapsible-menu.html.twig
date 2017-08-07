@@ -4,25 +4,18 @@
  * Link banner pattern.
  */
 #}
-{%
-  set muid = "cmenu-" ~ random()
-%}
+{% set muid = "cmenu-" ~ random() %}
+{% set attributes = attributes.addClass("collapsible-menu js-collapsible-menu") %}
+{% set attributes = attributes.setAttribute('id', muid) %}
 
-{{ attach_library('ui_patterns/nav_item.nav_item_library') }}
-<nav id="{{ muid }}" class="collapsible-menu js-collapsible-menu">
+<nav{{ attributes }}>
   <ul class="nav-items">
 
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
-
-    {% set vars = {
-      'link': item.link,
-      'name': item.name
-      }
-    %}
-
+    {% set item = item|merge({'context': context}) %}
     {# Pass vars through to include template. #}
-    {% include '@stanford_components/atoms/nav-item/nav-item.html.twig' with vars %}
+    {{ pattern("nav_item", item) }}
   {% endfor %}
   </ul>
 

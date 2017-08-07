@@ -4,8 +4,9 @@
  * Callout blocks pattern.
  */
 #}
-<div class="calendar-block">
-  <a class="calendar-block__action" href="{{ link|render|striptags|trim }}">
+{% set attributes = attributes.addClass("calendar-block") %}
+<div{{ attributes }}>
+  {{ link|openlink({class:"calendar-block__action"}) }}
     <div class="calendar-block__date">
       <span class="calendar-block__day">{{ day }}</span>
       <span class="calendar-block__month">{{ month }}</span>
@@ -17,5 +18,5 @@
     <div class="calendar-block__arrow">
       <svg class="i-svg i-svg--arrow-right"> <use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use> </svg>
     </div>
-  </a>
+  {{ link|closelink }}
 </div>

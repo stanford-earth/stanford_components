@@ -7,7 +7,6 @@
 
 {% set attributes = attributes.addClass(['film-card', variants.arrow]) %}
 
-{% spaceless %}
 <div{{ attributes }}>
 
   {# If there is no link, lets wrap the contents with a div to keep similar styles. #}
@@ -48,4 +47,3 @@
     <p class="film-card__description">{{ description|render|striptags|trim }}</p>
   {% endif %}
 </div>
-{% endspaceless %}

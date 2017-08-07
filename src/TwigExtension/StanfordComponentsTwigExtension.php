@@ -97,7 +97,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       $link_element = $link->item(0);
 
       // Set title attribute if none exits.
-      if (!$link_element->getAttribute('title')) {
+      if (!$link_element->getAttribute('title') && !isset($attributes['title'])) {
         $link_element->setAttribute('title', $trimmed);
       }
 
@@ -226,8 +226,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
     // Only 1 field in the region.
     if (count($item) == 1 && strpos(key($item), "field_") === 0) {
       $field_key = key($item);
-
-      if (isset($item[$field_key]['#items'])) {
+      if (is_array($item[$field_key]) && isset($item[$field_key]['#items'])) {
         $items = $item[$field_key]['#items'];
         return $items->count();
       }

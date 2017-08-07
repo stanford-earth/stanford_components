@@ -64,7 +64,9 @@ masonry_block:
     background_image:
       description: "Card image."
       label: Image
-      preview: ~
+      preview:
+        theme: image
+        uri: "https://lorempixel.com/270/160/nature/5"
       type: text
     link:
       description: "URI that points somewhere"
@@ -89,4 +91,6 @@ masonry_block:
         css:
           component:
             css/masonry-block.component.css: {}
+        dependencies:
+          - ui_patterns/tag_item.tag_item_library
   use: "@stanford_components/molecules/masonry-block/masonry-block.html.twig"

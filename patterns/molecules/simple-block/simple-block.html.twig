@@ -15,9 +15,7 @@
 <div {{ attributes }}>
   {% if image is not empty %}
   <div class="simple-block__image">
-    {% if link is not empty %}
     {{ link|openlink({class:"simple-block__link"}) }}
-    {% endif %}
       <div class="simple-block__thumbnail">
         {{ image }}
         {% if tag is not empty %}
@@ -26,9 +24,7 @@
           </div>
         {% endif %}
       </div>
-    {% if link is not empty %}
     {{ link|closelink }}
-    {% endif %}
   </div>
   {% endif %}
   <div class="simple-block__content">

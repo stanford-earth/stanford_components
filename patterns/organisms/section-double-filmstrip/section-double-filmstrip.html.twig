@@ -14,8 +14,6 @@
 'superhead': superhead
 } %}
 
-{# Template HTML #}
-{% spaceless %}
 <div{{ attributes }}>
   <div class="filmstrip__header">
     {{ pattern('section_header', header_vars) }}
@@ -25,4 +23,3 @@
     {{ pattern('filmstrip', {'context': context, 'items': items}) }}
   </div>
 </div>
-{% endspaceless %}

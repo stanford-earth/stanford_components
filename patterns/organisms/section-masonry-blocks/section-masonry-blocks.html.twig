@@ -4,19 +4,9 @@
  * Simple blocks pattern.
  */
 #}
-{{ attach_library('ui_patterns/nav_item.nav_item_library') }}
-{{ attach_library('ui_patterns/collapsible_menu.collapsible_menu_library') }}
-{{ attach_library('ui_patterns/tag_item.tag_item_library') }}
-{{ attach_library('ui_patterns/masonry_block.masonry_block_library') }}
-{{ attach_library('ui_patterns/masonry_blocks.masonry_blocks_library') }}
-<div class="section-masonry-blocks">
-  {%  set nav_vars = {
-    'items': items
-  } %}
-  {% include '@stanford_components/molecules/collapsible-menu/collapsible-menu.html.twig' with nav_vars %}
-
-  {%  set card_vars = {
-    'cards': cards
-  } %}
-  {% include '@stanford_components/molecules/masonry-blocks/masonry-blocks.html.twig' with card_vars %}
+{% set attributes = attributes.addClass("section-masonry-blocks") %}
+<div{{ attributes }}>
+  {#{% set items = items|merge({'context': context}) %}#}
+  {{ pattern('collapsible_menu', {'items': items, 'context': context}) }}
+  {{ pattern('masonry_blocks', {'cards': cards, 'context': context}) }}
 </div>

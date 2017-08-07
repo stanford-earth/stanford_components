@@ -149,4 +149,7 @@ masonry_blocks:
         js:
           ../../vendor/js/masonry.pkgd.min.js: {}
           js/masonry-blocks.js: {}
+        dependencies:
+          - ui_patterns/tag_item.tag_item_library
+          - ui_patterns/masonry_block.masonry_block_library
   use: "@stanford_components/molecules/masonry-blocks/masonry-blocks.html.twig"

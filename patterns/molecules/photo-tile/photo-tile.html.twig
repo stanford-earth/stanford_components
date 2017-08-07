@@ -4,10 +4,9 @@
  * Photo tile pattern.
  */
 #}
-<div class="photo-tile tile-item">
-  {% if link is not empty %}
-  <a class="photo-tile__action" href="{{ link|render|striptags|trim }}">
-  {% endif %}
+{% set attributes = attributes.addClass("photo-tile tile-item") %}
+<div{{ attributes }}>
+  {{ link|openlink({class: 'photo-tile__action'}) }}
     <div class="photo-tile__thumbnail">
       {{ image }}
       <div class="photo-tile__header">
@@ -16,7 +15,5 @@
         <span class="photo-tile__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
       </div>
     </div>
-  {% if link is not empty %}
-  </a>
-  {% endif %}
+  {{ link|closelink }}
 </div>

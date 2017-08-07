@@ -4,19 +4,12 @@
  * Feature blocks pattern.
  */
 #}
-{{ attach_library('ui_patterns/simple_block.simple_block_library') }}
-<div class="feature-blocks">
+{% set attributes = attributes.addClass("feature-blocks") %}
+<div{{ attributes }}>
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
-    {% set vars = {
-      'link': item.link,
-      'image': item.image,
-      'tag': item.tag,
-      'description': item.description,
-      'more': item.more
-      }
-    %}
+    {% set item = item|merge({'context': context}) %}
     {# Pass vars through to include template. #}
-    {% include '@stanford_components/molecules/simple-block/simple-block.html.twig' with vars %}
+    {{ pattern('simple_block', item) }}
   {% endfor %}
 </div>

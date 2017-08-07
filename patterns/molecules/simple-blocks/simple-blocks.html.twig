@@ -4,20 +4,13 @@
  * Simple blocks pattern.
  */
 #}
-<div class="simple-blocks">
+{% set attributes = attributes.addClass("simple-blocks") %}
+<div{{ attributes }}>
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
     {% if item.title is not empty %}
-      {% set vars = {
-        'description': item.description,
-        'image': item.image,
-        'link': item.link,
-        'tag': item.tag,
-        'title': item.title,
-        'context': context
-        }
-      %}
-      {{ pattern('simple_block', vars) }}
+      {% set item = item|merge({'context': context}) %}
+      {{ pattern('simple_block', item) }}
     {% else %}
       {{ item }}
     {% endif %}

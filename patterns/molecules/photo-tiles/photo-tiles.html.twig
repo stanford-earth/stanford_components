@@ -4,13 +4,17 @@
  * Photo tile pattern.
  */
 #}
-{{ attach_library('ui_patterns/photo_thumb.photo_thumb_library') }}
-{{ attach_library('ui_patterns/photo_tile.photo_tile_library') }}
-<div class="photo-tiles{% if is_right %} is-right{% endif %}{% if classes is not empty %} {{ classes }}{% endif %}">
+{% set attributes = attributes.addClass("photo-tiles") %}
+{% if is_right %}
+  {% set attributes = attributes.addClass("is-right") %}
+{% endif %}
+{% if classes is not empty %}
+  {% set attributes = attributes.addClass(classes) %}
+{% endif %}
+
+<div{{ attributes }}>
   <div class="photo-tile tile-item tile-sizer">
-    {% if link is not empty %}
-    <a class="photo-tile__action" href="{{ link|render|striptags|trim }}">
-    {% endif %}
+    {{ link|openlink({class: 'photo-tile__action'}) }}
       <div class="photo-tile__thumbnail">
         {{ image }}
         <div class="photo-tile__header">
@@ -19,20 +23,14 @@
           <span class="photo-tile__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
         </div>
       </div>
-    {% if link is not empty %}
-    </a>
-    {% endif %}
+    {{ link|closelink }}
   </div>
 
   <div class="photo-thumbs">
   {% for item in items %}
-    {% set vars = {
-      'link': item.link,
-      'image': item.image
-      }
-    %}
+    {% set item = item|merge({'context': context}) %}
     {# Pass vars through to include template. #}
-    {% include '@stanford_components/atoms/photo-thumb/photo-thumb.html.twig' with vars %}
+    {{ pattern('photo_thumb', item) }}
   {% endfor %}
 
     {% if quote is not empty %}

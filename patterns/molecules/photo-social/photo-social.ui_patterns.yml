@@ -37,4 +37,6 @@ photo_social:
         css:
           component:
             css/photo-social.component.css: {}
+        dependencies:
+          - ui_patterns/photo_thumb.photo_thumb_library
   use: "@stanford_components/molecules/photo-social/photo-social.html.twig"

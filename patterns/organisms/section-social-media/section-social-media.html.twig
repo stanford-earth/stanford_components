@@ -6,9 +6,10 @@
 #}
 
 {% set header_vars = {'superhead': superhead, 'subhead': subhead, 'context': context} %}
+{% set attributes = attributes.addClass("section-social-media") %}
 
 {# Template HTML #}
-<div class="section-social-media">
+<div{{ attributes }}>
   <div class="social-media__header">
     {{ pattern('header_card', header_vars) }}
   </div>
@@ -17,21 +18,11 @@
     {# Break up the individual items in to the appropriate template var. #}
     {% for item in items %}
       {% if item.platform == 'instagram' %}
-        {% set photo_vars = {
-        'link': item.link,
-        'image': item.image
-        } %}
         {# Pass vars through to include template. #}
-        {{ pattern('photo_social', photo_vars) }}
+        {{ pattern('photo_social', item|merge({'context': context})) }}
       {% elseif item.platform == 'twitter' %}
-        {% set card_vars = {
-        'link': item.link,
-        'handle': item.handle,
-        'handle_link': item.handle_link,
-        'description': item.description
-        } %}
         {# Pass vars through to include template. #}
-        {{ pattern('social_card', card_vars) }}
+        {{ pattern('social_card', item|merge({'context': context})) }}
       {% endif %}
     {% endfor %}
   </div>

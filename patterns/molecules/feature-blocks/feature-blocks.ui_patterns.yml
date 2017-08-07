@@ -8,7 +8,7 @@ feature_blocks:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."
       label: "A list of simple image cards"
       type: collection
-      preview: 
+      preview:
         -
           description: "Stanford Earth faculty and young scientists in the media."
           image:
@@ -40,4 +40,6 @@ feature_blocks:
         css:
           component:
             css/feature-blocks.component.css: {}
+        dependencies:
+          - ui_patterns/simple_block.simple_block_library
   use: "@stanford_components/molecules/feature-blocks/feature-blocks.html.twig"
