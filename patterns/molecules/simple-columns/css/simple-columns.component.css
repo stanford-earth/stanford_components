@@ -18,4 +18,16 @@
   }
 }
 
+@media only screen and (min-width: 576px) {
+  .simple-columns.three-columns {
+    column-count: 3;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .simple-columns.four-columns {
+    column-count: 4;
+  }
+}
+
 /*# sourceMappingURL=simple-columns.component.css.map */

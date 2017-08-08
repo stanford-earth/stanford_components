@@ -5,6 +5,6 @@
  */
 #}
 
-<div{{ attributes.addClass('simple-columns') }}>
-  <p>{{ content }} {% if link %}{{ link }}{% endif %}</p>
+<div{{ attributes.addClass(['simple-columns', variants.columns]) }}>
+  <p>{{ content }} {{ link }}</p>
 </div>

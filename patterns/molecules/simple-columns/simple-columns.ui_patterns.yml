@@ -3,6 +3,15 @@
 simple_columns:
   label: "Simple Columns"
   description: "A horizontal list callout blocks with icons and styled text"
+  variants:
+    columns:
+      label: Columns
+      description: "How many columns to split the content into"
+      default: two-columns
+      options:
+        two-columns: "2 Columns"
+        three-columns: "3 Columns"
+        four-columns: "4 Columns"
   fields:
     content:
       description: "The rendered html markup for the items if using a view or something else that will already provide the templated output."

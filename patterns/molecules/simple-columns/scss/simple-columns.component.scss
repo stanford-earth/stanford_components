@@ -18,5 +18,17 @@
     column-gap: 27px;
   }
 
+  &.three-columns {
+    @include grid-media($media-sm) {
+      column-count: 3;
+    }
+  }
+
+  &.four-columns {
+    @include grid-media($media-sm) {
+      column-count: 4;
+    }
+  }
+
 }
 
