@@ -1,6 +1,7 @@
 .postcard {
   position: relative;
   overflow: hidden;
+  margin-bottom: 30px;
 }
 
 .postcard::after {
