@@ -31,6 +31,5 @@
     @include grid-media($media-lg) {
       @include grid-column(4, $feature-cards-grid);
     }
-
   }
 }

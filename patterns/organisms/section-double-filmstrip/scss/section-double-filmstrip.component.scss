@@ -1,12 +1,10 @@
 @charset 'UTF-8';
-
 @import 'decanter/core/utilities/decanter-utilities';
 
 // Grab our mixins.
 @import 'patterns/utilities/utilities';
 
 .section-double-filmstrip {
-
   &.has-columns {
     .filmstrip__header {
       @include grid-media($media-md) {
@@ -35,6 +33,18 @@
           }
         }
 
+        .film-card__link {
+          @include image-zoom;
+          transition: unset;
+
+          @include on-event {
+            margin: 0;
+          }
+
+          &::before {
+            z-index: 0;
+          }
+        }
       }
     }
   }

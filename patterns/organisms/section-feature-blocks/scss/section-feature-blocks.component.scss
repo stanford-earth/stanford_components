@@ -1,16 +1,11 @@
 @charset 'UTF-8';
-
 @import 'decanter/core/utilities/decanter-utilities';
 
 // Grab our mixins.
 @import 'patterns/utilities/utilities';
 
 .section-feature-blocks {
-  $feature-cards-grid: (
-    columns: 12,
-    gutter: 30px,
-  );
-
+  $feature-cards-grid: ( columns: 12, gutter: 30px, );
   @include grid-container;
 
   .feature-blocks__header {

@@ -5,6 +5,10 @@
 // Grab our mixins.
 @import 'patterns/utilities/utilities';
 
+.simple-block__image {
+  @include image-zoom;
+}
+
 .simple-block__link {
   position: relative;
   display: block;
@@ -12,6 +16,7 @@
 
 .simple-block__thumbnail {
   position: relative;
+  overflow: hidden;
 
   img {
     display: block;
