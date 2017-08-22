@@ -18,7 +18,7 @@
     {{ link|openlink({class:"simple-block__link"}) }}
       <div class="simple-block__thumbnail">
         {{ image }}
-        {% if tag is not empty %}
+        {% if tag|render|striptags|trim is not empty %}
           <div class="simple-block__tag">
             <h6>{{ tag|render|striptags|trim }}</h6>
           </div>
