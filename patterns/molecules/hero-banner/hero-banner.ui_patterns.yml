@@ -52,6 +52,11 @@ hero_banner:
       label: Cite
       preview: "Copyright by so-and-so."
       type: text
+    footer:
+      description: "An open footer area."
+      label: "Footer"
+      preview: "<p>Photo Source: lorempixel.com</p>"
+      type: text
     image:
       description: "Hero image."
       label: "Image URL"
