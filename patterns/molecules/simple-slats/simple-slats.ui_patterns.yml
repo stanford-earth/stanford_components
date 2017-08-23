@@ -3,13 +3,6 @@
 simple_slats:
   label: "Simple Slats"
   description: "A horizontal list simple slats"
-  variants:
-    is_slat:
-      label: "Is a slat"
-      description: "Render slat on medium and up screens.  Treat as boolean (true/false)."
-      default: true
-      options:
-        true: "Render as a slat"
   fields:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."

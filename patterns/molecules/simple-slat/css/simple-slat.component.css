@@ -20,4 +20,16 @@
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .simple-slat.has-image-right .simple-block__image {
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .simple-slat.is-narrow {
+    margin: 0 10%;
+  }
+}
+
 /*# sourceMappingURL=simple-slat.component.css.map */

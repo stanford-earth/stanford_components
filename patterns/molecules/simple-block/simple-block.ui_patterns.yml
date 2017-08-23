@@ -6,18 +6,11 @@ simple_block:
   variants:
     has_arrow:
       label: "Has Arrow"
-      description: "Render arrow on card.  Treat as boolean (true/false)."
+      description: "Render arrow on card."
       default: true
       options:
         true: "Has arrow"
         false: "Does not have arrow"
-    is_slat:
-      label: "Is a slat"
-      description: "Render slat on medium and up screens.  Treat as boolean (true/false)."
-      default: false
-      options:
-        true: "Render as a slat"
-        false: "Render as a block"
   fields:
     description:
       description: "Block description."
@@ -31,6 +24,11 @@ simple_block:
         theme: image
         uri: "https://lorempixel.com/270/160/nature/5"
       type: image
+    image_caption:
+      description: "Image Caption"
+      label: "Image Caption"
+      preview: "Sample Inline Image (Image credit: Lorempixel)"
+      type: text
     link:
       description: "URI that points somewhere"
       label: Link

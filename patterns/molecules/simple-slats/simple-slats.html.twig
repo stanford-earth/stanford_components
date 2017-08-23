@@ -4,21 +4,17 @@
  * Simple Slats pattern.
  */
 #}
-{% set variants = variants|merge({'is_slat': true}) %}
+
 {% set attributes = attributes.addClass("simple-slats") %}
+
 <div{{ attributes }}>
   {# Break up the individual items in to the appropriate template var. #}
   {% for item in items %}
-    {% set vars = {
-      'image': item.image,
-      'link': item.link,
-      'description': item.description,
-      'tag': item.tag,
-      'title': item.title,
-      'context': context
-      }
-    %}
-    {# Pass vars through to include template. #}
-    {{ pattern("simple_slat", vars) }}
+    {% if item.title %}
+      {{ pattern("simple_slat", item|merge({'context': context})) }}
+    {% else %}
+      {{ item }}
+    {% endif %}
+
   {% endfor %}
 </div>

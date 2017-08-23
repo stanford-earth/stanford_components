@@ -4,12 +4,20 @@ simple_slat:
   label: "Simple Slat"
   description: "A horizontal list simple slats"
   variants:
-    is_slat:
-      label: "Is a slat"
-      description: "Render slat on medium and up screens.  Treat as boolean (true/false)."
-      default: true
+    image_side:
+      label: "Image Side"
+      description: "Which side to display the image."
+      default: 'has-image-left'
       options:
-        true: "Render as a slat"
+        has-image-left: "Image Left"
+        has-image-right: "Image Right"
+    width:
+      label: "Width"
+      description: "How wide to allow the slat"
+      default: 'is-wide'
+      options:
+        is-wide: "Wide"
+        is-narrow: "Narrow"
   fields:
     description:
       description: "Slat description."
@@ -23,6 +31,11 @@ simple_slat:
         theme: image
         uri: "https://lorempixel.com/270/160/nature/5"
       type: image
+    image_caption:
+      description: "Image Caption"
+      label: "Image Caption"
+      preview: "Sample Inline Image (Image credit: Lorempixel)"
+      type: text
     link:
       description: "URI that points somewhere"
       label: Link
@@ -51,4 +64,5 @@ simple_slat:
             css/simple-slat.component.css: {}
         dependencies:
           - ui_patterns/simple_block.simple_block_library
+          - stanford_components/component_centered_container
   use: "@stanford_components/molecules/simple-slat/simple-slat.html.twig"

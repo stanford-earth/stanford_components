@@ -19,4 +19,18 @@
       @include grid-column(8);
     }
   }
+
+  &.has-image-right {
+    @include grid-media($media-md) {
+      .simple-block__image {
+        float: right;
+      }
+    }
+  }
+
+  &.is-narrow {
+    @include grid-media($media-md) {
+      margin: 0 10%;
+    }
+  }
 }
