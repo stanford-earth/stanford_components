@@ -87,6 +87,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
     }
 
     $dom = new \DOMDocument('1.0', 'UTF-8');
+    libxml_use_internal_errors(TRUE);
     $dom->loadHTML($original_link);
 
     // Get all links.
@@ -172,6 +173,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
 
     if (strpos($item, '<img') !== FALSE) {
       $dom = new \DOMDocument('1.0', 'UTF-8');
+      libxml_use_internal_errors(TRUE);
       $dom->loadHTML($item);
       /** @var \DOMNodeList $images */
       $images = $dom->getElementsByTagName('img');
