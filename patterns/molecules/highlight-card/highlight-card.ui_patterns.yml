@@ -23,6 +23,11 @@ highlight_card:
       label: Title
       preview: "Life At The Extremes"
       type: text
+    sub_title:
+      description: "Card Sub title."
+      label: Sub Title
+      preview: "Sample Subtitle"
+      type: text
   libraries:
     -
       highlight_card_library:

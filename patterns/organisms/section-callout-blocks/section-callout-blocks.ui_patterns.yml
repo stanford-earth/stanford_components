@@ -20,7 +20,7 @@ section_callout_blocks:
         has-dash-under: Under
     is_centered:
       label: Centered
-      description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
+      description: "The position of the section header."
       default: left-aligned
       options:
         left-aligned: Left Aligned

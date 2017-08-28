@@ -153,6 +153,7 @@ module.exports = function(grunt) {
           'patterns/organisms/section-expandable-banner/css/section-expandable-banner.states.css':      'patterns/organisms/section-expandable-banner/scss/section-expandable-banner.states.scss',
           'patterns/organisms/section-feature-blocks/css/section-feature-blocks.component.css':         'patterns/organisms/section-feature-blocks/scss/section-feature-blocks.component.scss',
           'patterns/organisms/section-highlight-banner/css/section-highlight-banner.component.css':     'patterns/organisms/section-highlight-banner/scss/section-highlight-banner.component.scss',
+          'patterns/organisms/section-highlight-cards/css/section-highlight-cards.component.css':     'patterns/organisms/section-highlight-cards/scss/section-highlight-cards.component.scss',
           'patterns/organisms/section-masonry-blocks/css/section-masonry-blocks.component.css':         'patterns/organisms/section-masonry-blocks/scss/section-masonry-blocks.component.scss',
           'patterns/organisms/section-photo-mosaic/css/section-photo-mosaic.component.css':             'patterns/organisms/section-photo-mosaic/scss/section-photo-mosaic.component.scss',
           'patterns/organisms/section-photo-mosaic-quotes/css/section-photo-mosaic-quotes.component.css':      'patterns/organisms/section-photo-mosaic-quotes/scss/section-photo-mosaic-quotes.component.scss',
