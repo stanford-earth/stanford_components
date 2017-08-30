@@ -34,9 +34,11 @@
         @include grid-column(10);
       }
 
-      .filmstrip__cards {
-        @include grid-media($media-md) {
-          @include grid-collapse;
+      &.header-to-left {
+        .filmstrip__cards {
+          @include grid-media($media-md) {
+            @include grid-collapse;
+          }
         }
       }
     }
@@ -49,5 +51,21 @@
       max-width: 500px;
       margin: 0 auto;
     }
+  }
+
+  @include grid-media($media-md) {
+    &.header-to-top {
+      .filmstrip__header {
+        @include grid-column(1 of 1);
+      }
+
+      .section-header {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &.no-arrow .film-card__arrow {
+    display: none;
   }
 }

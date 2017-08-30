@@ -5,26 +5,15 @@
  */
 #}
 
-{% set header_vars = {
-  'superhead': superhead,
-  'subhead': subhead,
-  'context':context
-} %}
-
-{% set strip_vars = {
-  'items': items,
-  'context':context
-} %}
-
-{% set attributes = attributes.addClass(['section-callout-filmstrip', variants.has_columns]) %}
+{% set attributes = attributes.addClass(['section-callout-filmstrip', variants.has_columns, variants.section_header, variants.arrow]) %}
 
 {# has-columns: adds two column layout to filmstrip #}
 <div{{ attributes }}>
   <div class="filmstrip__header">
-    {{ pattern('section_header', header_vars) }}
+    {{ pattern('section_header', {'superhead': superhead,'subhead': subhead,'context':context}) }}
   </div>
 
   <div class="filmstrip__container">
-    {{ pattern('filmstrip', strip_vars) }}
+    {{ pattern('filmstrip', {'items': items, 'context':context}) }}
   </div>
 </div>

@@ -46,6 +46,20 @@ section_callout_filmstrip:
       options:
         has-columns: Left Columns
         no-columns: No Left Columns
+    section_header:
+      description: "Where and how to display the heading text."
+      label: "Section header orientation"
+      default: header-to-top
+      options:
+        header-to-left: Left of filmstrip
+        header-to-top: Above filmstrip
+    arrow:
+      description: "Render arrow on card."
+      label: Arrow
+      default: no-arrow
+      options:
+        has-arrow: Show Arrow
+        no-arrow: No Arrow
   fields:
     subhead:
       description: "Subhead for callout"

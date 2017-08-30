@@ -4,7 +4,6 @@
  * Card pattern.
  */
 #}
-
 {% set attributes = attributes.addClass(['film-card', variants.arrow]) %}
 
 <div{{ attributes }}>
@@ -21,7 +20,7 @@
       <div class="film-card__caption">
 
         {% if title|render is not empty %}
-          <h6 class="film-card__title">{{ title|render|striptags|trim }}</h6>
+          <h6 class="film-card__title">{{ title|render|striptags|trim|nl2br }}</h6>
         {% endif %}
 
         {% if subtitle is not empty%}

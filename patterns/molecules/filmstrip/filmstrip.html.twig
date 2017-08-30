@@ -19,7 +19,7 @@
     {# Break up the individual items in to the appropriate template var. #}
     {% if (items.0 and items.0.title) %}
       {% for item in items %}
-      {% set item = item|merge({"context": context}) %}
+        {% set item = item|merge({"context": context}) %}
         {{ pattern('film_card', item) }}
       {% endfor %}
     {% else %}
