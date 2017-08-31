@@ -13,6 +13,11 @@ simple_columns:
         three-columns: "3 Columns"
         four-columns: "4 Columns"
   fields:
+    title:
+      description: "A stylized title for the column text"
+      label: Title
+      preview: "This is a wonderful title"
+      type: text
     content:
       description: "The rendered html markup for the items if using a view or something else that will already provide the templated output."
       label: "Rendered Markup (optional)"
@@ -30,4 +35,3 @@ simple_columns:
           component:
             css/simple-columns.component.css: {}
   use: "@stanford_components/molecules/simple-columns/simple-columns.html.twig"
-  

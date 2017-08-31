@@ -5,12 +5,27 @@
 // Grab our mixins.
 @import 'patterns/utilities/utilities';
 
+.simple-columns__title {
+  @include responsive-container($default-container);
+  @include grid-media($media-lg) {
+    margin-left: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  @include grid-media($media-sm) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+}
+
 .simple-columns {
   @include grid-container;
+  @include responsive-container($default-container);
 
   @include grid-media($media-lg) {
-    max-width: 792px;
-    margin: 0 auto;
+    margin: 0 200px;
   }
 
   @include grid-media($media-sm) {
@@ -31,4 +46,3 @@
   }
 
 }
-

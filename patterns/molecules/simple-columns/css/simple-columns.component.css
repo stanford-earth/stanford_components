@@ -1,13 +1,159 @@
+@media only screen and (max-width: 575px) {
+  .simple-columns__title {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns__title::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .simple-columns__title {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns__title::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .simple-columns__title {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns__title::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .simple-columns__title {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns__title::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .simple-columns__title {
+    padding: 1em calc(50% - (750px - 15px));
+  }
+  .simple-columns__title::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only print {
+  .simple-columns__title {
+    padding: 1em calc(((50% /12) * 0) + 0.25in);
+  }
+  .simple-columns__title::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .simple-columns__title {
+    margin-left: 200px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .simple-columns__title {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 .simple-columns::after {
   clear: both;
   content: "";
   display: block;
 }
 
+@media only screen and (max-width: 575px) {
+  .simple-columns {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .simple-columns {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .simple-columns {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .simple-columns {
+    padding: 1em calc(((50% /12) * 0) + 15px);
+  }
+  .simple-columns::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .simple-columns {
+    padding: 1em calc(50% - (750px - 15px));
+  }
+  .simple-columns::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only print {
+  .simple-columns {
+    padding: 1em calc(((50% /12) * 0) + 0.25in);
+  }
+  .simple-columns::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
 @media only screen and (min-width: 1024px) {
   .simple-columns {
-    max-width: 792px;
-    margin: 0 auto;
+    margin: 0 200px;
   }
 }
 
