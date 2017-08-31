@@ -4,7 +4,7 @@
  * Section feature blocks pattern.
  */
 #}
-{% set attributes = attributes.addClass('section-feature-blocks') %}
+{% set attributes = attributes.addClass(['section-feature-blocks', variants.is_centered]) %}
 
 {#
   Center the container if variant is true by including the library/css and adding

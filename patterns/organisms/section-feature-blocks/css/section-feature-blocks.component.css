@@ -10,7 +10,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .section-feature-blocks .feature-blocks__header {
+  .section-feature-blocks.left-aligned .feature-blocks__header {
     width: calc(100% - 60px);
     float: left;
     margin-left: 30px;
@@ -18,7 +18,7 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-feature-blocks .feature-blocks__header {
+  .section-feature-blocks.left-aligned .feature-blocks__header {
     width: calc(25% - 37.5px);
     float: left;
     margin-left: 30px;
@@ -26,13 +26,13 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .section-feature-blocks .feature-blocks__header {
+  .section-feature-blocks.left-aligned .feature-blocks__header {
     padding-right: 5.3846153846em;
   }
 }
 
 @media only screen and (min-width: 1024px) {
-  .section-feature-blocks .feature-blocks__container {
+  .section-feature-blocks.left-aligned .feature-blocks__container {
     width: calc(75% - 52.5px);
     float: left;
     margin-left: 30px;
@@ -40,7 +40,47 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .section-feature-blocks .feature-blocks__container .feature-blocks {
+  .section-feature-blocks.left-aligned .feature-blocks__container .feature-blocks {
+    margin-left: -30px;
+    margin-right: -30px;
+    width: calc(100% + 60px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-feature-blocks.right-aligned .feature-blocks__header {
+    width: calc(100% - 60px);
+    float: left;
+    margin-left: 30px;
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-feature-blocks.right-aligned .feature-blocks__header {
+    width: calc(25% - 37.5px);
+    float: left;
+    margin-left: 30px;
+    float: right;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .section-feature-blocks.right-aligned .feature-blocks__header {
+    padding-right: 5.3846153846em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .section-feature-blocks.right-aligned .feature-blocks__container {
+    width: calc(75% - 52.5px);
+    float: left;
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .section-feature-blocks.right-aligned .feature-blocks__container .feature-blocks {
     margin-left: -30px;
     margin-right: -30px;
     width: calc(100% + 60px);
