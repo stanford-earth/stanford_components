@@ -20,9 +20,9 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .simple-columns__title {
-    padding: 1em calc(((50% /12) * 0) + 15px);
+    padding: 1em calc(((50% /12) * 0) + 30px);
   }
   .simple-columns__title::after {
     clear: both;
@@ -31,9 +31,9 @@
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
   .simple-columns__title {
-    padding: 1em calc(((50% /12) * 0) + 15px);
+    padding: 1em calc(((50% /12) * 0) + 30px);
   }
   .simple-columns__title::after {
     clear: both;
@@ -44,7 +44,7 @@
 
 @media only screen and (min-width: 1200px) {
   .simple-columns__title {
-    padding: 1em calc(50% - (750px - 15px));
+    padding: 1em calc(50% - (750px - 60px));
   }
   .simple-columns__title::after {
     clear: both;
@@ -107,9 +107,9 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
   .simple-columns {
-    padding: 1em calc(((50% /12) * 0) + 15px);
+    padding: 1em calc(((50% /12) * 0) + 30px);
   }
   .simple-columns::after {
     clear: both;
@@ -118,9 +118,9 @@
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
+@media only screen and (min-width: 1024px) and (max-width: 1199px) {
   .simple-columns {
-    padding: 1em calc(((50% /12) * 0) + 15px);
+    padding: 1em calc(((50% /12) * 0) + 30px);
   }
   .simple-columns::after {
     clear: both;
@@ -131,7 +131,7 @@
 
 @media only screen and (min-width: 1200px) {
   .simple-columns {
-    padding: 1em calc(50% - (750px - 15px));
+    padding: 1em calc(50% - (750px - 60px));
   }
   .simple-columns::after {
     clear: both;

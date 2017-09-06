@@ -41,8 +41,6 @@
 
 .film-card__thumbnail {
   position: relative;
-  width: 220px;
-  height: 145px;
 }
 
 .film-card__thumbnail::before {

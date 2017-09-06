@@ -28,7 +28,7 @@ section_callout_filmstrip:
     card_widths:
       description: "Make cards have flexible rather than fixed widths."
       label: Flexible widths
-      default: fixed-width
+      default: is-flexible
       options:
         is-flexible: Flexible Widths
         fixed-width: Fixed Widths
@@ -42,7 +42,7 @@ section_callout_filmstrip:
     has_columns:
       description: "Add left column to grid for section header."
       label: "Has Columns"
-      default: has-columns
+      default: no-columns
       options:
         has-columns: Left Columns
         no-columns: No Left Columns
@@ -56,7 +56,7 @@ section_callout_filmstrip:
     arrow:
       description: "Render arrow on card."
       label: Arrow
-      default: no-arrow
+      default: has-arrow
       options:
         has-arrow: Show Arrow
         no-arrow: No Arrow

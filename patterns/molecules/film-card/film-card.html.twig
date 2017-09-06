@@ -24,7 +24,7 @@
         {% endif %}
 
         {% if subtitle is not empty%}
-          <p class="film-card__subtitle">{{ subtitle|render|striptags|trim }}</p>
+          <p class="film-card__subtitle">{{ subtitle|render|striptags|trim|nl2br }}</p>
         {% endif %}
 
       </div>

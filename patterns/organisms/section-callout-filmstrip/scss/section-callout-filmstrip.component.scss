@@ -1,71 +1,97 @@
 @charset 'UTF-8';
 
 @import 'decanter/core/utilities/decanter-utilities';
-
 // Grab our mixins.
 @import 'patterns/utilities/utilities';
 
 .section-callout-filmstrip {
-  padding-bottom: em(86px);
+  padding-bottom: em(46px);
 
-  &.has-columns {
-    @include grid-container;
-    padding: em(58px) 0;
+  // When the section header is above.
+  &.header-to-top {
+    .section-header {
+      @include grid-column(1 of 1);
+      text-align: center;
 
-    .filmstrip__header {
-      width: 100%;
-      position: relative;
+      p {
+        @include grid-media($media-sm) {
+          min-width: 75%;
+          max-width: 80%;
+        }
 
-      @include grid-media($media-md) {
-        @include grid-column(12);
-      }
+        @include grid-media($media-xl) {
+          max-width: 50%;
+          min-width: auto;
+        }
 
-      @include grid-media($media-lg) {
-        @include grid-column(2);
-      }
-
-      @include grid-media($media-xl) {
-        padding-right: em(70px);
+        margin-left: auto;
+        margin-right: auto;
       }
     }
 
-    .filmstrip__container {
-      @include grid-media($media-lg) {
-        @include grid-column(10);
+    .filmstrip__cards {
+      @include responsive-grid-collapse($default-container);
+    }
+
+    .film-card__caption {
+      font-weight: 600;
+    }
+
+  }
+
+  // When the section header is below.
+  &.header-to-left {
+
+    .section-header {
+      h2.has-dash-under::after {
+        left: 6%;
+      }
+    }
+
+    @include grid-media($media-sm-max) {
+      .section-header {
+        @include grid-column(1 of 1);
+      }
+    }
+
+    @include grid-media($media-md) {
+      @include responsive-container($default-container);
+
+      .filmstrip__header {
+        @include grid-column(2 of 12);
       }
 
-      &.header-to-left {
-        .filmstrip__cards {
-          @include grid-media($media-md) {
-            @include grid-collapse;
-          }
+      .filmstrip__container {
+        @include grid-column(10 of 12);
+
+        .filmstrip.is-flexible,
+        .component-centered-container {
+          margin: 0;
+          padding: 0;
         }
       }
     }
-  }
 
-  .section-header {
-    padding-bottom: em(67px);
-
-    @include grid-media($media-md) {
-      max-width: 500px;
-      margin: 0 auto;
+    @include grid-media($media-lg-only) {
+      .film-card {
+        @include grid-column(1 of 2);
+      }
     }
   }
 
   @include grid-media($media-md) {
-    &.header-to-top {
-      .filmstrip__header {
-        @include grid-column(1 of 1);
-      }
-
-      .section-header {
-        padding-bottom: 0;
+    .film-card {
+      &.has-arrow {
+        .film-card__caption {
+          position: absolute;
+          left: 20px;
+          right: 20px;
+          bottom: 20px;
+          top: auto;
+          margin: 0;
+          transform: none;
+        }
       }
     }
-  }
-
-  &.no-arrow .film-card__arrow {
-    display: none;
   }
 }
