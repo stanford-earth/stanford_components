@@ -30,7 +30,7 @@ section_header:
       default: false
       options:
         true: "Centered"
-        false: "Normal"
+        0: "Normal"
   fields:
     link:
       description: "Read More Link."

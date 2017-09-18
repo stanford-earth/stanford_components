@@ -10,7 +10,7 @@ section_highlight_cards:
       default: true
       options:
         true: "Centered"
-        false: "Full Width"
+        0: "Full Width"
     card_width:
       label: Width
       description: "Width of the individual cards"

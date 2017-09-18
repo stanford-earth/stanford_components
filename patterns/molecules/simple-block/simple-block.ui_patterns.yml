@@ -10,7 +10,7 @@ simple_block:
       default: true
       options:
         true: "Has arrow"
-        false: "Does not have arrow"
+        0: "Does not have arrow"
   fields:
     description:
       description: "Block description."

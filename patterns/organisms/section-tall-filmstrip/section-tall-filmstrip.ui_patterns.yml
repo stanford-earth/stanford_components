@@ -38,7 +38,7 @@ section_tall_filmstrip:
       default: true
       options:
         true: "Centered"
-        false: "Normal"
+        0: "Normal"
     card_widths:
       description: "Make cards have flexible rather than fixed widths."
       label: Flexible widths
@@ -74,7 +74,7 @@ section_tall_filmstrip:
       default: false
       options:
         true: "Expanded by default"
-        false: "Collapsed by default"
+        0: "Collapsed by default"
   fields:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."

@@ -10,7 +10,7 @@ section_feature_blocks:
       default: true
       options:
         true: "Centered"
-        false: "Full Width"
+        0: "Full Width"
     dash_under:
       label: "Dash Under Header"
       description: "Dash under h2 or to the left?  Treat as boolean (true/false)"
@@ -39,14 +39,14 @@ section_feature_blocks:
       default: true
       options:
         true: "Has arrow"
-        false: "Does not have arrow"
+        0: "Does not have arrow"
     is_slat:
       label: "Is a slat"
       description: "Render slat on medium and up screens.  Treat as boolean (true/false)."
       default: false
       options:
         true: "Render as a slat"
-        false: "Render as a block"
+        0: "Render as a block"
   fields:
     items:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a url, title, and an image rendered as an html element."

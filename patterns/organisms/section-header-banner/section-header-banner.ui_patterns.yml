@@ -31,7 +31,7 @@ section_header_banner:
       default: false
       options:
         true: "Centered"
-        false: "Normal"
+        0: "Normal"
   fields:
     image:
       description: "Banner image."

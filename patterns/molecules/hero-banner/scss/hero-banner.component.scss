@@ -73,15 +73,42 @@ $hero-max-width: 1380px;
 
 .hero-banner {
   background-color: color(charcoal);
-  background-size: cover;
   position: relative;
 
   &.has-tint {
-    &::before {
+    .image::before {
       @extend %absolute-fill;
       content: '';
       display: block;
       background-color: rgba(0, 0, 0, 0.35);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img,
+    picture {
+      object-fit: cover;
+      object-position: 50% 50%;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &.has-video {
+    .hero-banner__inner {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      pointer-events: none;
     }
   }
 }
