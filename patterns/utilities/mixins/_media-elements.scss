@@ -1,7 +1,7 @@
 @charset 'UTF-8';
 
-@mixin image-overlay($image-overlay-bg-color: rgba(0, 0, 0, 0.35)) {
-  position: relative;
+@mixin image-overlay($image-overlay-bg-color: rgba(0, 0, 0, 0.35), $image-overlay-position: relative) {
+  position: $image-overlay-position;
 
   &::before {
     position: absolute;
@@ -95,4 +95,17 @@
   &::before {
     z-index: 1;
   }
+}
+
+@mixin cover-image() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-height: 100%;
+  min-width: 100%;
+
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
 }

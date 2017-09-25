@@ -15,7 +15,10 @@ section_masonry_blocks:
           title: "Stanford scientists test links between extreme weather and climate change"
           date: "April 2"
           is_full_width: true
-          background_image: "https://lorempixel.com/420/225/nature/6"
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/555/370/nature/4"
           tags:
             -
               tag: "Earth"
@@ -27,7 +30,10 @@ section_masonry_blocks:
           date: "April 2"
           is_full_width: true
           has_image_right: true
-          background_image: "https://lorempixel.com/420/225/nature/6"
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/555/370/nature/8"
           tags:
             -
               tag: "Earth"
@@ -53,7 +59,10 @@ section_masonry_blocks:
           date: "April 13"
           has_background: true
           is_wide: true
-          background_image: "https://lorempixel.com/420/225/nature/6"
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/420/225/nature/5"
           tags:
             -
               tag: "Evolution of Earth and Life"
@@ -90,7 +99,10 @@ section_masonry_blocks:
           has_background: true
           has_tint: true
           is_tall: true
-          background_image: "https://lorempixel.com/700/700/nature/8"
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/420/225/nature/5"
           tags:
             -
               tag: "Energy"
@@ -117,7 +129,10 @@ section_masonry_blocks:
           title: "A conversation with Stanford Earth"
           date: "April 2"
           has_columns: true
-          background_image: "https://lorempixel.com/420/225/nature/6"
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/420/225/nature/5"
           tags:
             -
               tag: "Earth"
@@ -132,7 +147,10 @@ section_masonry_blocks:
           date: "April 2"
           has_columns: true
           has_image_right: true
-          background_image: "https://lorempixel.com/420/225/nature/6"
+          image:
+            alt: "this is a sample image"
+            theme: image
+            uri: "https://lorempixel.com/420/225/nature/5"
           tags:
             -
               tag: "Earth"

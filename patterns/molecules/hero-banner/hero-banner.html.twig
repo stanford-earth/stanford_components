@@ -63,6 +63,6 @@
     </div>
   </div>
 </div>
-{% if footer is not empty %}
+{% if footer|render|striptags|trim is not empty %}
   <div class="hero-banner__footer">{{ footer }}</div>
 {% endif %}

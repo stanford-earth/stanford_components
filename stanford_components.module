@@ -75,3 +75,13 @@ function stanford_components_theme_suggestions_alter(array &$suggestions, array 
     }
   }
 }
+
+/**
+ * Implements hook_preprocess_views_view_pattern().
+ */
+function stanford_components_preprocess_views_view_pattern(&$variables) {
+  /** @var \Drupal\views\ViewExecutable $view */
+  $view = $variables['view'];
+  $pattern = $view->style_plugin->options['pattern'];
+  $variables['pattern'] = $pattern;
+}

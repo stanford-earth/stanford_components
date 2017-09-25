@@ -3,56 +3,29 @@
 masonry_block:
   label: "Masonry Block"
   description: "A single of masonry block"
+  variants:
+    style:
+      default: random
+      description: "What style to display the card"
+      label: Style
+      options:
+        columns: Columns
+        full: "Full Width"
+        large: "Large Photo"
+        wide: Wide
+        random: Random
+        simple: Simple
+        tall: "Tall Photo"
   fields:
-    action:
-      description: "Optional. Inverts color scheme adds button. Only used with no image or social links"
-      label: Action
-      preview: ~
+    date:
+      description: "Simple Block date"
+      label: Date
+      preview: "April 24"
       type: text
     description:
       description: "Block description."
       label: Description
       preview: "Mapping the seawater threat to California Central Coast aquifers"
-      type: text
-    date:
-      description: "Simple Block date"
-      label: Title
-      preview: "April 24"
-      type: text
-    has_background:
-      description: "Render background image on card.  Treat as boolean (true/false)."
-      label: Background
-      preview: false
-      type: text
-    has_image_right:
-      description: "Used with has-columns. Render image to the right of content on medium up.  Treat as boolean (true/false)."
-      label: Columns
-      preview: true
-      type: text
-    has_columns:
-      description: "Render image and content as columns.  Treat as boolean (true/false)."
-      label: Columns
-      preview: true
-      type: text
-    is_column_width:
-      description: "Set default column width for masonry grid.  Treat as boolean (true/false)."
-      label: Masonry Column width
-      preview: true
-      type: text
-    is_full_width:
-      description: "Render image and content as columns. Span all columns, full width.  Treat as boolean (true/false)."
-      label: Full
-      preview: false
-      type: text
-    is_tall:
-      description: "Render extra padding at the top of photo background blocks.  Treat as boolean (true/false)."
-      label: Wide
-      preview: false
-      type: text
-    is_wide:
-      description: "Render wide on medium and up screens.  Treat as boolean (true/false)."
-      label: Wide
-      preview: false
       type: text
     image:
       description: "Block image."
@@ -61,30 +34,23 @@ masonry_block:
         theme: image
         uri: "https://lorempixel.com/270/160/nature/5"
       type: image
-    background_image:
-      description: "Card image."
-      label: Image
-      preview:
-        theme: image
-        uri: "https://lorempixel.com/270/160/nature/5"
-      type: text
     link:
       description: "URI that points somewhere"
       label: Link
       preview: "https://stanford.edu"
       type: url
-    title:
-      description: "Simple Block Title"
-      label: Title
-      preview: "Detecting methane leaks with infrared cameras:  Are they fast and effective?"
-      type: text
     tags:
       description: "This template iterates over the items to produce a nested unordered list of divs. Each item must have a tag name rendered as an html element."
       label: "A list of tags"
       preview:
         -
-          tag: "Earth"
           link: "https://stanford.edu"
+          tag: Earth
+    title:
+      description: "Simple Block Title"
+      label: "Block Title"
+      preview: "Detecting methane leaks with infrared cameras:  Are they fast and effective?"
+      type: text
   libraries:
     -
       masonry_block_library:

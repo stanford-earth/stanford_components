@@ -4,33 +4,64 @@
  * Masonry Block pattern.
  */
 #}
-<div class="masonry-block js-masonry-item{% if has_background %} has-background{% endif %}{% if has_tint %} has-tint{% endif %}{% if is_inverted %} is-inverted{% endif %}{% if is_tall %} is-tall{% endif %}{% if has_image_right %} has-image-right{% endif %}{% if action is not empty %} is-action{% endif %}{% if is_wide %} is-wide{% elseif has_columns %} has-columns{% elseif is_full_width %} is-full-width{% else %} is-column-width{% endif %}" {% if has_background %} style="background-image:url('{{ background_image|render|striptags|trim }}')"{% endif %}>
 
-  {% if background_image is not empty and (has_columns or is_full_width) %}
-  <div class="masonry-block__image" style="background-image:url('{{ background_image|get_img_src }}')">
-  </div>
-  {% elseif image is not empty %}
-  <div class="masonry-block__image">
-    <div class="masonry-block__thumbnail">
-      {{ image }}
+{% if variants.style == 'random' %}
+  {% set variants = variants|merge({style: random([1, 2, 3, 'columns', 'full','tall','large', 'color', 'wide'])}) %}
+{% endif %}
+
+{% set attributes = attributes.addClass([
+'masonry-block',
+'js-masonry-item',
+image|get_img_src is not empty ? 'has-image' : 'no-image',
+image|get_img_src is not empty ? random(['has-image-right','has-image-left'])
+]) %}
+
+{% if variants.style  == 'large' and image|get_img_src is not empty %}
+  {% set classes = ['is-wide', 'has-background', 'has-tint'] %}
+{% elseif (variants.style  == 'wide' and image|get_img_src is not empty) %}
+  {% set classes = ['is-wide'] %}
+{% elseif (variants.style  == 'full' and image|get_img_src is not empty) %}
+  {% set classes = ['is-full-width'] %}
+{% elseif (variants.style  == 'columns' and image|get_img_src is not empty) %}
+  {% set classes = ['has-columns'] %}
+{% elseif variants.style  == 'tall' and image|get_img_src is not empty %}
+  {% set classes = ['is-tall', 'has-background', 'has-tint'] %}
+{% elseif variants.style  == 'color' and image|get_img_src is empty %}
+  {% set classes = ['is-inverted'] %}
+{% else %}
+  {% set classes = ['is-column-width'] %}
+{% endif %}
+
+
+<div{{ attributes.addClass(classes) }}>
+  {% if image|get_img_src is not empty %}
+    <div class="masonry-block__image">
+      <div class="masonry-block__thumbnail">
+        {{ image }}
+      </div>
     </div>
-  </div>
   {% endif %}
 
   <div class="masonry-block__content">
     {% if tags is not empty %}
-    <div class="masonry-block__tags">
-      {# Break up the individual items in to the appropriate template var. #}
-      {% for tag in tags %}
-        {% set tag = tag|merge({'context': context}) %}
-        {# Pass vars through to include template. #}
-        {{ pattern('tag_item', tag) }}
-      {% endfor %}
-    </div>
-   {% endif %}
+      <div class="masonry-block__tags">
+
+        {% if tags is iterable %}
+          {% for tag in tags %}
+            {% set tag = tag|merge({'context': context}) %}
+            {# Pass vars through to include template. #}
+            {{ pattern('tag_item', tag) }}
+          {% endfor %}
+        {% else %}
+          {{ tags }}
+        {% endif %}
+
+      </div>
+    {% endif %}
     <div class="masonry-block__header">
       {% if title is not empty %}
-        <h3 class="masonry-block__title"><a class="masonry-block__link" href="{{ link|render|striptags|trim }}">{{ title }}</a></h3>
+        <h3 class="masonry-block__title"><a class="masonry-block__link"
+                                            href="{{ link|render|striptags|trim }}">{{ title }}</a></h3>
       {% endif %}
       {% if description is not empty %}
         <p class="masonry-block__description">{{ description }}</p>
@@ -40,20 +71,34 @@
       {% endif %}
     </div>
     {% if date is not empty %}
-    <div class="masonry-block__footer">
-      <div class="masonry-block__date"><svg class="i-svg"><use xlink:href="#i-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ date }}</div>
+      <div class="masonry-block__footer">
+        <div class="masonry-block__date">
+          <svg class="i-svg"><use xlink:href="#i-clock" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+          </svg>{{ date }}</div>
 
-      <div class="masonry-block__actions">
-        <span class="masonry-block__social-links">
-          {{ link|openlink({class: 'masonry-block__social-link masonry-block--mail'}) }}<svg class="i-svg"><use xlink:href="#i-mail" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
-          {{ link|openlink({class: 'masonry-block__social-link masonry-block--linkedin'}) }}<svg class="i-svg"><use xlink:href="#i-linkedin" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
-          {{ link|openlink({class: 'masonry-block__social-link masonry-block--twitter'}) }}<svg class="i-svg"><use xlink:href="#i-twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
-          {{ link|openlink({class: 'masonry-block__social-link masonry-block--facebook'}) }}<svg class="i-svg"><use xlink:href="#i-fb" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
-        </span>
+        {% if link|closelink %}
+          <div class="masonry-block__actions">
+          <span class="masonry-block__social-links">
+            {{ link|openlink({class: 'masonry-block__social-link masonry-block--mail'}) }}
+            <svg class="i-svg"><use xlink:href="#i-mail"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
+            {{ link|openlink({class: 'masonry-block__social-link masonry-block--linkedin'}) }}
+            <svg class="i-svg"><use xlink:href="#i-linkedin"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
+            {{ link|openlink({class: 'masonry-block__social-link masonry-block--twitter'}) }}
+            <svg class="i-svg"><use xlink:href="#i-twitter"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
+            {{ link|openlink({class: 'masonry-block__social-link masonry-block--facebook'}) }}
+            <svg class="i-svg"><use xlink:href="#i-fb"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>{{ link|closelink }}
+          </span>
 
-        {{ link|openlink }}<span class="masonry-block__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>{{ link|closelink }}
+            {{ link|openlink }}<span class="masonry-block__arrow"><svg class="i-svg i-svg--arrow-right"><use
+                  xlink:href="#i-arrow"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>{{ link|closelink }}
+          </div>
+        {% endif %}
       </div>
-    </div>
     {% endif %}
   </div>
 </div>

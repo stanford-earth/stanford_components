@@ -7,6 +7,8 @@
 {% set attributes = attributes.addClass("section-masonry-blocks") %}
 <div{{ attributes }}>
   {#{% set items = items|merge({'context': context}) %}#}
-  {{ pattern('collapsible_menu', {'items': items, 'context': context}) }}
+  {% if items is not empty %}
+    {{ pattern('collapsible_menu', {'items': items, 'context': context}) }}
+  {% endif %}
   {{ pattern('masonry_blocks', {'cards': cards, 'context': context}) }}
 </div>

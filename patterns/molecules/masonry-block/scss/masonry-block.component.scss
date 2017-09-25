@@ -8,25 +8,46 @@
 .masonry-block {
   position: relative;
 
+  &.is-wide {
+    img {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
   &.has-background {
-    background-size: cover;
     padding-top: 120px;
+    position: relative;
+    overflow: hidden;
+
+    .masonry-block__image,
+    .masonry-block__thumbnail {
+      @include position(absolute, 0 0 0 0);
+
+      img {
+        @include cover-image();
+        object-fit: cover;
+      }
+    }
 
     &.is-tall {
       padding-top: 300px;
     }
 
     &.has-tint {
-      @include image-overlay;
-    }
-  }
+      .masonry-block__thumbnail {
+        @include image-overlay($image-overlay-position: absolute);
 
-  &.is-inverted {
-    padding-top: 30px;
+        &::before {
+          z-index: 1;
+        }
+      }
 
-    .masonry-block__tags {
-      position: relative;
-      top: auto;
+      .masonry-block__header,
+      .masonry-block__footer {
+        z-index: 2;
+        position: relative;
+      }
     }
   }
 
@@ -60,23 +81,17 @@
       bottom: 0;
 
       img {
-        max-width: none;
-        height: 100%;
+        @include cover-image();
+        object-fit: cover;
       }
     }
 
     .masonry-block__content {
       position: relative;
-      padding-top: 30px;
 
       @include grid-media($media-md) {
         float: right;
       }
-    }
-
-    .masonry-block__tags {
-      position: relative;
-      top: auto;
     }
   }
 
@@ -124,6 +139,33 @@
       }
     }
   }
+
+  &.is-wide,
+  &.has-image.is-column-width,
+  &.has-background {
+    .masonry-block__tags {
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      z-index: 2;
+    }
+  }
+
+  &.no-image,
+  &.is-inverted,
+  &.has-columns,
+  &.is-full-width {
+    .masonry-block__content {
+      padding-top: 15px;
+    }
+
+    .masonry-block__tags {
+      position: relative;
+      padding: 15px 30px 0;
+      top: auto;
+      left: auto;
+    }
+  }
 }
 
 .masonry-block__link {
@@ -137,13 +179,6 @@
   img {
     display: block;
   }
-}
-
-.masonry-block__tags {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  z-index: 2;
 }
 
 .masonry-block__header {
