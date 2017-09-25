@@ -44,6 +44,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       new \Twig_SimpleFilter('openlink', [$this, 'openLink']),
       new \Twig_SimpleFilter('closelink', [$this, 'closeLink']),
       new \Twig_SimpleFilter('first_char', [$this, 'firstChar']),
+      new \Twig_SimpleFilter('get_img_alt', [$this, 'getImgAlt']),
       new \Twig_SimpleFilter('get_img_src', [$this, 'getImgSrc']),
       new \Twig_SimpleFilter('md5', [$this, 'md5']),
       new \Twig_SimpleFilter('field_count', [$this, 'fieldCount']),
@@ -58,6 +59,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       new \Twig_SimpleFunction('openlink', [$this, 'openLink']),
       new \Twig_SimpleFunction('closelink', [$this, 'closeLink']),
       new \Twig_SimpleFunction('first_char', [$this, 'firstChar']),
+      new \Twig_SimpleFunction('get_img_alt', [$this, 'getImgAlt']),
       new \Twig_SimpleFunction('get_img_src', [$this, 'getImgSrc']),
       new \Twig_SimpleFunction('get_param', [$this, 'getParam']),
       new \Twig_SimpleFunction('md5', [$this, 'md5']),
@@ -160,6 +162,23 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
   }
 
   /**
+   * Parse the item to get the image alt text.
+   *
+   * @param mixed $item
+   *   Render array or string of the image alt text.
+   *
+   * @return null|string
+   *   Alt text.
+   */
+  public function getImgAlt($item) {
+    $alt = $this->getTagAttribute(render($item), 'img', 'alt');
+    if (!$alt) {
+      $alt = trim(strip_tags(render($item)));
+    }
+    return $alt ? $alt : NULL;
+  }
+
+  /**
    * Parse the item to get an actual image url.
    *
    * @param mixed $item
@@ -169,19 +188,46 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
    *   Url to image.
    */
   public function getImgSrc($item) {
-    $item = render($item);
+    $src = $this->getTagAttribute(render($item), 'img', 'src');
+    if (!$src) {
+      $src = trim(strip_tags(render($item)));
+    }
+    return $src ? $src : NULL;
+  }
 
-    if (strpos($item, '<img') !== FALSE) {
-      $dom = new \DOMDocument('1.0', 'UTF-8');
-      libxml_use_internal_errors(TRUE);
-      $dom->loadHTML($item);
-      /** @var \DOMNodeList $images */
-      $images = $dom->getElementsByTagName('img');
-      return $images->item(0)->getAttribute('src');
+  /**
+   * Get a specific attribute from a specific element.
+   *
+   * @param string $html
+   *   The html containing the tag.
+   * @param string $tag
+   *   The element tag name.
+   * @param string $attribute
+   *   The attribute to get from the tag.
+   * @param int $index
+   *   The index of the element if the first is to be ignored.
+   *
+   * @return null|string
+   *   The attribute value or null if none there.
+   */
+  public function getTagAttribute($html, $tag, $attribute, $index = 0) {
+    // Validate before trying to parse.
+    if (!$html) {
+      return NULL;
     }
 
-    $trimmed = trim(strip_tags($item));
-    return $trimmed ? $trimmed : NULL;
+    $dom = new \DOMDocument('1.0', 'UTF-8');
+    libxml_use_internal_errors(TRUE);
+    $dom->loadHTML($html);
+    /** @var \DOMNodeList $items */
+    $items = $dom->getElementsByTagName($tag);
+
+    // No items of that tag or index.
+    if (!$items || !$items->item($index)) {
+      return NULL;
+    }
+
+    return $items->item($index)->getAttribute($attribute);
   }
 
   /**

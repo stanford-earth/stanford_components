@@ -10,7 +10,7 @@
 
   {# If there is no link, lets wrap the contents with a div to keep similar styles. #}
   {% if link|openlink is not empty %}
-    {{ link|openlink({class: 'film-card__link'}) }}
+    {{ link|openlink({class: 'film-card__link', 'aria-label': title|render|striptags|trim}) }}
   {% else %}
     <div class="film-card__link">
   {% endif %}
@@ -30,7 +30,7 @@
       </div>
       {% if variants.arrow == 'has-arrow' and link|closelink is not empty%}
         <div class="film-card__arrow">
-          <svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+          <svg class="i-svg i-svg--arrow-right" role="img"><title>{{ 'Navigate to item'|t }}</title><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
         </div>
       {% endif %}
     </div>

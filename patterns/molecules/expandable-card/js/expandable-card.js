@@ -12,8 +12,11 @@
 
       if ($(parent).hasClass('is-open')) {
         $(parent).find('.icon-items').attr('aria-expanded', true);
-        $('#close-' + $(parent).attr('id')).focus();
-      } else {
+        // $('#close-' + $(parent).attr('id')).focus();
+        // Highlight the first item in menu instead of the collapse item.
+        $(parent).find('.icon-items a:first').first().focus();
+      }
+      else {
         $(parent).find('.icon-items').attr('aria-expanded', false);
         $('#open-' + $(parent).attr('id')).focus();
       }

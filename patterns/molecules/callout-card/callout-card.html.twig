@@ -11,8 +11,8 @@
       {{ link|openlink }}{{ title }}{{ link|closelink }}</h3>
   </div>
   {% if link|openlink is not empty %}
-  {{ link|openlink({'class': 'callout-card__action'}) }}
-    <svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
+  {{ link|openlink({'class': 'callout-card__action', 'aria-label': "Navigate to "|t ~ title|render|striptags }) }}
+    <svg class="i-svg i-svg--arrow-right" role="img"><title>{{ 'Navigate to item'|t }}</title><use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg>
   {{ link|closelink }}
   {% endif %}
   {% if image is not empty %}

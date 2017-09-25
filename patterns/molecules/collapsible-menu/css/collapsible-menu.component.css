@@ -20,6 +20,14 @@
   }
 }
 
+.collapsible-menu .nav-items li {
+  list-style: none;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  line-height: inherit;
+}
+
 .collapsible-menu .nav-item {
   color: #112;
   display: block;

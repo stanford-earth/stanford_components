@@ -9,10 +9,17 @@
   {% set attributes = attributes.addClass('has-arrow') %}
 {% endif %}
 
+{% if title is not empty %}
+  {% set arialabel = title|render|striptags %}
+{% else %}
+  {% set arialabel = tag|render|striptags %}
+{% endif %}
+
 <div{{ attributes }}>
   {% if image is not empty %}
     <figure class="simple-block__image">
-      {{ link|openlink({class: "simple-block__link"}) }}
+      {# Hiding this to screen readers because of all the other links that are available for this block. #}
+      {{ link|openlink({class: "simple-block__link", "aria-hidden": "true", "tabindex": "-1"}) }}
       <div class="simple-block__thumbnail">
         {{ image }}
         {% if tag|render|striptags|trim is not empty %}
@@ -40,20 +47,21 @@
       <p class="simple-block__description">
         {{ description }}
         {% if variants.has_arrow and link|render is not empty %}
-          {{ link|openlink }}
-          <span class="simple-block__arrow"><svg class="i-svg i-svg--arrow-right"><use xlink:href="#i-arrow"
-                                                                                       xmlns:xlink="http://www.w3.org/1999/xlink"></use></svg></span>
+          {{ link|openlink({"aria-label": "Navigate to "|t ~ arialabel}) }}
+          <span class="simple-block__arrow">
+            <svg class="i-svg i-svg--arrow-right" role="img"><title>{{ 'Navigate to item'|t }}</title>
+              <use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+          </span>
           {{ link|closelink }}
         {% endif %}
       </p>
     {% endif %}
 
-    {% if more is not empty %}
+    {% if more|first["#object"] is not empty %}
       {{ link|openlink({class:"simple-block__more"}) }}
         {{ more }}
       {{ link|closelink }}
-    {% else %}
-      {{ link }}
     {% endif %}
   </div>
 </div>
