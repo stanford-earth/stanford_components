@@ -111,16 +111,12 @@
 }
 
 .filmstrip.is-double .film-card .film-card__thumbnail {
+  position: relative;
   width: 100%;
   height: 110px;
 }
 
-.filmstrip.is-double .film-card .film-card__link {
-  display: block;
-  position: relative;
-}
-
-.filmstrip.is-double .film-card .film-card__link::before {
+.filmstrip.is-double .film-card .film-card__thumbnail::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -132,7 +128,11 @@
   display: block;
 }
 
-.filmstrip.is-double .film-card .film-card__link img {
+.filmstrip.is-double .film-card .film-card__thumbnail img {
+  display: block;
+}
+
+.filmstrip.is-double .film-card .film-card__link {
   display: block;
 }
 
@@ -170,15 +170,11 @@
 }
 
 .filmstrip.is-tall .film-card .film-card__thumbnail {
-  height: 263px;
+  position: relative;
   width: initial;
 }
 
-.filmstrip.is-tall .film-card__link {
-  position: relative;
-}
-
-.filmstrip.is-tall .film-card__link::before {
+.filmstrip.is-tall .film-card .film-card__thumbnail::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -190,7 +186,12 @@
   display: block;
 }
 
-.filmstrip.is-tall .film-card__link img {
+.filmstrip.is-tall .film-card .film-card__thumbnail img {
+  display: block;
+}
+
+.filmstrip.is-tall .film-card__link {
+  overflow: hidden;
   display: block;
 }
 

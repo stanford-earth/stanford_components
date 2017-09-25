@@ -9,7 +9,7 @@
   @include grid-container;
 
   .callout-card {
-    margin-bottom: 2em;
+    @include margin(null auto 2em auto);
     width: 100%;
 
     @include grid-media($media-md) {

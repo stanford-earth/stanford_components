@@ -109,13 +109,13 @@
       }
 
       .film-card__thumbnail {
+        @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
         width: 100%;
         height: 110px;
       }
 
       .film-card__link {
         display: block;
-        @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
       }
 
     }
@@ -157,14 +157,16 @@
       }
 
       .film-card__thumbnail {
-        height: 263px;
+        @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
+        // height: 260px;
         width: initial;
       }
 
     }
 
     .film-card__link {
-      @include image-gradient($image-gradient-bg-color: rgba(0, 0, 0, 0.75));
+      overflow: hidden;
+      display: block;
     }
   }
 }

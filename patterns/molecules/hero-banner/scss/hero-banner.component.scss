@@ -196,12 +196,10 @@ $hero-max-width: 1380px;
   }
 }
 
-// If there's a hero banner with a racing stripe, t
+// If there's a hero banner with a racing stripe,
 // Then we don't need the lockup in the branding bar.
 .has-racing-stripe {
   .hero-banner__racing_stripe {
-    @include responsive-abs-container($default-container);
-
     display: none;
     position: absolute;
     top: 0;
@@ -213,11 +211,17 @@ $hero-max-width: 1380px;
 
     @include grid-media($media-md) {
       display: inherit;
+      left: 40px;
     }
 
-    .block--lockup {
-      padding: 0 20px;
+    @media only screen and (min-width: 1500px) {
+      @include responsive-abs-container($default-container);
     }
+  }
+
+  .block--lockup {
+    padding: 0;
+    margin: 0 auto;
   }
 
   #header .block--lockup {

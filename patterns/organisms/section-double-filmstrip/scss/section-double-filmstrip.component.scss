@@ -5,7 +5,12 @@
 @import 'patterns/utilities/utilities';
 
 .section-double-filmstrip {
+  @include grid-media($media-md) {
+    @include responsive-container($default-container);
+  }
+
   &.has-columns {
+
     .filmstrip__header {
       @include grid-media($media-md) {
         @include grid-column(12);
@@ -43,6 +48,17 @@
 
           &::before {
             z-index: 0;
+          }
+
+          .film-card__thumbnail {
+            &::before {
+              z-index: 1;
+            }
+          }
+
+          .film-card__caption,
+          .film-card__arrow {
+            z-index: 2;
           }
         }
       }

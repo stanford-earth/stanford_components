@@ -19,8 +19,6 @@
 
 <div{{ attributes }}>
   {{ pattern('section_header', header_vars) }}
-  <div class="callout-blocks">
-    {# Break up the individual items in to the appropriate template var. #}
-    {{ pattern('callout_blocks', {'items': items}) }}
-  </div>
+  {# Break up the individual items in to the appropriate template var. #}
+  {{ pattern('callout_blocks', {'items': items}) }}
 </div>

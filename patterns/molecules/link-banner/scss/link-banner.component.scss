@@ -6,15 +6,16 @@
 @import 'patterns/utilities/utilities';
 
 .link-banner {
+  @include responsive-container($default-container);
   @include grid-container;
   background-repeat: no-repeat;
 
-  @include grid-media($media-lg) {
-    margin-right: -80px;
-    margin-left: -80px;
-    padding-left: 80px;
-    padding-right: 80px;
-  }
+  // @include grid-media($media-lg) {
+  //   margin-right: -80px;
+  //   margin-left: -80px;
+  //   padding-left: 80px;
+  //   padding-right: 80px;
+  // }
 
   .link-banner__header {
     @include grid-column(12);

@@ -14,24 +14,8 @@
 }
 
 .film-card__link {
-  position: relative;
   display: inline-block;
   color: #fff;
-}
-
-.film-card__link::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.35);
-  content: '';
-  display: block;
-}
-
-.film-card__link img {
-  display: block;
 }
 
 .film-card__link:hover, .film-card__link:active, .film-card__link:focus {

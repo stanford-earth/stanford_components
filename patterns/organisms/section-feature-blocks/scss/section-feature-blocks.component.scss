@@ -53,8 +53,8 @@
 
   // Right Aligned Section Header.
   &.right-aligned {
-    .feature-blocks__header {
 
+    .feature-blocks__header {
       @include grid-media($media-md) {
         @include grid-column(12);
         float: right;
@@ -82,9 +82,4 @@
       }
     }
   }
-
-
-
-
-
 }

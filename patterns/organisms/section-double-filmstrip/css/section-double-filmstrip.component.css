@@ -1,3 +1,58 @@
+@media only screen and (min-width: 768px) and (max-width: 575px) {
+  .section-double-filmstrip {
+    padding: 1em calc(((50% /12) * 0) + 30px);
+  }
+  .section-double-filmstrip::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 576px) and (max-width: 767px) {
+  .section-double-filmstrip {
+    padding: 1em calc(((50% /12) * 0) + 30px);
+  }
+  .section-double-filmstrip::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1023px) {
+  .section-double-filmstrip {
+    padding: 1em calc(((50% /12) * 0) + 30px);
+  }
+  .section-double-filmstrip::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1024px) and (max-width: 1199px) {
+  .section-double-filmstrip {
+    padding: 1em calc(((50% /12) * 0) + 30px);
+  }
+  .section-double-filmstrip::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 1200px) {
+  .section-double-filmstrip {
+    padding: 1em calc(50% - (750px - 60px));
+  }
+  .section-double-filmstrip::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .section-double-filmstrip.has-columns .filmstrip__header {
     width: calc(100% - 60px);
@@ -64,6 +119,15 @@
 
 .section-double-filmstrip.has-columns .filmstrip__container .filmstrip__cards .film-card__link::before {
   z-index: 0;
+}
+
+.section-double-filmstrip.has-columns .filmstrip__container .filmstrip__cards .film-card__link .film-card__thumbnail::before {
+  z-index: 1;
+}
+
+.section-double-filmstrip.has-columns .filmstrip__container .filmstrip__cards .film-card__link .film-card__caption,
+.section-double-filmstrip.has-columns .filmstrip__container .filmstrip__cards .film-card__link .film-card__arrow {
+  z-index: 2;
 }
 
 /*# sourceMappingURL=section-double-filmstrip.component.css.map */

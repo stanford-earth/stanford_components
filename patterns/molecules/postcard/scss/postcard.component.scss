@@ -67,6 +67,7 @@ $color-dust: #fbfbfb;
 
     @include grid-media($media-md) {
       padding: em(30px);
+      width: auto;
     }
   }
 

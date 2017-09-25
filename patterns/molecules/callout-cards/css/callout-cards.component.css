@@ -5,7 +5,9 @@
 }
 
 .callout-cards .callout-card {
+  margin-right: auto;
   margin-bottom: 2em;
+  margin-left: auto;
   width: 100%;
 }
 

@@ -76,6 +76,7 @@
 @media only screen and (min-width: 768px) {
   .postcard .postcard__content-text {
     padding: 2.3076923077em;
+    width: auto;
   }
 }
 

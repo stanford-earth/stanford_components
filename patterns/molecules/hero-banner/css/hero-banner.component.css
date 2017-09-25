@@ -162,7 +162,14 @@
   width: 190px;
 }
 
-@media only screen and (max-width: 575px) {
+@media only screen and (min-width: 768px) {
+  .has-racing-stripe .hero-banner__racing_stripe {
+    display: inherit;
+    left: 40px;
+  }
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 575px) {
   .has-racing-stripe .hero-banner__racing_stripe {
     left: calc(((50% /12) * 0) + 15px);
   }
@@ -173,7 +180,7 @@
   }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
+@media only screen and (min-width: 1500px) and (min-width: 576px) and (max-width: 767px) {
   .has-racing-stripe .hero-banner__racing_stripe {
     left: calc(((50% /12) * 0) + 15px);
   }
@@ -184,7 +191,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 1500px) and (min-width: 768px) and (max-width: 1023px) {
   .has-racing-stripe .hero-banner__racing_stripe {
     left: calc(((50% /12) * 0) + 30px);
   }
@@ -195,7 +202,7 @@
   }
 }
 
-@media only screen and (min-width: 1024px) and (max-width: 1199px) {
+@media only screen and (min-width: 1500px) and (min-width: 1024px) and (max-width: 1199px) {
   .has-racing-stripe .hero-banner__racing_stripe {
     left: calc(((50% /12) * 0) + 30px);
   }
@@ -206,7 +213,7 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1500px) and (min-width: 1200px) {
   .has-racing-stripe .hero-banner__racing_stripe {
     left: calc(50% - (750px - 60px));
   }
@@ -217,25 +224,9 @@
   }
 }
 
-@media only print {
-  .has-racing-stripe .hero-banner__racing_stripe {
-    left: calc(((50% /12) * 0) + 0.25in);
-  }
-  .has-racing-stripe .hero-banner__racing_stripe::after {
-    clear: both;
-    content: "";
-    display: block;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .has-racing-stripe .hero-banner__racing_stripe {
-    display: inherit;
-  }
-}
-
-.has-racing-stripe .hero-banner__racing_stripe .block--lockup {
-  padding: 0 20px;
+.has-racing-stripe .block--lockup {
+  padding: 0;
+  margin: 0 auto;
 }
 
 .has-racing-stripe #header .block--lockup {
