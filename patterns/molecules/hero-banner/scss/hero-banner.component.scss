@@ -138,6 +138,10 @@ $hero-max-width: 1380px;
       min-height: 660px;
     }
   }
+
+  .has-video & {
+    min-height: 0;
+  }
 }
 
 .hero-banner__container {

@@ -163,7 +163,7 @@ module.exports = function(grunt) {
           'patterns/organisms/section-header-banner/css/section-header-banner.component.css':           'patterns/organisms/section-header-banner/scss/section-header-banner.component.scss',
           'patterns/organisms/section-social-media/css/section-social-media.component.css':             'patterns/organisms/section-social-media/scss/section-social-media.component.scss',
           // Templates.
-          'patterns/templates/paragraph-filmstrip/css/paragraph-filmstrip.component.css':       'patterns/templates/paragraph-filmstrip/scss/paragraph-filmstrip.component.scss'
+          'patterns/templates/simple/css/simple.component.css':                                         'patterns/templates/simple/scss/simple.component.scss'
         }
       }
     },

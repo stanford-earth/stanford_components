@@ -80,6 +80,10 @@
   }
 }
 
+.has-video .hero-banner__inner {
+  min-height: 0;
+}
+
 .hero-banner__header {
   position: absolute;
   top: 50%;
