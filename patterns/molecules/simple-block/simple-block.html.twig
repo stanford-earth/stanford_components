@@ -10,9 +10,9 @@
 {% endif %}
 
 {% if title is not empty %}
-  {% set arialabel = title|render|striptags %}
+  {% set arialabel = title|render|striptags|trim %}
 {% else %}
-  {% set arialabel = tag|render|striptags %}
+  {% set arialabel = tag|render|striptags|trim %}
 {% endif %}
 
 <div{{ attributes }}>
@@ -49,7 +49,7 @@
         {% if variants.has_arrow and link|render is not empty %}
           {{ link|openlink({"aria-label": "Navigate to "|t ~ arialabel}) }}
           <span class="simple-block__arrow">
-            <svg class="i-svg i-svg--arrow-right" role="img"><title>{{ 'Navigate to item'|t }}</title>
+            <svg class="i-svg i-svg--arrow-right" role="img"><title>{{ "Navigate to "|t ~ arialabel}}</title>
               <use xlink:href="#i-arrow" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
             </svg>
           </span>
