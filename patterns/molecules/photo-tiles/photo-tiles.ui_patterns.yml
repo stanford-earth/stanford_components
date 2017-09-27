@@ -36,6 +36,20 @@ photo_tiles:
       label: Title
       preview: "Students"
       type: text
+    cite_name:
+      description: "Citation Person Name"
+      label: "Citation Name"
+      preview: "Elsa M. Ordway"
+      type: text
+    cite_title:
+      description: "Citation Person Title"
+      label: "Person's title"
+      preview: "Ph.D. Candidate"
+    quote:
+      description: "Quote text body"
+      label: "Quotation text"
+      preview: "I’m fascinated by the way our world works. I use technology to make visible what is not visible to the naked eye."
+      type: text
     items:
       description: "This template iterates over the items to produce a collection of divs. Each item must have a url, title, description and an image rendered as an html element."
       label: "A collection of photo tiles"
@@ -59,6 +73,7 @@ photo_tiles:
             theme: image
             uri: "https://lorempixel.com/380/380/nature/2"
           link: "https://www.stanford.edu"
+
   libraries:
     -
       photo_tiles_library:

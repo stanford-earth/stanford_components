@@ -5,6 +5,10 @@
 // Grab our mixins.
 @import 'patterns/utilities/utilities';
 
+.section-photo-mosaic--quotes {
+  @include responsive-container($default-container);
+}
+
 .photo-mosaic--thumbs-up {
   .photo-tiles__quote {
     display: none;
