@@ -21,7 +21,7 @@ section_tall_filmstrip:
     is_centered:
       label: Centered
       description: "Flag to determine whether h2 should be centered.  Treat as boolean (true/false)."
-      default: left-aligned
+      default: is-centered
       options:
         left-aligned: Left Aligned
         is-centered: Centered

@@ -40,7 +40,7 @@
   <div class="simple-block__content">
 
     {% if title is not empty %}
-      <h3>{{ link|openlink({class:"simple-block__link"}) }}{{ title }}{{ link|closelink }}</h3>
+      <h3 class="simple-block__title">{{ link|openlink({class:"simple-block__link"}) }}{{ title }}{{ link|closelink }}</h3>
     {% endif %}
 
     {% if description is not empty %}
@@ -58,7 +58,7 @@
       </p>
     {% endif %}
 
-    {% if more|first["#object"] is not empty %}
+    {% if more is not empty %}
       {{ link|openlink({class:"simple-block__more"}) }}
         {{ more }}
       {{ link|closelink }}

@@ -17,6 +17,10 @@
   margin: 0 auto 3em;
 }
 
+.callout-blocks .callout-block:nth-child(4) {
+  clear: left;
+}
+
 @media only screen and (min-width: 768px) {
   .callout-blocks .callout-block {
     width: calc(33.3333333333% - 40px);

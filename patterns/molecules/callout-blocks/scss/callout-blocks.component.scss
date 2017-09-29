@@ -23,5 +23,9 @@
       max-width: none;
       margin-left: 20px;
     }
+
+    &:nth-child(4) {
+      clear: left;
+    }
   }
 }

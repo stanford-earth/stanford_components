@@ -1,6 +1,6 @@
 .section-tall-filmstrip .filmstrip__container {
   max-width: 240px;
-  margin: 0 auto;
+  margin: 2em auto 0;
 }
 
 @media only screen and (min-width: 768px) {
