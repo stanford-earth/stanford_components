@@ -24,9 +24,36 @@
   .film-card {
     @include grid-media($media-md) {
       float: left;
-      width: 220px;
+      width: 218px;
     }
   }
+
+  // &.fixed-width {
+  //   $filmstrip-fixed: (
+  //     columns: 12,
+  //     gutter: 18px,
+  //   );
+
+  //   .filmstrip__cards {
+  //     @include grid-container;
+
+  //     @include grid-media($media-md-only) {
+  //       @include grid-collapse;
+  //     }
+  //   }
+
+  //   .film-card {
+  //     @include grid-media($media-md-only) {
+  //       @include grid-column(4, $filmstrip-fixed);
+  //       margin-right: 0;
+  //     }
+
+  //     @include grid-media($media-lg) {
+  //       float: left;
+  //       width: 220px;
+  //     }
+  //   }
+  // }
 
   &.is-flexible,
   &.is-tight {

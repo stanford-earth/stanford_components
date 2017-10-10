@@ -7,6 +7,7 @@
   float: left;
   margin-left: 15px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .section-callout-filmstrip.header-to-top .section-header p {
@@ -78,10 +79,6 @@
 
 .section-callout-filmstrip.header-to-top .film-card__caption {
   font-weight: 600;
-}
-
-.section-callout-filmstrip.header-to-left .section-header h2.has-dash-under::after {
-  left: 6%;
 }
 
 @media only screen and (max-width: 767px) {

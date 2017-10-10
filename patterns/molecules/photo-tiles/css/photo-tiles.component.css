@@ -16,15 +16,22 @@
   }
 }
 
-.photo-tiles.is-right .photo-tile,
-.photo-tiles.is-right .photo-thumb,
-.photo-tiles.is-right .photo-thumbs {
-  float: right;
+@media only screen and (min-width: 768px) {
+  .photo-tiles.is-right .photo-tile,
+  .photo-tiles.is-right .photo-thumb,
+  .photo-tiles.is-right .photo-thumbs {
+    float: right;
+  }
 }
 
 .photo-tiles .photo-tile {
-  float: left;
   width: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+  .photo-tiles .photo-tile {
+    float: left;
+  }
 }
 
 .photo-tiles .photo-tile__action {

@@ -7,6 +7,7 @@
 
 .section-photo-mosaic--quotes {
   @include responsive-container($default-container);
+  margin-bottom: em(58px);
 }
 
 .photo-mosaic--thumbs-up {

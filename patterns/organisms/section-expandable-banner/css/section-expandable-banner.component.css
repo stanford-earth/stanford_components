@@ -3,7 +3,7 @@
   padding-bottom: 2.3076923077em;
   padding-top: 2.3076923077em;
   position: relative;
-  margin-bottom: 58px;
+  margin-bottom: 4.4615384615em;
 }
 
 @media only screen and (max-width: 575px) {
@@ -101,7 +101,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .section-expandable-banner .expandable-banner__container .expandable-cards {
     margin-left: -30px;
     margin-right: -30px;

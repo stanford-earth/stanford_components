@@ -20,13 +20,18 @@
     .photo-tile,
     .photo-thumb,
     .photo-thumbs {
-      float: right;
+      @include grid-media($media-md) {
+        float: right;
+      }
     }
   }
 
   .photo-tile {
-    float: left;
     width: 200px;
+
+    @include grid-media($media-md) {
+      float: left;
+    }
   }
 
   .photo-tile__action {

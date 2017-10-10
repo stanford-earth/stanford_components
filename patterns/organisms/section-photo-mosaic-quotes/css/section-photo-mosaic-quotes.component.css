@@ -1,3 +1,7 @@
+.section-photo-mosaic--quotes {
+  margin-bottom: 4.4615384615em;
+}
+
 @media only screen and (max-width: 575px) {
   .section-photo-mosaic--quotes {
     padding: 1em calc(((50% /12) * 0) + 15px);
