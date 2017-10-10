@@ -49,14 +49,14 @@
   }
 
   .highlight-banner__header {
+    @include padding(30px);
     position: relative;
-    padding-top: em(30px);
     width: 100%;
     z-index: 2;
 
     @include grid-media($media-md) {
       @include grid-column(3);
-      padding-top: 0;
+      @include padding(0);
     }
 
     @include grid-media($media-lg) {

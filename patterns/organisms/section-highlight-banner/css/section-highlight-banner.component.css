@@ -117,8 +117,8 @@
 }
 
 .section-highlight-banner .highlight-banner__header {
+  padding: 30px;
   position: relative;
-  padding-top: 2.3076923077em;
   width: 100%;
   z-index: 2;
 }
@@ -128,7 +128,7 @@
     width: calc(25% - 37.5px);
     float: left;
     margin-left: 30px;
-    padding-top: 0;
+    padding: 0;
   }
 }
 
