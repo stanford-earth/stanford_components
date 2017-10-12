@@ -14,7 +14,7 @@ hero_banner:
     has_tint:
       label: "Has background tinting"
       description: "Slight shade over background image"
-      default: has-tint
+      default: no-tint
       options:
         no-tint: "No tint"
         has-tint: "Enabled tint"
