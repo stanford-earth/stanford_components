@@ -23,7 +23,7 @@ hero_banner:
       description: "Choose where you would like to see the text appear over the image"
       default: 'is-right'
       options:
-        not-centered: "Centered"
+        0: "Centered"
         is-right: "On the right"
     is_page_title:
       label: "Should the banner use an h1 page title?"
