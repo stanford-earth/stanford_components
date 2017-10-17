@@ -24,7 +24,7 @@
         {{ image }}
         {% if tag|render|striptags|trim is not empty %}
           <div class="simple-block__tag">
-            <h6>{{ tag|render|striptags|trim }}</h6>
+            <h6>{{ tag|render|striptags|trim|raw }}</h6>
           </div>
         {% endif %}
       </div>
