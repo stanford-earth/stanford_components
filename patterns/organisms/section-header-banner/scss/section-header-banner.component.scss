@@ -8,6 +8,7 @@
 .section-header-banner {
   @include grid-container;
   @include image-banner();
+  margin-bottom: em(58px);
 
   padding: 30px;
 

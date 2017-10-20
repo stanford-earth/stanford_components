@@ -5,6 +5,7 @@
   display: block;
   min-height: 280px;
   padding: 30px;
+  margin-bottom: 4.4615384615em;
 }
 
 .section-quote-banner::after {

@@ -110,6 +110,12 @@ $hero-max-width: 1380px;
       top: 0;
       pointer-events: none;
     }
+
+    &.component-centered-container-margins {
+      .video {
+        margin-bottom: em(58px);
+      }
+    }
   }
 }
 

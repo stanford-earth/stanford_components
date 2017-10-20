@@ -13,7 +13,7 @@ $color-dust: #fbfbfb;
   @include grid-container;
   position: relative;
   overflow: hidden;
-  margin-bottom: 30px;
+  margin-bottom: em(58px);
 
   .postcard__image {
     background-size: 100%;

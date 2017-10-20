@@ -11,6 +11,7 @@
   padding-bottom: em(30px);
   padding-top: em(30px);
   position: relative;
+  margin-bottom: em(58px);
 
   @include grid-media($media-md) {
     display: flex;
