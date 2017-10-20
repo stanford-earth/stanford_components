@@ -62,6 +62,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
       new \Twig_SimpleFunction('get_img_alt', [$this, 'getImgAlt']),
       new \Twig_SimpleFunction('get_img_src', [$this, 'getImgSrc']),
       new \Twig_SimpleFunction('get_param', [$this, 'getParam']),
+      new \Twig_SimpleFunction('get_tag_attribute', [$this, 'getTagAttribute']),
       new \Twig_SimpleFunction('md5', [$this, 'md5']),
       new \Twig_SimpleFunction('field_count', [$this, 'fieldCount']),
     ];
