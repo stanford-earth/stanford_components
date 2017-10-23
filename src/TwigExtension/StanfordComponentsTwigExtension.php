@@ -81,7 +81,7 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
    */
   public function openLink($original_link, $attributes = []) {
     // Make sure we have a string.
-    $original_link = render($original_link);
+    $original_link = htmlspecialchars_decode(render($original_link));
     $trimmed = trim(strip_tags($original_link));
 
     // Empty.
