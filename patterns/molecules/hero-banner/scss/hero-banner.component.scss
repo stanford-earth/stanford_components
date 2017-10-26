@@ -191,6 +191,12 @@ $hero-max-width: 1380px;
       @include grid-media($media-md) {
         float: right;
         padding-top: 0;
+        width: 90%;
+      }
+
+      @include grid-media($media-lg) {
+        float: right;
+        padding-top: 0;
         width: 50%;
       }
     }
