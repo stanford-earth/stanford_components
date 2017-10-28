@@ -3,7 +3,7 @@ type: module
 description: 'Provides a library of re-usable components'
 core: 8.x
 package: Stanford
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha1
 dependencies:
   - components
   - ui_patterns
