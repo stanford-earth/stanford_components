@@ -24,7 +24,7 @@
     <span class="drop-cap-title__drop-cap" aria-hidden="true">{{ superhead|first_char }}</span>
   </h2>
   {% if subhead %}
-    <p>{{ subhead|render|striptags|trim|raw }}</p>
+    {{ subhead|raw }}
   {% endif %}
   {% if link %}
     {{ link }}
