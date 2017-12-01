@@ -17,7 +17,7 @@
   };
 
   // Execute code once the window is fully loaded & when ajax completes.
-  $(window).load(masonryPackery);
+  $(window).bind('load', masonryPackery);
   $(document).ajaxComplete(function(){
     setTimeout(masonryPackery, 500);
   });
