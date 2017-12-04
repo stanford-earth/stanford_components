@@ -1,5 +1,5 @@
 # [Stanford Components](https://github.com/SU-SWS/stanford_components)
-##### Version: 8.x-1.0-alpha2
+##### Version: 8.x-1.0-dev
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
 
