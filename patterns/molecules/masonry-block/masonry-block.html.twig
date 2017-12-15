@@ -64,7 +64,7 @@ image|get_img_src is not empty ? random(['has-image-right','has-image-left'])
                                             href="{{ link|render|striptags|trim|raw }}">{{ title }}</a></h3>
       {% endif %}
       {% if description is not empty %}
-        <p class="masonry-block__description">{{ description }}</p>
+        <span class="masonry-block__description">{{ description }}</span>
       {% endif %}
       {% if action is not empty %}
         {{ link|openlink({class: 'masonry-block__button button__hollow--white'}) }}{{ action }}{{ link|closelink }}
