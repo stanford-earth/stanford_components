@@ -23,6 +23,8 @@
       {% elseif item.platform == 'twitter' %}
         {# Pass vars through to include template. #}
         {{ pattern('social_card', item|merge({'context': context})) }}
+      {% else %}
+        {{ item }}
       {% endif %}
     {% endfor %}
   </div>
