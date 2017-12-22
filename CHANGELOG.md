@@ -1,5 +1,12 @@
 # Stanford Components
 
+8.x-1.0-alpha4
+-------------------------------------------------------------------------------
+_Release Date: 2017-12-22_
+
+- Fix to Masonry block template
+- Fix to section social media template
+
 8.x-1.0-alpha3
 -------------------------------------------------------------------------------
 _Release Date: 2017-12-14_
