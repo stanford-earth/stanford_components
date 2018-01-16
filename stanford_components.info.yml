@@ -8,9 +8,5 @@ dependencies:
   - components
   - ui_patterns
   - ui_patterns_variants
-component-libraries:
-  stanford_components:
-    paths:
-      - patterns
 # libraries:
 #   - /example_name

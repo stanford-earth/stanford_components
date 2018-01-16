@@ -60,9 +60,3 @@
 #     js/script.js: {}
 #   dependencies:
 #     - core/jquery
-
-component_centered_container:
-  version: VERSION
-  css:
-    layout:
-       css/component-centered-container.css: {}
