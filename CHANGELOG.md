@@ -1,5 +1,11 @@
 # Stanford Components
 
+8.x-1.1-alpha6
+-------------------------------------------------------------------------------
+_Release Date: 2018-05-17_
+
+- Added back the views preview template so that there are no more errors on views ui previews.
+
 8.x-1.1-alpha5
 -------------------------------------------------------------------------------
 _Release Date: 2018-01-29_
