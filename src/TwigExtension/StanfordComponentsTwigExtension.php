@@ -272,6 +272,9 @@ class StanfordComponentsTwigExtension extends \Twig_Extension {
    *   Number of field items.
    */
   public function fieldCount($item) {
+    if (empty($item) || !is_array($item)) {
+      return 0;
+    }
     // Only 1 field in the region.
     if (count($item) == 1 && strpos(key($item), "field_") === 0) {
       $field_key = key($item);
