@@ -1,5 +1,11 @@
 # Stanford Components
 
+8.x-1.1-alpha7
+-------------------------------------------------------------------------------
+_Release Date: 2020-09-10_
+
+- Fix null array error in src/Plugin/TwigExtension/StanfordComponentsTwigExtension.php.
+
 8.x-1.1-alpha6
 -------------------------------------------------------------------------------
 _Release Date: 2018-05-17_
