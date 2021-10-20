@@ -1,7 +1,7 @@
 name: 'Stanford Components'
 type: module
 description: 'Provides a library of re-usable components'
-core: 8.x
+core_version_requirement: ^8 || ^9
 package: Stanford
 version: 8.x-1.1-dev
 dependencies:
